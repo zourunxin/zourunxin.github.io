@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Java | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据结构及方法数组——Array方法： 数组元素排序：Arrays.sort(T[] original) 数组元素求和：Arrays.stream(T[] original).sum() 从数组中获取最大值&#x2F;最小值：Arrays.stream(nums).min()&#x2F;max().getAsInt(); 数组元素统一赋值：Arrays.fill(T[] original, a) —— 数组origi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java">
+<meta property="og:url" content="http://example.com/2021/02/05/Java/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据结构及方法数组——Array方法： 数组元素排序：Arrays.sort(T[] original) 数组元素求和：Arrays.stream(T[] original).sum() 从数组中获取最大值&#x2F;最小值：Arrays.stream(nums).min()&#x2F;max().getAsInt(); 数组元素统一赋值：Arrays.fill(T[] original, a) —— 数组origi">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="article:published_time" content="2021-02-05T13:10:50.000Z">
+<meta property="article:modified_time" content="2021-10-25T11:13:48.317Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2021/02/05/Java/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Java',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-10-25 19:13:48'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Java</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-02-05T13:10:50.000Z" title="Created 2021-02-05 21:10:50">2021-02-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T11:13:48.317Z" title="Updated 2021-10-25 19:13:48">2021-10-25</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="数据结构及方法"><a href="#数据结构及方法" class="headerlink" title="数据结构及方法"></a>数据结构及方法</h1><h2 id="数组——Array"><a href="#数组——Array" class="headerlink" title="数组——Array"></a>数组——Array</h2><h3 id="方法："><a href="#方法：" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li>数组元素排序：<code>Arrays.sort(T[] original)</code></li>
+<li>数组元素求和：<code>Arrays.stream(T[] original).sum()</code></li>
+<li>从数组中获取最大值/最小值：<code>Arrays.stream(nums).min()/max().getAsInt();</code></li>
+<li>数组元素统一赋值：<code>Arrays.fill(T[] original, a)</code> —— 数组original所有元素统一赋值为a，original可为一维或二维数组</li>
+<li>复制数组1：<code>Arrays.copyOfRange(T[] original, int from, int to)</code> —— 将一个原始的数组original，从下标from开始复制，复制到上标to（不包括上标to），生成一个新的数组（返回值）;</li>
+<li>复制数组2：<code>System.arraycopy(T[] org1, a, T[] org2, b, k)</code> —— 将数组org1起始索引为a（含），长度为k的元素复制（替换）到数组org2起始索引为b（含）的后续元素中。</li>
+<li>指定方式排序<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Arrays.sort(array, <span class="keyword">new</span> Comparator&lt;<span class="keyword">int</span>[]&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(<span class="keyword">int</span>[] o1, <span class="keyword">int</span>[] o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o1[<span class="number">0</span>] - o2[<span class="number">0</span>];</span><br><span class="line">            &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li>Arrays和List的相互转化：<ol>
+<li><code>Arrays.asList(array);</code> —— Arrays转List</li>
+<li><code>list.toArray();</code> —— List转Array（Arrays的类型为Object）</li>
+</ol>
+</li>
+<li>List 移除特定整数的方法：<code>list.remove((Integer) num)</code> —— 要先将其转化为 Integer 才不会引起歧义</li>
+</ul>
+<h2 id="字符串——String"><a href="#字符串——String" class="headerlink" title="字符串——String"></a>字符串——String</h2><p><strong>获取字符后，可利用java的Charcater类对字符进行操作</strong></p>
+<h3 id="方法：-1"><a href="#方法：-1" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li>遍历字符串字符：<ol>
+<li>i递增通过charAt()循环遍历字符串字符；</li>
+<li>toCharArray()将字符串转化为字符数组再通过循环遍历；</li>
+<li>通过subString()遍历</li>
+</ol>
+</li>
+<li>替换字符串中某类字符为另一字符：<ol>
+<li>string.replace(str1, str2)——其中str1为被替换字符，str2为替换字符；</li>
+<li>string.replaceAll(str1, str2)——（且支持正则表达式替换)</li>
+<li>替换字符串中第一个匹配的字符为另一字符：string.replaceFirst(str1, str2);</li>
+</ol>
+</li>
+<li>查找字符串是否包含某字符：<ol>
+<li>string.contains(String)——括号内需为字符串形式</li>
+<li>string.indexOf(char)——括号内为字符形式，若含该字符，则返回对应下标，否则返回-1；</li>
+</ol>
+</li>
+<li>字符串和数字（整型为例）的互相转化<ol>
+<li>string.valueOf(Object value)——将value值由int类型转化为String类型</li>
+<li>Integer.parseInt(String)——将字符串string转化为int类型</li>
+</ol>
+</li>
+</ul>
+<h3 id="StringBuilder与StringBuffer"><a href="#StringBuilder与StringBuffer" class="headerlink" title="StringBuilder与StringBuffer"></a>StringBuilder与StringBuffer</h3><p><strong>进行添加操作时，添加的可以是字符或字符串</strong></p>
+<h4 id="方法：-2"><a href="#方法：-2" class="headerlink" title="方法："></a>方法：</h4><ul>
+<li>声明：<ol>
+<li>StringBuilder stack = new StringBuilder();</li>
+<li>StringBuffer stack = new StringBuffer();</li>
+</ol>
+</li>
+<li>添加字符：stack.append(char c);</li>
+<li>指定位置添加字符：stack.insert(offset, char c)——在offset索引处添加字符c</li>
+<li>删除指定位置的字符：stack.deleteCharAt(i);</li>
+<li>转字符串格式：stack.toString();</li>
+</ul>
+<h2 id="栈——Stack"><a href="#栈——Stack" class="headerlink" title="栈——Stack"></a>栈——Stack</h2><p><strong>先进后出</strong><br><em>使用栈和双端队列均可实现</em></p>
+<h3 id="方法：-3"><a href="#方法：-3" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li>声明（使用栈）：<code>Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();</code></li>
+<li>声明（使用双端队列）：<code>Deque&lt;Integer&gt; stack = new LinkedList&lt;&gt;();</code></li>
+<li>压入元素：<code>stack.push(int value);</code></li>
+<li>取出栈顶元素：<code>stack.peek();</code>（若栈为空，则报NullPointException异常）</li>
+<li>取出栈顶元素并删除：<code>stack.pop();</code></li>
+</ul>
+<h2 id="集合——Set"><a href="#集合——Set" class="headerlink" title="集合——Set"></a>集合——Set</h2><p><strong>元素唯一</strong></p>
+<h3 id="方法：-4"><a href="#方法：-4" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li>添加元素：set.add();（添加成功返回true，失败则返回false（已有该元素)）</li>
+</ul>
+<h2 id="队列——Queue"><a href="#队列——Queue" class="headerlink" title="队列——Queue"></a>队列——Queue</h2><p><strong>先进先出</strong></p>
+<h3 id="方法：-5"><a href="#方法：-5" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li>声明：<code>Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;();</code></li>
+<li>添加元素：<code>queue.offer(int value);</code>（成功则返回true，失败返回false）</li>
+<li>添加元素：<code>queue.add(int value);</code>（成功则返回true，失败则抛出IIIegaISlabEepeplian异常）</li>
+<li>添加元素：<code>queue.put(int value);</code>（无返回值，若队列满则阻塞）</li>
+<li>返回队列头部元素：<code>queue.peek();</code>（若队列为空，则返回null）</li>
+<li>返回队列头部元素：<code>queue.element();</code>（若队列为空，则抛出NoSuchElementException异常）</li>
+<li>移除并返回队列头部元素：<code>queue.poll();</code>（若队列为空，则返回null）</li>
+<li>移除并返回队列头部元素：<code>queue.remove();</code>（若队列为空，则抛出NoSuchElementException异常）</li>
+<li>移除并返回队列头部元素：<code>queue.take();</code>（若队列为空，则阻塞）</li>
+<li>移除队列头部元素：<code>queue.removeFist();</code>　　移除队列尾部元素：queue.removeLast();</li>
+<li>返回队列头部元素：<code>queue.peekFist();</code>　　　返回队列尾部元素：queue.peekLast();</li>
+<li>队头添加元素：<code>queue.addFirst();</code>　　　　    　队尾添加元素：queue.addLast();</li>
+</ul>
+<h3 id="优先级队列——PriorityQueue"><a href="#优先级队列——PriorityQueue" class="headerlink" title="优先级队列——PriorityQueue"></a>优先级队列——PriorityQueue</h3><p><strong>优先级队列实现了queue接口，是升序队列，数组形式，左侧为队头，右侧为队尾，本质是小根堆。每次插入元素会自动重新排序，以确保队列元素保持为升序顺序。各功能同用以上普通队列方法实现（C++的优先队列每次取最大元素）</strong><br><strong>优先级队列每次以O(1)时间复杂度取出队列权值最小的元素（即队头元素），以O(log)插入新元素。</strong></p>
+<ul>
+<li>声明：<code>PriorityQueue&lt;Integer&gt; pq = new PriorityQueue&lt;&gt;();</code></li>
+<li>声明（大根堆）：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Queue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;(new Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public int compare(Integer o1, Integer o2) &#123;</span><br><span class="line">        return o2.compareTo(o1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+简化版：<code>PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;((o1, o2)-&gt;o2.compareTo(o1));</code></li>
+</ul>
+<h2 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h2><p><strong>元素为键值对，一个map中仅能含一个键(Key)，可以在多个键中存有相同的值(value)。</strong></p>
+<h3 id="方法：-6"><a href="#方法：-6" class="headerlink" title="方法："></a>方法：</h3><ul>
+<li><p>添加元素：map.put(Key, Value);（添加一对键值对）</p>
+</li>
+<li><p>添加元素：map.putAll(map);(添加其他map中的键值对）</p>
+</li>
+<li><p>获取value：map.get(Object Key);（根据key获取指定的value）</p>
+</li>
+<li><p>删除元素：map.remove(Object Key);（根据键删除键值对）</p>
+</li>
+<li><p>查找某键：map.containsKey(Object Key);（查找是否存在键为Key的键值对，若有，则返回true；若无，则返回false）</p>
+</li>
+<li><p>查找某值：map.containsValue(Object Value);（查找是否存在值为Value的键值对，若有，则返回true；若无，则返回false）</p>
+</li>
+<li><p>map.getOrDefault(key, value);（若map中含有该键key，则使用该键的值；否则使用默认值value）</p>
+</li>
+<li><p>for循环遍历map中的键值对：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其中通过entry.getKey()获取键，通过entry.getValue()获取值</span></span><br><span class="line"><span class="keyword">for</span>(Map.Entry&lt;Key, Value&gt; entry : map.entrySet())</span><br></pre></td></tr></table></figure></li>
+<li><p>for循环遍历map中的键或值：<code>for(Object Key : map.keySet())</code> 和 <code>for(Object Value : map.values())</code></p>
+</li>
+</ul>
+<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><ul>
+<li>声明：<code>Map&lt;Object Key, Object Value&gt; map = new HashMap&lt;&gt;();</code></li>
+</ul>
+<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><p><strong>红黑树，元素（键值对）按照键的自然顺序排序（如自然数，按照1，2，3…的顺序排序）</strong></p>
+<h4 id="方法：-7"><a href="#方法：-7" class="headerlink" title="方法："></a>方法：</h4><ul>
+<li>声明：<code>TreeMap&lt;Object Key, Object Value&gt; map = new TreeMap&lt;&gt;();</code></li>
+<li>获取首键的值：<code>map.firstKey();</code></li>
+<li>获取尾键的值：<code>map.lastKey();</code></li>
+</ul>
+<hr>
+<h1 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h1><h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="异或运算"><a href="#异或运算" class="headerlink" title="异或运算"></a>异或运算</h3><p>同0同1的异或为0，不同0、1的异或为1；<br>异或运算的性质：</p>
+<ol>
+<li>异或运算满足交换律和结合律；</li>
+<li>任何整数和自身做异或运算的结果都等于0；</li>
+<li>任何整数和0做异或运算的结果都等于自身</li>
+</ol>
+<hr>
+<h1 id="Java-依赖"><a href="#Java-依赖" class="headerlink" title="Java 依赖"></a>Java 依赖</h1><h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/01702897eeb4" title="简书">Gradle依赖引入</a></p>
+</blockquote>
+<h3 id="引入依赖基本方式"><a href="#引入依赖基本方式" class="headerlink" title="引入依赖基本方式"></a>引入依赖基本方式</h3><p>理论上gradle支持三种类型的引用（在 build.gradle 文件下），方式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    </span><br><span class="line">    implementation project(&#x27;:projectABC&#x27;)   // 本地项目依赖</span><br><span class="line">    </span><br><span class="line">    implementation fileTree(dir: &#x27;libs&#x27;, include: [&#x27;*.jar&#x27;])   // 本地二进制依赖</span><br><span class="line"></span><br><span class="line">    implementation &#x27;androidx.appcompat:appcompat:1.0.2&#x27;   // 远端二进制依赖</span><br><span class="line">    implementation  group: &#x27;androidx.appcompat&#x27;, name:&#x27;appcompat&#x27;, version:&#x27;1.0.2&#x27;   // 远端二进制依赖完整写法</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Gradle使用maven本地仓库"><a href="#配置Gradle使用maven本地仓库" class="headerlink" title="配置Gradle使用maven本地仓库"></a>配置Gradle使用maven本地仓库</h3><ul>
+<li>这样Gradle就不会重新下载已经存在maven本地仓库的jar包，从而节省时间和空间。</li>
+<li>在环境变量中加入新的系统变量：GRADLE_USER_HOME，变量值是maven本地仓库的路径，本文为例D:\Software\Maven\repository</li>
+<li>此时，Gradle下载的文件将放到指定的仓库路径中。但是还需要修改build.gradle文件中加入mavenLocal() 引用本地仓库<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;   <span class="comment">//repositories闭包</span></span><br><span class="line">	mavenLocal()   <span class="comment">//配置先从本地仓库寻找jar包，优先寻找上一个配置，找到不执行下面的配置</span></span><br><span class="line">	mavenCentral()   <span class="comment">//配置从中央仓库寻找</span></span><br><span class="line">	google()   <span class="comment">//第三方仓库</span></span><br><span class="line">	jcenter()   <span class="comment">//代码托管库：设置之后可以在项目中轻松引用jcenter上的开源项目</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h3 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h3><ol>
+<li>mvn：执行 maven executable （可执行）文件</li>
+<li>clean：删除过去已经编译过的 java .class 文件和资源（如 .properties）</li>
+<li>install：compile, test &amp; package your Java project and even install/copy your built .jar/.war file into your local Maven repository.</li>
+</ol>
+<p><strong>补充：install 和 package 的不同：</strong><br><em>package will compile your code and also package it.</em><br><em>install will compile and package, but it will also put the package in your local repository.</em></p>
+<hr>
+<h1 id="JavaWeb"><a href="#JavaWeb" class="headerlink" title="JavaWeb"></a>JavaWeb</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.wuquejs.cn/bt-javaweb-tomcat.html">使用宝塔面板部署JavaWeb项目的两种方法(war版)</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/88b300c217c2?utm_campaign=haruki">IDEA部署项目到云服务器(未编译版)</a></p>
+</blockquote>
+<h2 id="Java-注解"><a href="#Java-注解" class="headerlink" title="Java 注解"></a>Java 注解</h2><h3 id="PostConstruct-注解"><a href="#PostConstruct-注解" class="headerlink" title="@PostConstruct 注解"></a>@PostConstruct 注解</h3><p>从 Java EE5 规范开始，Servlet 中增加了两个影响 Servlet 生命周期的注解，@PostConstruct 和 @PreDestroy，这两个注解被用来修饰一个非静态的 void（）方法。<br>被 @PostConstruct 修饰的方法会在服务器加载 Servlet 的时候运行，并且只会被服务器执行一次。PostConstruct 在构造函数之后执行，init()方法之前执行。PreDestroy()方法在destroy()方法执行之后执行</p>
+<hr>
+<h1 id="Java-测试"><a href="#Java-测试" class="headerlink" title="Java 测试"></a>Java 测试</h1><h2 id="注解"><a href="#注解" class="headerlink" title="注解"></a>注解</h2><h3 id="RunWith-MockitoJUnitRunner-class"><a href="#RunWith-MockitoJUnitRunner-class" class="headerlink" title="@RunWith(MockitoJUnitRunner.class)"></a>@RunWith(MockitoJUnitRunner.class)</h3><p>功能和 MockitoAnnotations.initMocks(this) 语句类似，体现在如下两点：</p>
+<ol>
+<li>都可以为 UT 提供框架使用的自动验证。在写UT时，若在 mock 数据有语法或者书写错误，框架使用的自动验证会在单元测试运行的时候报告出来。</li>
+<li>对 UT 提供 mock 初始化工作：在单元测试中使用 @Mock, @Spy, @InjectMocks 等注解时，需要进行初始化后才能使用。</li>
+</ol>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span>   <span class="comment">// 一般测试类</span></span><br><span class="line"><span class="meta">@BeforeClass</span>   <span class="comment">// 每次测试类执行前执行一次，主要用来初使化公共资源等</span></span><br><span class="line"><span class="meta">@AfterClass</span>   <span class="comment">// 每次测试类执行完成后执行一次，主要用来释放资源或清理工作</span></span><br><span class="line"><span class="meta">@Before</span>   <span class="comment">// 每个测试案例执行前都会执行一次</span></span><br><span class="line"><span class="meta">@After</span>   <span class="comment">// 每个测试案例执行完成后都会执行一次</span></span><br><span class="line"><span class="meta">@Test(expected=xxxException.class)</span>   <span class="comment">// 测试是否报异常（抛出异常测试通过）</span></span><br><span class="line"><span class="meta">@Test(timeout=1000)</span>   <span class="comment">// 测试运行时间（timeout时间内执行完通过）</span></span><br><span class="line"><span class="meta">@Mock</span>   <span class="comment">// 创建一个Mock</span></span><br><span class="line"><span class="meta">@InjectMocks</span>   <span class="comment">// 创建一个实例，其余的由用 @Mock（或@Spy）注解创建的 mock 注入到该实例中。</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><h3 id="setAccessible-true-用法及意义"><a href="#setAccessible-true-用法及意义" class="headerlink" title="setAccessible(true)用法及意义"></a>setAccessible(true)用法及意义</h3><p>Accessible 属性是继承自 AccessibleObject 类. 功能是启用或禁用安全检查；<br>setAccessible() 可作用于两处：</p>
+<ol>
+<li>作用于方法上：method.setAccessible(true);</li>
+<li>作用于属性上：field.setAccessible(true);<br>将此对象的 accessible 标志设置为指示的布尔值。值为 true 则指示反射的对象在使用时应该取消 Java 语言访问检查；值为 false 则指示反射的对象应该实施 Java 语言访问检查。由于JDK的安全检查耗时较多.所以通过 setAccessible(true) 的方式关闭安全检查就可以达到提升反射速度的目的。</li>
+</ol>
+<h3 id="Mock-常用方法"><a href="#Mock-常用方法" class="headerlink" title="Mock 常用方法"></a>Mock 常用方法</h3><p>我们希望能在测试中，规避外部依赖的各种问题，专心测试单元逻辑，因此引入了mock。在测试过程中，mock需要同时承担<strong>伪造输入依赖</strong>和<strong>验证输出依赖</strong>两方面职责。</p>
+<ol>
+<li><code>Mockito.mock(***.class)</code>，构造指定类虚拟的对象。</li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/03/%E9%9D%A2%E8%AF%95/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">面试</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/02/%E5%AE%BF%E8%88%8D%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%A4%8D%E7%9B%98/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">宿舍管理系统复盘</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">勤加注释！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%8F%8A%E6%96%B9%E6%B3%95"><span class="toc-text">数据结构及方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E2%80%94%E2%80%94Array"><span class="toc-text">数组——Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E2%80%94%E2%80%94String"><span class="toc-text">字符串——String</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-1"><span class="toc-text">方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StringBuilder%E4%B8%8EStringBuffer"><span class="toc-text">StringBuilder与StringBuffer</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-2"><span class="toc-text">方法：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88%E2%80%94%E2%80%94Stack"><span class="toc-text">栈——Stack</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-3"><span class="toc-text">方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E5%90%88%E2%80%94%E2%80%94Set"><span class="toc-text">集合——Set</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-4"><span class="toc-text">方法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E2%80%94%E2%80%94Queue"><span class="toc-text">队列——Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-5"><span class="toc-text">方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E5%85%88%E7%BA%A7%E9%98%9F%E5%88%97%E2%80%94%E2%80%94PriorityQueue"><span class="toc-text">优先级队列——PriorityQueue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map"><span class="toc-text">Map</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-6"><span class="toc-text">方法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HashMap"><span class="toc-text">HashMap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#TreeMap"><span class="toc-text">TreeMap</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A-7"><span class="toc-text">方法：</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97"><span class="toc-text">运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-text">位运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%82%E6%88%96%E8%BF%90%E7%AE%97"><span class="toc-text">异或运算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-%E4%BE%9D%E8%B5%96"><span class="toc-text">Java 依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gradle"><span class="toc-text">Gradle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96%E5%9F%BA%E6%9C%AC%E6%96%B9%E5%BC%8F"><span class="toc-text">引入依赖基本方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEGradle%E4%BD%BF%E7%94%A8maven%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="toc-text">配置Gradle使用maven本地仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Maven"><span class="toc-text">Maven</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A7%A3%E6%9E%90"><span class="toc-text">命令解析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaWeb"><span class="toc-text">JavaWeb</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-%E6%B3%A8%E8%A7%A3"><span class="toc-text">Java 注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PostConstruct-%E6%B3%A8%E8%A7%A3"><span class="toc-text">@PostConstruct 注解</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java-%E6%B5%8B%E8%AF%95"><span class="toc-text">Java 测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3"><span class="toc-text">注解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#RunWith-MockitoJUnitRunner-class"><span class="toc-text">@RunWith(MockitoJUnitRunner.class)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-text">代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#setAccessible-true-%E7%94%A8%E6%B3%95%E5%8F%8A%E6%84%8F%E4%B9%89"><span class="toc-text">setAccessible(true)用法及意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mock-%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">Mock 常用方法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><time datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E4%BD%9C%E7%A7%AF%E7%B4%AF/" title="工作积累">工作积累</a><time datetime="2021-10-25T05:16:26.000Z" title="Created 2021-10-25 13:16:26">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><time datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/22/hello-world/" title="Hello World">Hello World</a><time datetime="2021-09-22T15:33:18.000Z" title="Created 2021-09-22 23:33:18">2021-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/" title="选调相关">选调相关</a><time datetime="2021-05-31T14:57:21.000Z" title="Created 2021-05-31 22:57:21">2021-05-31</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
