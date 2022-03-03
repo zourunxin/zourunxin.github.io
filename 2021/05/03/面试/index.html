@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="准备 leetcode的《校招基础知识讲解》leetcode的《计算机网络面试突击》leetcode的《Java面试突击》leetcode的《排序算法全解析》以下内容是基于以上书籍的总结和补充：  计算机网络需要注意的对比 http的九种请求方法 get和post方法的对比（六种） http和https的请求过程 http和https的对比（http的缺点，https的缺点） http1.1的新特">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="面试问一句答一句，不要自顾自答Leetcode一般 字符串个数统计相关：无论字符串是数字 or 字符形式，统计方式可利用一维数组统计各字符出现次数。 数字：int[10]，cnt[c - ‘0’]++； 小写字母：int[26]，cnt[c - ‘97’]（97 - 122）； 大写字母：int[26]，cnt[c - ‘65’]（65 - 90）；    递归 实现方式：深度优先遍历，隐式使用了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试">
 <meta property="og:url" content="http://example.com/2021/05/03/%E9%9D%A2%E8%AF%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="准备 leetcode的《校招基础知识讲解》leetcode的《计算机网络面试突击》leetcode的《Java面试突击》leetcode的《排序算法全解析》以下内容是基于以上书籍的总结和补充：  计算机网络需要注意的对比 http的九种请求方法 get和post方法的对比（六种） http和https的请求过程 http和https的对比（http的缺点，https的缺点） http1.1的新特">
+<meta property="og:description" content="面试问一句答一句，不要自顾自答Leetcode一般 字符串个数统计相关：无论字符串是数字 or 字符形式，统计方式可利用一维数组统计各字符出现次数。 数字：int[10]，cnt[c - ‘0’]++； 小写字母：int[26]，cnt[c - ‘97’]（97 - 122）； 大写字母：int[26]，cnt[c - ‘65’]（65 - 90）；    递归 实现方式：深度优先遍历，隐式使用了">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg">
+<meta property="og:image" content="http://example.com/img/beijing.jpg">
 <meta property="article:published_time" content="2021-05-03T07:37:48.000Z">
-<meta property="article:modified_time" content="2021-09-23T04:23:33.280Z">
+<meta property="article:modified_time" content="2022-03-02T14:58:48.149Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2021/05/03/%E9%9D%A2%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="http://example.com/img/beijing.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2021/05/03/%E9%9D%A2%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: undefined,
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-09-23 12:23:33'
+  postUpdate: '2022-03-02 22:58:48'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -146,157 +146,138 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-09-23T04:23:33.280Z" title="Updated 2021-09-23 12:23:33">2021-09-23</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><blockquote>
-<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook">leetcode的《校招基础知识讲解》</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/networks-interview-highlights/">leetcode的《计算机网络面试突击》</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/java-interview-highlights/">leetcode的《Java面试突击》</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/sort-algorithms/euivj1/">leetcode的《排序算法全解析》</a><br>以下内容是基于以上书籍的总结和补充：</p>
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/beijing.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-02T14:58:48.149Z" title="Updated 2022-03-02 22:58:48">2022-03-02</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="面试问一句答一句，不要自顾自答"><a href="#面试问一句答一句，不要自顾自答" class="headerlink" title="面试问一句答一句，不要自顾自答"></a>面试问一句答一句，不要自顾自答</h1><h1 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h1><h2 id="一般"><a href="#一般" class="headerlink" title="一般"></a>一般</h2><ul>
+<li>字符串个数统计相关：无论字符串是数字 or 字符形式，统计方式可利用一维数组统计各字符出现次数。<ul>
+<li>数字：int[10]，cnt[c - ‘0’]++；</li>
+<li>小写字母：int[26]，cnt[c - ‘97’]（97 - 122）；</li>
+<li>大写字母：int[26]，cnt[c - ‘65’]（65 - 90）；</li>
+</ul>
+</li>
+</ul>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><ul>
+<li>实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序/中序/后序遍历。</li>
+<li>本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/">二叉树的序列化与反序列化</a><br>有两种回溯处理方式：</li>
+<li>递归利用回溯：即当前层的处理结果依赖下面层的处理返回结果，递归方法需有返回值；一般递归语句后有其他处理逻辑。</li>
+<li>递归不利用回溯：即当前层的处理结果不依赖下面层的处理返回结果，仅与该层及前面层有关；一般递归语句后无其他处理逻辑。</li>
+<li>需注意：<ul>
+<li>递归函数的参数建议是中间值；</li>
+<li>不变的变量用作全局变量，不要作为参数使用。</li>
+</ul>
+</li>
+</ul>
+<h2 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h2><ul>
+<li>实现方式：在循环体里进行递归。</li>
+<li>本质：循环的作用是枚举所有情况；递归的作用是若在某种情况下若不符合题解要求，则回溯，若符合题解要求，则立即返回。</li>
+<li>回溯的本质是利用循环 + 递归枚举所有可能的情况。</li>
+<li>记忆化：回溯的当前层的状态与未来层的状态关联，与过去层的状态无关。因此若当前层状态计算得到，则可存储以记忆，此后再来到当前层，则可直接返回。</li>
+</ul>
+<p><strong>回溯与动态规划的不同之处在于，回溯需要更换前面已经确定的值</strong></p>
+<h2 id="广度优先遍历"><a href="#广度优先遍历" class="headerlink" title="广度优先遍历"></a>广度优先遍历</h2><ul>
+<li>实现方式：将每一层次遍历的结点存入队列中，在访问时取出来。循环 + 队列实现。</li>
+<li>本质是遍历结点，多应用于树和图类的数据结构。</li>
+</ul>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><ul>
+<li>实现方式：通过数组记录各个状态的值，当前状态的值与前面某个的一个/两个状态的值相关；</li>
+<li>特点：<ul>
+<li>一个子问题求解得到结果后，以后的计算过程就不会修改它；</li>
+<li>只解决每个子问题一次。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%20-%20%E7%9B%AE%E5%BD%95.html#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5">CS-Notes-网络基础</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/o960w7/">校招基础知识讲解</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/networks-interview-highlights/ekz8lr/">计算机网络面试突击</a></p>
 </blockquote>
-<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="需要注意的对比"><a href="#需要注意的对比" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>http的九种请求方法</li>
-<li>get和post方法的对比（六种）</li>
-<li>http和https的请求过程</li>
-<li>http和https的对比（http的缺点，https的缺点）</li>
-<li>http1.1的新特性，http2.0的新特性</li>
-<li>cookie和session的对比（三点）</li>
-<li>TCP粘包问题及解决方法</li>
-<li>http请求用到的协议</li>
-<li>路由算法</li>
-<li>http五类状态码和9个状态码</li>
-<li>再看一遍HTTP/3</li>
-</ol>
-<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ol>
-<li><p>TCP四次挥手过程中的CLOSED_WAIT和TIME_WAIT：<br>服务器在收到客户端发送的FIN报文并回答了ACK报文后，会进入CLOSED_WAIT状态，以保证服务器在关闭连接之前将待发送的数据发送完成。<br>客户端在收到服务器发送的FIN报文并回答了ACK报文后，会进入TIME_WAIT状态。TIME_WAIT本质是一个2MSL的计时器，MSL（Maximum Segment Lifetime）指一段 TCP 报文在传输过程中的最大生命周期。2MSL是为了确保服务器已经收到了客户端发送的ACK确认报文。<br>TIME_WAIT状态可能导致的问题：在高并发短连接的业务场景中，服务器处理完请求后主动请求关闭连接，这样服务器上会有大量的处在TIME_WAIT状态的连接，服务器维护每个连接都需要一个socket。也就是每个连接会占用一个文件描述符，而文件描述符的使用是有上限的，如果持续高并发，会导致一些正常的 连接失败。<br>解决方案：修改配置或设置 SO_REUSEADDR 套接字，使得服务器处于 TIME-WAIT 状态下的端口能够快速回收和重用。</p>
-</li>
-<li><p>HTTPs<br>HTTPs是以安全为目标的HTTP通道，在http的基础上通过传输加密和身份认证保证了传输过程的安全性。HTTPs在HTTP的基础下加入SSL/TLS协议</p>
-<p><strong>加密算法：</strong></p>
+<h2 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h2><p><strong>基本知识</strong></p>
 <ul>
-<li>对称加密算法</li>
-<li>非对称加密算法</li>
-<li>哈希算法</li>
+<li>路由选择协议；</li>
+<li>TCP 连接三次握手过程，及为什么；</li>
+<li>TCP 断连四次挥手过程，及为什么；</li>
+<li>TCP 粘包问题及解决方法；</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li>ipv4 和 ipv6 的区别<ul>
+<li>地址长度：ipv4 的地址长度为 32 位（4bytes），ipv6 的地址长度为 128 位（16bytes）</li>
+<li>地址表示：ipv4 地址用小数表示，ipv6 地址用十六进制表示</li>
+<li>包头大小：ipv4 包头的基本大小是 20bytes（可扩展 40bytes），ipv6 是 40bytes</li>
+<li>安全性：ipv6 内置了 IPsec，提供身份验证和加密。但在 ipv4 中是可选的，如果在适当的 IPv4 选项格式中实现 AH 和 ESP 头，IPv4 也可以使用这种安全性功能</li>
 </ul>
 </li>
-<li><p>四层负载均衡和七层负载均衡<br>四层负载均衡：是通过报文中的目标地址和端口，再加上负载均衡设备设置的服务器选择方式，决定最终选择的内部服务器与请求客户端建立TCP连接，然后发送Client请求的数据。<br>七层负载均衡：也称内容交换，也就是主要通过报文中的真正有意义的应用层内容，再加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。七层负载均衡服务器起了一个代理服务器的作用<br><strong>区别：</strong></p>
-<ul>
-<li>四层负载服务器不需要和客户端建立TCP连接，但七层负载服务器需要，并起到了代理服务器的作用。</li>
-<li>七层负载服务器可以有效防止SYN Flood攻击，使网站更安全</li>
-<li>七层负载服务器使整个网络更“智能化”，能把对图片类的请求转发到图片服务器并可以使用缓存技术，对文字的请求转发到文字服务器并可以使用压缩技术</li>
+<li>TCP 基本概念<ul>
+<li>通过超时重传保证数据可靠传输。</li>
+<li>发送窗口大小 = 由接收方返回的窗口大小和发送方自己维护的拥塞窗口大小共同确定。</li>
+<li>流量控制：接收方控制发送方发送数据的频率的方法，可通过在确认报文段中的窗口大小来控制。</li>
+<li>拥塞控制：发送方在遇到网络拥塞时的应对算法。<ul>
+<li>慢开始：cwnd = 1，每次确认 cwnd 翻倍。</li>
+<li>拥塞避免：当 cwnd &gt;= ssthresh 时进入，每次确认 cwnd 加 1。</li>
+</ul>
+  <strong>此时若出现超时，则 ssthresh = cwnd/2，并重新执行慢开始</strong><ul>
+<li>快重传：发送方收到对某个字节连续三次的确认。</li>
+<li>快恢复：ssthresh = cwnd/2，cwnd = ssthresh。</li>
+</ul>
+  <strong>若发送方发现了快重传现象，则执行快恢复</strong></li>
 </ul>
 </li>
-<li><p>DNS解析过程</p>
+<li>TCP 半连接队列和全连接队列<ul>
+<li>半连接队列：也称 SYN 队列，客户端发来 SYN 连接请求时，服务端会把该连接存储到半连接队列</li>
+<li>全连接队列：也称 accept 队列，第三次握手时服务端接收到客户端发来的 ACK 后，内核会将半连接移除，然后创建全新的连接，将其添加到 accept 队列。    </li>
+</ul>
+  <strong>TCP/IP协议中，listen()、connect()和accept()函数和三次握手间的关系</strong><ul>
+<li>服务器调用 listen 监听特定端口号</li>
+<li>客户端调用 connect 来请求与服务端通过三次握手建立 TCP 连接</li>
+<li>服务器的 listen() 函数负责三次握手的交互过程。连接建立后，往 accept 队列中添加一个成功的连接。</li>
+<li>服务器调用 accept() 从 accept 队列中取出一条成功的 tcp 连接</li>
+</ul>
+</li>
+<li>TCP 四次挥手过程中的 CLOSED_WAIT 和 TIME_WAIT：<br> 服务器在收到客户端发送的 FIN 报文并回答了 ACK 报文后，会进入 CLOSED_WAIT 状态，以保证服务器在关闭连接之前将待发送的数据发送完成。<br> 客户端在收到服务器发送的 FIN 报文并回答了 ACK 报文后，会进入 TIME_WAIT 状态。TIME_WAIT 本质是一个 2MSL 的计时器，MSL（Maximum Segment Lifetime）指一段 TCP 报文在传输过程中的最大生命周期。2MSL 是为了确保服务器已经收到了客户端发送的 ACK 确认报文。<br> TIME_WAIT 状态可能导致的问题：在高并发短连接的业务场景中，服务器处理完请求后主动请求关闭连接，这样服务器上会有大量的处在 TIME_WAIT 状态的连接，服务器维护每个连接都需要一个 socket。也就是每个连接会占用一个文件描述符，而文件描述符的使用是有上限的，如果持续高并发，会导致一些正常的 连接失败。<br> 解决方案：修改配置或设置 SO_REUSEADDR 套接字，使得服务器处于 TIME-WAIT 状态下的端口能够快速回收和重用。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80_1.png" class=""></li>
+<li>TCP 攻击<ul>
+<li>Flood 攻击：如发送海量的 SYN 报文，请求连接而又不建立连接<strong>（三次握手建立 TCP 连接的缺点）</strong>；</li>
+<li>连接耗尽攻击：TCP 三次握手建立连接后不再发送报文但一直维持连接，消耗 TCP 连接资源</li>
+</ul>
+  <strong>如何防范 SYN 泛洪攻击</strong><ul>
+<li>降低 SYN timeout，使主机尽快释放半连接及其占用的资源；</li>
+<li>设置 SYN cookie，如果短时间内收到了某个 IP 的重复 SYN 请求，我们就可以认为受到了攻击</li>
+</ul>
+</li>
+<li>UDP 如何保证可靠性<ul>
+<li>有序性：添加序列号</li>
+<li>丢包：确认和超时重传</li>
+<li>协议字段：标识当前使用的协议</li>
+</ul>
+</li>
+<li>TCP 和 UDP 的区别<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/3.png" class="">
 <ul>
+<li>TCP 保证可靠交付（序列号和确认、超时重传、流量控制、拥塞控制），UDP 尽最大努力交付，可靠性由应用层保证</li>
+<li>TCP 仅支持一对一通信，UDP 支持一对一、一对多、多对一和多对多通信</li>
+</ul>
+</li>
+<li>DNS 过程（由域名找 ip）<ul>
 <li>在浏览器中输入域名后，浏览器首先检查缓存中是否有该域名解析过的ip地址，若有，解析结束</li>
 <li>若没有，浏览器会到操作系统缓存中（即hosts文件）查看是否有该域名对应的ip地址，若命中，解析结束；</li>
 <li>若没有找到，就会请求本地域名服务器来解析，一般情况下解析到这步就完成了</li>
 <li>若还没有，本地域名服务器则会迭代查询（一般情况下）根域名服务器，顶级域名服务器和权限域名服务器，找到目标ip，缓存和返回给用户，解析结束</li>
 </ul>
 </li>
-<li><p>客户端和服务器是如何建立连接的<br>通过socket。socket作为一种通信机制，可用于对ip地址和端口号进行描述。一般过程大概如下：服务端至少两个socket，其中一个用于接受客户端发来的连接请求，并不负责与客户端通信。每当服务器成功接受客户端的请求时，在服务器端会创建一个与客户端进行通信的socket。在客户端，通过创建一个socket对象对TCP连接初始化</p>
-</li>
-<li><p>TCP和UDP的区别</p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/3.png" class="">
-<ul>
-<li>TCP保证可靠交付（序列号和确认、超时重传、流量控制、拥塞控制），UDP尽最大努力交付，可靠性由应用层保证</li>
-<li>TCP仅支持一对一通信，UDP支持一对一、一对多、多对一和多对多通信</li>
+<li>DNS 污染、DNS 劫持<ul>
+<li>DNS 污染：指的是用户访问一个地址，国内的服务器(非 DNS)监控到用户访问的已经被标记地址时，服务器伪装成 DNS 服务器向用户发回错误的地址的行为。范例，访问 Youtube、Facebook 之类网站等出现的状况。</li>
+<li>DNS 劫持：就是指用户访问一个被标记的地址时，DNS 服务器故意将此地址指向一个错误的 IP 地址的行为。</li>
 </ul>
 </li>
-<li><p>HTTP/2.0的多路复用</p>
-<ul>
-<li>HTTP/1.1：虽然实现了长连接和流水线，服务端能接收多个请求，但在响应过程中，服务端是顺序（串行）发送响应报文的，若某一报文阻塞，则后续已经准备好的报文同样会被阻塞无法发送，导致响应效率降低</li>
-<li>HTTP/2.0：实现了多路复用，二进制帧头对所在流进行了标识，在客户端收到后可根据标识进行拼接。因此在服务端可实现并行发送响应</li>
+<li>数字证书的内容<ul>
+<li>证书的版本信息；</li>
+<li>证书的序列号，每个证书都有一个唯一的证书序列号；</li>
+<li>证书所使用的签名算法；</li>
+<li>证书的发行机构名称，命名规则一般采用X.500格式；</li>
+<li>证书的有效期，通用的证书一般采用UTC时间格式；</li>
+<li>证书所有人的名称，命名规则一般采用X.500格式；</li>
+<li>证书所有人的公开密钥；</li>
+<li>证书发行者对证书的签名。</li>
 </ul>
 </li>
-<li><p>数字证书的内容</p>
-<ul>
-<li><p>证书的版本信息；</p>
-</li>
-<li><p>证书的序列号，每个证书都有一个唯一的证书序列号；</p>
-</li>
-<li><p>证书所使用的签名算法；</p>
-</li>
-<li><p>证书的发行机构名称，命名规则一般采用X.500格式；</p>
-</li>
-<li><p>证书的有效期，通用的证书一般采用UTC时间格式；</p>
-</li>
-<li><p>证书所有人的名称，命名规则一般采用X.500格式；</p>
-</li>
-<li><p>证书所有人的公开密钥；</p>
-</li>
-<li><p>证书发行者对证书的签名。</p>
-</li>
-</ul>
-</li>
-<li><p>HTTP/3</p>
-<ul>
-<li>HTTP/3 是在 QUIC 基础上发展起来的，其底层使用 UDP 进行数据传输，上层仍然使用 HTTP/2。在 UDP 与 HTTP/2 之间存在一个 QUIC 层，其中 TLS 加密过程在该层进行处理。</li>
-</ul>
-</li>
-<li><p>客户端最多与服务器同时建立多少个TCP连接<br><strong>背景：</strong>网络通信过程中服务端监听一个固定的端口,客户端主动发起连接请求后要经过三次握手才能与服务器建立起一个tcp连接    </p>
-<ul>
-<li>客户端每次发起一个tcp连接时,系统会随机选取一个空闲的端口,该端口是独占的不能与其他tcp连接共享,因此理论上一台机器有多少空闲的端口,就能对外发起多少个tcp连接</li>
-<li>根据tcp/ip协议,端口port使用16位无符号整数unsigned short来存储,因此本地端口一共有2^16=65536个,即0-65535,其中0~1023是预留端口,0有特殊含义不能使用,1024以下端口都是超级管理员用户(如root)才可以使用,因此就算使用root权限,一台机器最多能使用的端口也只有65535个</li>
-<li>但实际上linux限制了可使用端口号区间为[32768, 60999]，即实际对外可建立的连接默认最大只有28232个</li>
-</ul>
-<p><strong>服务端最多可建立连接数</strong></p>
-<ul>
-<li>因为受服务器资源、操作系统的限制,linux内核默认文件描述符最大值是1024,也就是说默认支持最大并发连接是1024个</li>
-</ul>
-</li>
-<li><p>TCP攻击</p>
-<ul>
-<li>Flood攻击：如发送海量的SYN报文，请求连接而又不建立连接</li>
-<li>连接耗尽攻击：TCP三次握手建立连接后不再发送报文一直维持连接，消耗TCP连接资源</li>
-</ul>
-<p><strong>如何防范SYN泛洪攻击</strong></p>
-<ul>
-<li>降低SYN timeout，使主机尽快释放半连接及其占用的资源；</li>
-<li>设置SYN cookie，如果短时间内收到了某个IP的重复SYN请求，我们就可以认为受到了攻击</li>
-</ul>
-</li>
-<li><p>TCP半连接队列和全连接队列</p>
-<ul>
-<li>半连接队列：也称SYN队列，客户端发来SYN连接请求时，服务端会把该连接存储到半连接队列</li>
-<li>全连接队列：也称accept队列，第三次握手时服务端接收到客户端发来的ACK后，内核会将半连接移除，然后创建全新的连接，将其添加到accept队列。</li>
-</ul>
-<p><strong>TCP/IP协议中，listen()、connect()和accept()函数和三次握手间的关系</strong></p>
-<ul>
-<li>服务器调用listen监听特定端口号</li>
-<li>客户端调用connect来请求与服务端通过三次握手建立TCP连接</li>
-<li>服务器的listen()函数负责三次握手的交互过程。连接建立后，往accept队列中添加一个成功的连接。</li>
-<li>服务器调用accept()从accept队列中取出一条成功的tcp连接</li>
-</ul>
-</li>
-<li><p>UDP如何保证可靠性</p>
-<ul>
-<li>有序性：添加序列号</li>
-<li>丢包：确认和超时重传</li>
-<li>协议字段：标识当前使用的协议</li>
-</ul>
-</li>
-<li><p>Unicode 和 UTF-8 有何区别</p>
-<ul>
-<li>Unicode 是「字符集」，UTF-8 是「编码规则」</li>
-<li>广义的 Unicode 是一个标准，定义了一个字符集以及一系列的编码规则，即 Unicode 字符集和 UTF-8、UTF-16、UTF-32 等等编码……</li>
-</ul>
-<p><strong>其中</strong></p>
-<ol>
-<li>字符集：为每一个「字符」分配一个唯一的 ID（学名为码位/码点/Code Point）</li>
-<li>编码规则：将「码位」转换为字节序列的规则（编码/解码 可以理解为 加密/解密 的过程）</li>
-</ol>
-</li>
-<li><p>OSI七层网络模型和各层协议</p>
-<ul>
-<li>应用层：通过应用程序间的交互来完成特定的网络应用。有DNS协议、HTTP协议、DHCP协议、FTP协议、SMTP、POP3、IMAP协议</li>
-<li>表示层：使通信的应用程序能够解释交换数据的含义。（编码和解码）</li>
-<li>会话层：负责建立、管理和终止表示层实体之间的通信会话。</li>
-<li>传输层：为两台主机进程之间的通信提供服务。有TCP、UDP协议</li>
-<li>网络层：选择合适的网间路由和交换节点，确保数据按时成功传送。有IP协议、ICMP协议</li>
-<li>数据链路层：将网络层交下来的 IP 数据报组装成帧，在两个相邻节点间的链路上传送帧。有CSMA/CD协议、ARP协议（ARP缓存表存在内存里）、PPP协议</li>
-<li>物理层：实现计算机节点之间比特流的透明传送</li>
-</ul>
-<p><strong>OSI七层网络模型和TCP/IP网络模型</strong></p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/7.jpg" class=""></li>
-<li><p>TLS 握手详细过程</p>
-<ul>
-<li>“client hello”消息：客户端通过发送”client hello”消息向服务器发起握手请求，该消息包含了客户端所支持的 TLS 版本和密码组合以供服务器进行选择，还有一个”client random”随机字符串。</li>
-<li>“server hello”消息：服务器发送”server hello”消息对客户端进行回应，该消息包含了数字证书，服务器选择的密码组合和”server random”随机字符串。</li>
+<li>TLS 握手详细过程<ul>
+<li>“client hello” 消息：客户端通过发送 “client hello” 消息向服务器发起握手请求，该消息包含了客户端所支持的 TLS 版本和密码组合以供服务器进行选择，还有一个 “client random” 随机字符串。</li>
+<li>“server hello” 消息：服务器发送 “server hello” 消息对客户端进行回应，该消息包含了数字证书，服务器选择的密码组合和 “server random” 随机字符串。</li>
 <li>验证：客户端对服务器发来的证书进行验证，确保对方的合法身份。</li>
 <li>“premaster secret”字符串：客户端向服务器发送另一个随机字符串”premaster secret (预主密钥)”，这个字符串是经过服务器的公钥加密过的，只有对应的私钥才能解密。</li>
 <li>使用私钥：服务器使用私钥解密”premaster secret”。</li>
@@ -306,195 +287,903 @@
 <li>达成安全通信：握手完成，双方使用对称加密进行安全通信。</li>
 </ul>
 </li>
-<li><p>ipv4和ipv6的区别</p>
-<ul>
-<li>地址长度：ipv4的地址长度为32位（4bytes），ipv6的地址长度为128位（16bytes）</li>
-<li>地址表示：ipv4地址用小数表示，ipv6地址用十六进制表示</li>
-<li>包头大小：ipv4包头的基本大小是20bytes（可扩展40bytes），ipv6是40bytes</li>
-<li>安全性：ipv6内置了IPsec，提供身份验证和加密。但在ipv4中是可选的，如果在适当的IPv4选项格式中实现AH和ESP头，IPv4也可以使用这种安全性功能</li>
+<li>OSI七层网络模型和各层协议<ul>
+<li>应用层：通过应用程序间的交互来完成特定的网络应用。有 DNS 协议、HTTP 协议、DHCP 协议、FTP 协议、SMTP、POP3、IMAP 协议</li>
+<li>表示层：使通信的应用程序能够解释交换数据的含义。（编码和解码）</li>
+<li>会话层：负责建立、管理和终止表示层实体之间的通信会话。</li>
+<li>传输层：为两台主机进程之间的通信提供服务。有 TCP、UDP 协议</li>
+<li>网络层：选择合适的网间路由和交换节点，确保数据按时成功传送。有 IP 协议、ICMP 协议</li>
+<li>数据链路层：将网络层交下来的 IP 数据报组装成帧，在两个相邻节点间的链路上传送帧。有 CSMA/CD 协议、ARP 协议（ARP 缓存表存在内存里）、PPP 协议</li>
+<li>物理层：实现计算机节点之间比特流的透明传送    </li>
+</ul>
+  <strong>OSI 七层网络模型和 TCP/IP 网络模型</strong><img src="/2021/05/03/%E9%9D%A2%E8%AF%95/7.jpg" class=""></li>
+<li>四层负载均衡和七层负载均衡<br> 四层负载均衡：是通过报文中的目标地址和端口，再加上负载均衡设备设置的服务器选择方式，决定最终选择的内部服务器与请求客户端建立TCP连接，然后发送Client请求的数据。<br> 七层负载均衡：也称内容交换，也就是主要通过报文中的真正有意义的应用层内容，再加上负载均衡设备设置的服务器选择方式，决定最终选择的服务器。七层负载均衡服务器起了一个代理服务器的作用<br> <strong>区别：</strong><ul>
+<li>四层负载服务器不需要和客户端建立TCP连接，但七层负载服务器需要，并起到了代理服务器的作用。</li>
+<li>七层负载服务器可以有效防止SYN Flood攻击，使网站更安全</li>
+<li>七层负载服务器使整个网络更“智能化”，能把对图片类的请求转发到图片服务器并可以使用缓存技术，对文字的请求转发到文字服务器并可以使用压缩技术</li>
 </ul>
 </li>
-<li><p>DNS污染、DNS劫持</p>
-<ul>
-<li>DNS污染：指的是用户访问一个地址，国内的服务器(非DNS)监控到用户访问的已经被标记地址时，服务器伪装成DNS服务器向用户发回错误的地址的行为。范例，访问Youtube、Facebook之类网站等出现的状况。</li>
-<li>DNS劫持：就是指用户访问一个被标记的地址时，DNS服务器故意将此地址指向一个错误的IP地址的行为。</li>
+<li>客户端和服务器是如何建立连接的<br> 通过 socket。socket 作为一种通信机制，可用于对 ip 地址和端口号进行描述。一般过程大概如下：服务端至少两个 socket，其中一个用于接受客户端发来的连接请求，并不负责与客户端通信。每当服务器成功接受客户端的请求时，在服务器端会创建一个与客户端进行通信的 socket。在客户端，通过创建一个 socket 对象对 TCP 连接初始化</li>
+<li>客户端最多与服务器同时建立多少个 TCP 连接<br>  <strong>背景：</strong>网络通信过程中服务端监听一个固定的端口,客户端主动发起连接请求后要经过三次握手才能与服务器建立起一个 tcp 连接    <ul>
+<li>客户端每次发起一个 tcp 连接时,系统会随机选取一个空闲的端口,该端口是独占的不能与其他 tcp 连接共享,因此理论上一台机器有多少空闲的端口,就能对外发起多少个 tcp 连接</li>
+<li>根据 tcp/ip 协议,端口 port 使用16位无符号整数 unsigned short 来存储,因此本地端口一共有 2^16=65536 个,即 0-65535,其中 0~1023 是预留端口,0有特殊含义不能使用,1024以下端口都是超级管理员用户(如 root)才可以使用，因此就算使用 root 权限，一台机器最多能使用的端口也只有 65535 个。</li>
+<li>但实际上 linux 限制了可使用端口号区间为 [32768, 60999]，即实际对外可建立的连接默认最大只有 28232 个</li>
+</ul>
+  <strong>服务端最多可建立连接数</strong><ul>
+<li>因为受服务器资源、操作系统的限制，linux 内核默认文件描述符最大值是 1024，也就是说默认支持最大并发连接是 1024 个。</li>
 </ul>
 </li>
+<li>Unicode 和 UTF-8 有何区别<ul>
+<li>Unicode 是「字符集」，UTF-8 是「编码规则」；</li>
+<li>广义的 Unicode 是一个标准，定义了一个字符集以及一系列的编码规则，即 Unicode 字符集和 UTF-8、UTF-16、UTF-32 等编码规则。    </li>
+</ul>
+  <strong>其中</strong><ol>
+<li>字符集：为每一个「字符」分配一个唯一的 ID（学名为码位/码点/Code Point）</li>
+<li>编码规则：将「码位」转换为字节序列的规则（编码/解码 可以理解为 加密/解密 的过程）</li>
 </ol>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><h3 id="需要注意的对比："><a href="#需要注意的对比：" class="headerlink" title="需要注意的对比："></a>需要注意的对比：</h3><ol>
-<li>进程间的六种通信方式和线程间的三种通信方式</li>
+</li>
+</ul>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/HTTP/HTTP.html#%E4%B8%80-%E3%80%81%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5">CS-Notes-HTTP</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/networks-interview-highlights/">计算机网络面试突击</a></p>
+</blockquote>
+<p><strong>基本知识</strong></p>
+<ul>
+<li>http 的九种请求方法</li>
+<li>http 五类状态码和 9 个状态码</li>
+<li>cookie 和 session 的对比（三点）</li>
+<li>https 的优点（http 的缺点）、缺点；</li>
+<li>http1.1 的新特性，http2.0 的新特性</li>
+<li>get 和 post 方法的对比（六种）</li>
+<li>HTTP/3</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li><p>HTTP 报文组成：</p>
+<ul>
+<li>请求报文：请求行、请求头、空行、请求体；</li>
+<li>响应报文：响应行、响应头、空行、响应体。</li>
+</ul>
+</li>
+<li><p>HTTP 请求完整过程</p>
+<ul>
+<li>根据域名和 DNS 解析到服务器的IP地址 (DNS + CDN)</li>
+<li>通过 ARP 协议获得 IP 地址对应的物理机器的 MAC 地址</li>
+<li>浏览器对服务器发起 TCP 3 次握手</li>
+<li>建立 TCP 连接后发起 HTTP 请求报文</li>
+<li>服务器响应 HTTP 请求，将响应报文返回给浏览器</li>
+<li>短连接情况下，请求结束则通过 TCP 四次挥手关闭连接。长连接在没有访问服务器的若干时间后，进行连接的关闭；</li>
+<li>浏览器得到响应信息中的 HTML 代码， 并请求 HTML 代码中的资源（如 js、css、图片等）</li>
+<li>浏览器对页面进行渲染并呈现给用户</li>
+</ul>
+<p>  <strong>HTTPS 请求过程在 TCP 和 HTTP 之间增加了 SSL 协议</strong></p>
+</li>
+<li><p>HTTPs<br> HTTPs 是以安全为目标的 HTTP 通道，在 http 的基础上通过传输加密和身份认证保证了传输过程的安全性。HTTPs 在 HTTP 的基础下加入 SSL/TLS 协议。<br> <strong>加密算法：</strong></p>
+<ul>
+<li>对称加密算法</li>
+<li>非对称加密算法</li>
+<li>哈希算法</li>
+</ul>
+</li>
+<li><p>HTTP/1.1</p>
+<ul>
+<li>长连接：指 TCP 的长连接。HTTP 在一次数据传输结束后不会立马断开 TCP 连接，而是保留一段时间，期间若有新的 HTTP 请求，则复用该 TCP 连接。服务端可通过请求头来设置长连接保持的时间，若在大于设置时间里没有 HTTP 请求，则服务端发送 FIN 报文主动断开 TCP 连接。</li>
+<li>流水线：指客户端在同一条长连接上连续发出请求，而不用等待响应返回的技术，以减少延迟。但目前浏览器基本没有默认启用。</li>
+</ul>
+</li>
+<li><p>HTTP/2.0</p>
+<ul>
+<li>HTTP/1.x 的缺陷<ul>
+<li>客户端需要使用多个连接才能实现并发和缩短延迟；</li>
+<li>不会压缩请求和响应首部，从而导致不必要的网络流量；</li>
+<li>不支持有效的资源优先级，致使底层 TCP 连接的利用率低下。</li>
+</ul>
+</li>
+<li>二进制分帧层：通过帧和流，帧标识该帧属于哪个流，来避免 HTTP/1.x 的线头阻塞问题。<ul>
+<li>线头阻塞问题：HTTP 响应的顺序必须为 HTTP 请求的顺序，若 HTTP 某响应报文阻塞，而后续响应报文完成却不能发送，即为线头阻塞问题。</li>
+</ul>
+</li>
+<li>服务端推送：HTTP/2.0 在客户端请求一个资源时，会把相关的资源一起发送给客户端，客户端就不需要再次发起请求。</li>
+<li>首部压缩：通信双方各自缓存一份头部字段表。在 HTTP 报文头中，每次仅发送改变了的头部字段。</li>
+</ul>
+</li>
+<li><p>HTTP/3</p>
+<ul>
+<li>HTTP/3 是在 QUIC 基础上发展起来的，其底层使用 UDP 进行数据传输，上层仍然使用 HTTP/2。在 UDP 与 HTTP/2 之间存在一个 QUIC 层，其中 TLS 加密过程在该层进行处理。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%20-%20%E7%9B%AE%E5%BD%95.html#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99">CS-Notes</a><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/o9kvv5/">校招基础知识详解</a></p>
+</blockquote>
+<h2 id="一般系统"><a href="#一般系统" class="headerlink" title="一般系统"></a>一般系统</h2><p><strong>基本知识</strong></p>
+<ul>
 <li>进程的六种调度算法</li>
+<li>进程同步</li>
+<li>进程间的六种通信方式和线程间的三种通信方式</li>
+<li>死锁的四个必要条件及解决的策略</li>
 <li>虚拟内存的六种页面置换算法</li>
 <li>磁盘的三种磁盘调度算法</li>
-<li>死锁的四个必要条件及解决的策略</li>
-<li>再看一遍进程同步</li>
-</ol>
-<h3 id="补充-1"><a href="#补充-1" class="headerlink" title="补充"></a>补充</h3><ol>
-<li><p>进程和线程</p>
+</ul>
+<p><strong>详细</strong></p>
 <ul>
+<li>进程和线程<ul>
 <li>进程是操作系统分配资源的基本单位,线程是CPU调度的基本单位</li>
 <li>系统开销上：创建、切换和销毁进程都比创建、切换和销毁线程的开销要大</li>
 <li>通信上：线程可通过共享进程内存空间实现通信，进程需借助IPC通信</li>
 <li>一个进程由一个或多个线程组成（至少有一个线程），线程是一个进程中代码的不同执行路线</li>
-<li>进程之间相互独立，但同一进程下的各个线程之间共享程序的内存空间(包括代码段，数据集，堆等)及一些进程级的资源(如打开文件和信号等)，某进程内的线程在其他进程不可见；</li>
+<li>进程之间相互独立，但同一进程下的各个线程之间共享程序的内存空间(包括代码段，数据集，堆等)及一些进程级的资源(如打开文件和信号等)，某进程内的线程在其他进程不可见；   </li>
 </ul>
-<p><strong>为什么使用多线程而不是多进程</strong></p>
-<ul>
+ <strong>为什么使用多线程而不是多进程</strong><ul>
 <li>创建和销毁上：线程分配的资源少，效率更高</li>
 <li>上下文切换上：线程切换较进程切换开销少</li>
 </ul>
-</li>
-<li><p>虚拟内存<br>虚拟内存的目的是为了让物理内存扩充成更大的逻辑内存，从而使程序拥有更大的可用内存。<br>操作系统将内存抽象成地址空间，每个程序用有自己的地址空间。这些地址空间被切割成一个个块，每一块称为一页，同时物理内存也被分割成相同大小的块，物理内存的块称为页框。页和页框存在映射关系，但无需将页映射到连续的物理内存，也无需全部映射到物理内存。在程序运行过程中，若所需的页不在内存中，同时内存中没有足够的空间存放新页，操作系统则会调用页面置换算法，将选择的页置换到磁盘，同时调入所需的页进入内存。</p>
-</li>
-<li><p>六种页面置换算法：</p>
-<ul>
-<li>最佳（OPT）</li>
-<li>先进先出（FIFO）</li>
-<li>第二次机会算法</li>
-<li>最近最久未使用（LRU）</li>
-<li>最近未使用（NRU)</li>
-<li>时钟和改进时钟算法（CLOCK）</li>
+ <strong>为什么需要多进程</strong><ul>
+<li>进程是程序的一次执行过程，不同程序需要不同进程；</li>
+<li>需要独立内存空间的情况下，需要新建进程。</li>
 </ul>
 </li>
-<li><p>协程：<br>又称微线程，有点像子程序，但在子程序执行过程中，可以产生中断，转而执行其它程序，待其他程序执行完毕后，转回来执行原来的程序。这一过程不是函数调用，也没有发生线程切换，因此效率极高。</p>
-</li>
-<li><p>逻辑地址到物理地址的转化<br>MMU从虚拟地址中根据页大小计算出页号，与页表寄存器的页表始址结合计算出页面中该页号的物理地址。若计算结果大于页表长度，则产生越界中断；否则取出该地址的页框号，与页面偏移量结合起来即为物理地址。</p>
-</li>
-<li><p>用户态和内核态<br>用户态：运行应用程序<br>内核态：运行操作系统程序，操作硬件</p>
-<p><strong>区别：</strong></p>
-<ul>
-<li>处于用户态执行时，进程所能访问的内存空间和对象受到限制，其占有的处理器是可被抢占的</li>
-<li>处于内核态执行时，则能访问所有的内存空间和对象，且所占有的处理器是不允许被抢占的。</li>
-</ul>
-<p><strong>通常来说，以下三种情况会导致用户态到内核态的切换：</strong></p>
-<ul>
-<li>系统调用</li>
-<li>异常</li>
-<li>外围设备中断</li>
+<li>fork函数<ul>
+<li>fork() 函数通过系统调用创建一个与原来进程几乎完全相同的进程，这两个进程可以做相同的事，但如果初始参数或传入的变量不同，两个进程也可以做不同的事</li>
+<li>fork() 被调用后，返回给父进程子进程的进程id；返回给子进程0；如果出现错误，返回一个负值</li>
 </ul>
 </li>
-<li><p>线程间通信方式：</p>
-<ul>
-<li>消息队列</li>
-<li>全局变量</li>
-<li>使用事件CEvent类实现</li>
+<li>IPC区别<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/2.png" class=""></li>
+<li>单核 cpu 多任务下，单线程执行快还是多线程执行快<ul>
+<li>如果是 cpu 密集型作业：单线程执行快，因为多线程切换会浪费 cpu 时间</li>
+<li>如果是 I/O 密集型作业：多线程执行快，因为能充分利用线程阻塞期间 cpu 的时间</li>
 </ul>
 </li>
-<li><p>进程切换和线程切换的区别<br>进程切换分两步：</p>
-<ul>
-<li>切换页目录以使用新的地址空间</li>
-<li>切换内核栈和硬件上下文。<br>对于linux来说，线程和进程的最大区别就在于地址空间。<br>对于线程切换，第1步是不需要做的，第2是进程和线程切换都要做的。所以明显是进程切换代价大</li>
+<li>进程切换和线程切换的区别<br>  对于linux来说，线程和进程的最大区别就在于地址空间。<ul>
+<li>进程切换分两步：<ul>
+<li>切换页目录以使用新的地址空间；</li>
+<li>切换内核栈和硬件上下文。</li>
 </ul>
 </li>
-<li><p>虚拟内存的页和段的区别</p>
-<ul>
-<li>页的大小固定，段的大小可动态扩展</li>
-<li>分页存在内存碎片，分段没有</li>
-<li>分页地址是一维的，分段地址是二维的</li>
-<li>分页透明，分段需要程序员显示的划分每个段</li>
-</ul>
-<p><strong>操作系统分页的好处：</strong></p>
-<ul>
-<li>是操作系统实现虚拟内存的基础</li>
-<li>允许进程申请的内存空间不连续</li>
-<li>减少内存碎片</li>
-</ul>
-<p><strong>分页为什么是一维的：</strong></p>
-<ul>
-<li>操作时给出地址，即可根据该地址计算出页号和页内偏移量（这得益于页大小是固定的），而不需要显示划分</li>
+<li>对于线程切换：仅需切换内核栈和硬件上下文，无需切换页目录。</li>
 </ul>
 </li>
-<li><p>如何避免内核态和用户态的频繁切换</p>
-<ul>
-<li>减少线程切换。如使用无锁并发编程（CAS算法）、避免创建不必要的线程、使用线程</li>
-<li>若是因为I/O导致的切换，则使用用户进程缓冲区，并结合使用预读和延迟写方法</li>
+<li>进程通信的管道类型：<br>  <strong>管道本质是 FIFO 文件</strong><ul>
+<li>匿名管道：<ul>
+<li>管道是半双工的，数据在同一时刻只能单向通信；</li>
+<li>需要双方同时通信时，需要建立起两个管道；</li>
+<li>只能用于父子进程或者兄弟进程之间（具有亲缘关系的进程）。</li>
 </ul>
 </li>
-<li><p>线程共享进程哪些资源，独有哪些资源</p>
-<ul>
-<li>共享：堆、全局变量、静态变量、文件等公共资源</li>
-<li>不共享：栈、寄存器（进程的副本）</li>
+<li>命名管道：可在同一台计算机的不同进程之间或在跨越一个网络的不同计算机的不同进程之间，也仅支持半双工通信。    </li>
 </ul>
-</li>
-<li><p>fork函数</p>
-<ul>
-<li>fork（）函数通过系统调用创建一个与原来进程几乎完全相同的进程，这两个进程可以做相同的事，但如果初始参数或传入的变量不同，两个进程也可以做不同的事</li>
-<li>fork被调用后，返回给父进程子进程的进程id；返回给子进程0；如果出现错误，返回一个负值</li>
-</ul>
-</li>
-<li><p>进程通信的管道类型：<br><strong>管道本质是FIFO文件</strong></p>
-<ul>
-<li>匿名管道：管道是半双工的，数据只能单向通信；需要双方通信时，需要建立起两个管道；只能用于父子进程或者兄弟进程之间（具有亲缘关系的进程）。</li>
-<li>命名管道：可在同一台计算机的不同进程之间或在跨越一个网络的不同计算机的不同进程之间，也仅支持半双工通信。</li>
-</ul>
-<p><strong>管道通信的缺点</strong></p>
-<ul>
+  <strong>管道通信的缺点</strong><ul>
 <li>仅支持半双工通信，要想全双工需要额外开一个管道</li>
 <li>管道存在内存中，缓冲区有限</li>
 <li>若管道已满，写进程会被阻塞；若管道已空，读进程会被阻塞</li>
 </ul>
 </li>
-<li><p>IPC区别</p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/2.png" class=""></li>
-<li><p>单核cpu多任务下，单线程执行快还是多线程执行快</p>
-<ul>
-<li>如果是cpu密集型作业：单线程执行快，因为多线程切换会浪费cpu时间</li>
-<li>如果是I/O密集型作业：多线程执行快，因为能充分利用线程阻塞期间cpu的时间</li>
+<li>线程间通信方式：<ul>
+<li>消息队列</li>
+<li>全局变量</li>
+<li>使用事件 CEvent 类实现</li>
 </ul>
 </li>
-<li><p>线程挂掉后进程一定会挂吗？</p>
-<ul>
-<li>总体来说，线程没有独立的地址空间，如果崩溃，会产生SIGSEGV (Segmentation Violation/Fault)信号，如果没有错误处理的handler，OS一般直接杀死进程。</li>
-<li>但就算是有handler了处理，一般也会导致程序崩溃，因为很有可能其他线程或者进程的数据被破坏了。</li>
+<li>线程共享进程哪些资源，独有哪些资源<ul>
+<li>共享：堆、全局变量、静态变量、文件等公共资源</li>
+<li>独享：栈、寄存器（进程的副本）</li>
 </ul>
+</li>
+<li>线程挂掉后进程一定会挂吗？<ul>
+<li>总体来说，线程没有独立的地址空间，如果崩溃，会产生 SIGSEGV (Segmentation Violation/Fault)信号，如果没有错误处理的 handler，OS 一般直接杀死进程。</li>
+<li>但就算是有 handler 了处理，一般也会导致程序崩溃，因为很有可能其他线程或者进程的数据被破坏了。</li>
+</ul>
+</li>
+<li>协程：又称微线程，有点像子程序，但在子程序执行过程中，可以产生中断，转而执行其它程序，待其他程序执行完毕后，转回来执行原来的程序。这一过程不是函数调用，也没有发生线程切换，因此效率极高。</li>
+<li>用户态和内核态<br>  用户态：运行应用程序<br>  内核态：运行操作系统程序，操作硬件<br>  <strong>区别：</strong><ul>
+<li>处于用户态执行时，进程所能访问的内存空间和对象受到限制，其占有的处理器是可被抢占的</li>
+<li>处于内核态执行时，则能访问所有的内存空间和对象，且所占有的处理器是不允许被抢占的。</li>
+</ul>
+  <strong>通常来说，以下三种情况会导致用户态到内核态的切换：</strong><ul>
+<li>系统调用</li>
+<li>异常</li>
+<li>外围设备中断</li>
+</ul>
+  <strong>如何避免内核态和用户态的频繁切换</strong><ul>
+<li>减少线程切换。如使用无锁并发编程（CAS 算法）、避免创建不必要的线程、使用线程</li>
+<li>若是因为 I/O 导致的切换，则使用用户进程缓冲区，并结合使用预读和延迟写方法</li>
+</ul>
+</li>
+<li>内存大小<ul>
+<li>2 ^ 10 = 1K</li>
+<li>2 ^ 20 = 1M</li>
+<li>2 ^ 30 = 1G</li>
+<li>2 ^ 40 = 1T</li>
+<li>2 ^ 50 = 1P</li>
+<li>2 ^ 60 = 1e</li>
+</ul>
+</li>
+<li>虚拟内存<ul>
+<li>目的：使用逻辑内存，使程序拥有更大的可用内存。</li>
+<li>本质：根据寻址总线（如 64 位）形成的虚拟空间，进程启动时分配的是该虚拟空间。虚拟空间与物理内存存在映射，但只会映射进程当时需要的页，而不是全部映射。</li>
+<li>寻址：内存管理单元（MMU）管理着地址空间和物理内存的转换，其中的页表（Page table）存储着页（程序地址空间）和页框（物理内存空间）的映射表。对于虚拟地址，其前面若干位为页面号（对应页表的 index），查找页表得到对应的页框号，页框号拼接虚拟地址剩余的后面若干位形成页框地址。即完成寻址。</li>
+<li>调页：在寻址中，若标识位指示该页不在内存中，则需将该页从磁盘中调入内存。</li>
+<li>缺页：若在调页中发现该进程在内存没有足够空间存放新页，则操作系统调用页面置换算法，将选择的页调出内存，将需要的页调入内存。</li>
+</ul>
+</li>
+<li>虚拟内存的页和段的区别<ul>
+<li>页的大小固定，段的大小可动态扩展</li>
+<li>分页存在内存碎片，分段没有</li>
+<li>分页地址是一维的，分段地址是二维的</li>
+<li>分页透明，分段需要程序员显示的划分每个段</li>
+</ul>
+  <strong>操作系统分页的好处：</strong><ul>
+<li>是操作系统实现虚拟内存的基础</li>
+<li>允许进程申请的内存空间不连续</li>
+<li>减少内存碎片</li>
+</ul>
+  <strong>分页为什么是一维的：</strong><ul>
+<li>操作时给出地址，即可根据该地址计算出页号和页内偏移量（这得益于页大小是固定的），而不需要显示划分</li>
+</ul>
+</li>
+</ul>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p><strong>基本知识</strong></p>
+<ul>
+<li>再看一遍 Linux 的文件系统、文件、进程管理；</li>
+<li>再看一遍 socket。</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li><p>IO 多路复用</p>
+<ul>
+<li>指单个进程同时处理多个网络连接的 IO 的能力</li>
+<li>Linux 下提供了 select、poll 和 epoll 系统调用实现 IO 多路复用</li>
+<li>当用户进程调用了 select，会进入阻塞状态。select 会轮询负责的所有 socket，当 select 中的某个 socket 数据准备好时，select 会返回。这个时候用户进程再调用 read 操作，将数据从内核缓冲区拷贝到用户进程缓冲区</li>
+</ul>
+</li>
+<li><p>进程的内存结构</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/1.png" class=""></li>
+<li><p>Nginx 的优点</p>
+<ul>
+<li>内存消耗少</li>
+<li>稳定性高： 用于反向代理，宕机的概率微乎其微</li>
+<li>支持高并发连接：原因主要是 Nginx 使用了最新的 epoll（Linux2.6 内核）和 kqueue（freeBSD）网路 I/O 模型</li>
+<li>支持热部署：启动容易，且能够在不间断服务的情况下，对软件版本进行升级</li>
+<li>支持 Rewrite 重写 </li>
+<li>成本低廉</li>
+<li>配置简单  </li>
+</ul>
+</li>
+<li><p>常用操作<br>  <strong>查看端口号被哪个进程占用</strong></p>
+<ul>
+<li>lsof -i:端口号</li>
+<li>netstat -tunlp|grep 端口号</li>
+</ul>
+<p> <strong>进程查看和杀死命令</strong></p>
+<ul>
+<li>ps 命令用于查看当前正在运行的进程</li>
+<li>kill 命令用于终止进程</li>
+</ul>
+</li>
+<li><p>硬链接和软链接</p>
+<ul>
+<li>硬链接：文件名指向索引节点</li>
+<li>软链接：特殊的文件，存储另一文件的路径信息</li>
+</ul>
+</li>
+<li><p>零拷贝对比</p>
+<table>
+<thead>
+<tr>
+<th align="center">拷贝方式</th>
+<th align="center">CPU拷贝次数</th>
+<th align="center">DMA拷贝次数</th>
+<th align="center">上下文切换次数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">传统方式</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">mmap + write</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="center">sendfile</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">sendfile + DMA</td>
+<td align="center">0</td>
+<td align="center">2</td>
+<td align="center">2</td>
+</tr>
+</tbody></table>
+<p> <strong>缺点</strong></p>
+<ul>
+<li>mmap + write：当 mmap 一个文件时，若该文件被另一个进程所截获，则 write 系统调用会因为访问非法地址而被 SIGBUS 信号终止。 可通过使用文件的租界锁解决</li>
+<li>sendfile：仅适用于无需用户态处理的程序</li>
+<li>sendfile + DMA：除了 sendfile 一样的问题，还有需要硬件和驱动程序的支持</li>
+</ul>
+</li>
+<li><p>Ctrl + C/Z</p>
+<ul>
+<li>ctrl + C：强制中断执行当前交互程序的进程</li>
+<li>ctrl + Z：将任务中断,但是此任务并没有结束,他仍然在进程中他只是维持挂起的状态</li>
+</ul>
+</li>
+<li><p>实体链接和符号链接的区别：实体链接不能对目录进行链接，符号链接可以</p>
+</li>
+<li><p>waitpid() 和 wait() 相比的区别：</p>
+<ul>
+<li>多了参数 pid，指示一个子进程的 ID，表示只关心这个子进程退出的 SIGCHILD 信号</li>
+<li>多了 options 参数，可选为 WNOHANG 和 WUNTRACED 两个选项，若参数为 WNOHANG，可以使 waitpid() 调用变成非阻塞的，也就是说它会立即返回，父进程可以继续执行其它任务。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/java-interview-highlights/">Java 面试突击</a><br><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/">CS Note</a></p>
+</blockquote>
+<h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://pdai.tech/md/java/thread/java-thread-x-lock-AbstractQueuedSynchronizer.html">JUC 锁: 锁核心类 AQS 详解</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903695298068487">Synchronize 和 ReentrantLock 区别</a></p>
+</blockquote>
+<p><strong>基本知识</strong></p>
+<ul>
+<li>线程池好处</li>
+<li>线程池参数</li>
+<li>线程池提交任务的过程</li>
+<li>关闭线程池的方法</li>
+<li>Java 并发里的 JUC-AQS</li>
+<li>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</li>
+<li>可见性：指当多个线程访问同一个变量时，一个线程修改了这个变量的值，其他线程能够立即看得到修改的值。</li>
+<li>有序性：即程序执行的顺序按照代码的先后顺序执行。</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li>可见性问题：可见性与 Java 的内存模型有关，模型采用缓存与主存的方式对变量进行操作，也就是说，每个线程都有自己的缓存空间，对变量的操作都是在缓存中进行的，之后再将修改后的值返回到主存中。但这也带来了问题：有可能 线程1 在将共享变量修改后，还没有来的及将缓存中的变量返回给主存中，线程2 就要对该共享变量进行修改，那么 线程2 拿到的值是主存中未被修改的值，这就是可见性的问题。<strong>可通过缓存一致性协议（MESI）解决。</strong></li>
+<li>volatile 关键字<ul>
+<li>能保证可见性。变量经 volatile 修饰后，汇编指令中会有一个 LOCK 前缀指令，当该变量被修改时，会引发两件事情：<ol>
+<li>将当前处理器缓存行的数据写回到系统内存；</li>
+<li>这个写回内存的操作会使得在其他处理器缓存的该内存地址无效。<br>即当一个共享变量被 volatile 修饰时，它会保证修改的值被立即更新到主存，当有其他线程需要读取时，它会去内存中读取新值，这就保证了可见性。</li>
+</ol>
+</li>
+<li>能保证有序性。volatile 可以禁止指令进行重排序优化。</li>
+<li>不保证原子性。对于 i++ 操作：在某一时刻线程1 将 i 的值取出放到 cpu 缓存中，然后再将此值放置到寄存器A 中，在 A 中该值自增1（寄存器A 中保存的是中间值，没有直接修改 i，因此其他线程并不会获取到这个自增 1 的值）。如果在此时线程2 也执行同样的操作，获取值 i=10 ,自增 1 变为 11，然后马上刷入主内存。此时由于线程2 修改了 i 的值，线程1 中的 i=10 的值缓存失效，重新从主内存中读取，变为 11。接下来线程1 恢复。将自增过后的 A寄存器值 11 赋值给 cpu 缓存的 i。这样就出现了线程安全问题。</li>
+<li>使用场合：不要将 volatile 用在 getAndOperate 场合，仅仅 set 或者 get 的场景是适合 volatile 的。</li>
+<li>内存屏障：<ul>
+<li>在每个 volatile 写操作前插入 StoreStore 屏障，在写操作后插入 StoreLoad 屏障；</li>
+<li>在每个 volatile 读操作前插入 LoadLoad 屏障，在读操作后插入 LoadStore 屏障；</li>
+</ul>
+</li>
+</ul>
+  <strong>补充：Java 中变量的运算过程：</strong>线程先从内存中取该值放到线程缓存空间中，然后 cpu 读取缓存值放到寄存器运算，运算后结果返回线程缓存空间，再返回主存中。</li>
+<li>synchronized 关键字<ul>
+<li>实现细节：<ul>
+<li>若是同步代码块，则在代码块前后分别添加 monitorenter 和 monitorexit 字节码指令。在执行 monitorenter 指令时，首先尝试获取对象锁，或把锁的计算器加 1；在执行 monitorexit 指令时会将锁计算器减 1，当计算器为 0 时，锁就被释放了。</li>
+<li>若是同步方法，则 JVM 从方法常量池的方法表结构中的 ACC_SYNCHRONIZED 访问标志得知一个方法是否被声明为同步方法</li>
+</ul>
+</li>
+<li>四种锁状态<ul>
+<li>无锁状态</li>
+<li>偏向锁：通过对比 Mark Word 解决加锁问题（若获取锁的线程是 Mark Word 里记录的锁偏向的线程，则该线程直接获取锁），避免执行 CAS 操作（只有在置换 ThreadID 时使用 CAS 操作）。</li>
+<li>轻量级锁：通过用 CAS 操作和自旋来解决加锁问题，避免线程阻塞和唤醒而影响性能。</li>
+<li>重量级锁：将除了拥有锁的线程以外的线程都阻塞。</li>
+</ul>
+</li>
+</ul>
+  <strong>膨胀式锁分配策略：</strong>锁可以升级但不可以降级</li>
+<li>关键字 synchronized 和 volatile 的对比（五种）</li>
+<li>synchronized 和 ReentrantLock 对比<ul>
+<li>相同点：加锁方式同步、阻塞式同步，都属于可重入锁。</li>
+<li>不同点：<ul>
+<li>API 层面：Synchronized 是 java 语言的关键字，是原生语法层面的互斥，需要 jvm 实现；ReentrantLock 是 JDK 1.5 之后提供的 API 层面的互斥锁，需要 lock() 和 unlock() 方法配合 try/finally 语句块来完成。</li>
+<li>使用方式上：synchronized 既可以修饰方法，也可以修饰代码块；ReentrantLock 只适用于代码块，使用 <code>lock.lock()</code>、<code>lock.unlock()</code> 方法上锁/解锁。</li>
+<li>等待可中断：synchronized 不支持等待可中断，ReentrantLock 支持。</li>
+<li>公平锁：synchronized的锁是非公平锁，ReentrantLock默认情况下也是非公平锁，但可以通过带布尔值的构造函数要求使用公平锁。</li>
+<li>锁绑定多个条件：ReentrantLock 可以同时绑定多个 Condition 对象，只需多次调用 newCondition 方法即可；synchronized 中，锁对象的 wait()、notify() 或 notifyAll() 方法可以实现一个隐含的条件。但如果要和多于一个的条件关联的时候，就不得不额外添加一个锁。</li>
+</ul>
+</li>
+</ul>
+  <strong>等待可中断：</strong>等待可中断是指当持有锁的线程长期不释放锁的时候，正在等待的线程可以选择放弃等待，改为处理其他事情。等待可中断特性对处理执行时间非常长的同步块很有帮助。<br>  <strong>公平锁：</strong>公平锁是指多个线程在等待同一个锁时，必须按照申请的时间顺序来依次获得锁；非公平锁在锁被释放时，任何一个等待锁的线程都有机会获得锁，即不保证按申请的时间顺序来依次获得锁。<br>  <strong>可重入锁：</strong>获取锁的线程可重复获取该锁，则称为可重入锁。<ul>
+<li>ReentrantLock 补充：<ul>
+<li>为保证锁释放，每一个 lock() 动作，建议都立即对应一个 try-catch-finally unlock() 动作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>AQS 相关（AbstractQueuedSynchronizer 抽象队列同步器）<ul>
+<li>就 ReentrantLock 来说，AQS 是它的一个对象，是 ReentrantLock 用来实现加锁和释放锁的关键性的核心组件</li>
+<li>核心变量 state：0 表示未上锁，非 0 表示已上锁，非 0 值表示上锁的线程重入该锁的次数</li>
+<li>记录加锁线程的变量：该变量记录加锁的线程，用于实现可重入锁</li>
+<li>阻塞队列：ReentrantLock 是互斥锁，所有申请锁失败的线程都会进入阻塞队列</li>
+</ul>
+</li>
+<li>Java的锁分类（7大类）<ul>
+<li>偏向锁/轻量级锁/重量级锁</li>
+<li>可重入锁/不可重入锁</li>
+<li>共享锁/独占锁</li>
+<li>公平锁/非公平锁</li>
+<li>悲观锁/乐观锁</li>
+<li>自旋锁/非自旋锁</li>
+<li>可中断锁/不可中断锁</li>
+</ul>
+</li>
+<li>Java 创建线程的方式（也即如何实现多线程）<ul>
+<li>通过继承 Thread 类（该类实现了 Runnable 接口）：重写 run() 方法，调用 start() 方法创建新线程。<br>如 <code>new ThreadTest().start();</code>，其中 ThreadTest 类继承了 Trread 类。</li>
+<li>通过实现 Runnable 接口：创建该类的示例，将该实例作为 Thread 类的 target 对象新建线程。如 <code>ThreadTest tt = new ThreadTest(); new Thread(tt, &quot;新线程1&quot;).start();</code>，其中 ThreadTest 实现了 Runnable 接口。</li>
+</ul>
+  <strong>补充</strong>：run() 方法的方法体就是线程要完成的任务</li>
+<li>start() 和 run() 的区别<ul>
+<li>当程序调用 Thread 类 start() 方法，会创建一个新线程。此时该线程处于就绪（可运行）状态，并没有运行，一旦得到 cpu 时间片，才开始执行 run() 方法。</li>
+<li>若程序直接调用 run() 方法，则是程序当前运行线程执行 run() 方法。</li>
+</ul>
+</li>
+<li>Java 常见的几种线程池（五种）<ul>
+<li>newCachedThreadPool：创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程（数量没有限制）。</li>
+<li>newFixedThreadPool：创建一个指定工作线程数量的线程池。每当提交一个任务就创建一个工作线程，如果工作线程数量达到线程池初始的最大数，则将提交的任务存入到池队列中。</li>
+<li>newSingleThreadExecutor：只创建一个工作者线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。</li>
+<li>newScheduleThreadPool：创建一个定长的线程池，而且支持定时的以及周期性的任务执行</li>
+</ul>
+</li>
+<li>Java 线程的状态<ul>
+<li>初始状态（NEW）：线程已经构建，尚未启动。</li>
+<li>运行状态（RUNNABLE）：包括就绪（READY）和运行中（RUNNING）两种状态，统称为运行状态。</li>
+<li>阻塞状态（BLOCKED）：线程被锁阻塞。</li>
+<li>等待状态（WAITING）：线程需要等待其他线程做出特定动作（通知或中断）。</li>
+<li>超时等待状态（TIME_WAITING）：不同于等待状态，超时等待状态可以在指定的时间自行返回。</li>
+<li>终止状态（TERMINATED）：当前线程已经执行完毕。</li>
+</ul>
+  <strong>阻塞状态</strong><ul>
+<li>线程争用锁失败进入阻塞状态</li>
+</ul>
+  <strong>等待状态</strong><ul>
+<li>锁对象调用wait()方法（无指定超时时间）后线程进入等待状态</li>
+</ul>
+  <strong>超时等待状态</strong><ul>
+<li>线程调用sleep(int timeout)或锁对象wait(int timeout)方法后线程进入超时等待状态，在等待指定时间后会返回</li>
+</ul>
+  <strong>sleep()和wait()方法区别</strong><ul>
+<li>sleep()方法仅支持超时等待，wait()支持等待和超时等待状态</li>
+<li>sleep()释放CPU执行权，但不释放同步锁；wait()释放CPU执行权，也释放同步锁，使得其他线程可以使用同步控制块或者方法。</li>
+<li>只有锁对象才能调用wait()和notify()方法，sleep()方法不由锁对象调用</li>
+</ul>
+</li>
+<li>线程安全问题<ul>
+<li>运算结果错误（i++）</li>
+<li>对象没有在正确的时间、地点被发布或初始化</li>
+<li>活跃性问题，如死锁、活锁、饥饿</li>
+</ul>
+</li>
+<li>ThreadLocal() 类：ThreadLocal 是 JDK 包提供的一个线程内部的存储类，可以在指定线程内存储数据，数据存储以后，只有指定线程可以得到存储数据。通过 get 和 set 方法可以获取和设置当前线程对应的值。</li>
+<li>Copy-On-Write：一种读写分离的并发策略。在多线程下共享的某个对象，当有人想修改内容的时候，就会创建该对象的副本，对副本进行修改，修改完后将原本的引用指向副本。<ul>
+<li>优点：<ul>
+<li>读取性能很高，因为读取的时候是无锁的，比较适合读多写少的场景；</li>
+<li>采用读写分离策略，允许读取的时候修改集合数据，没有 fail-fast 机制；</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>内存占用问题。相比不读写分离，内存多占用了一倍；</li>
+<li>数据一致性问题，CopyOnWrite 只保证数据的最终一致性，并不能保证数据的实时一致性。所以对数据实时一致性要求比较高的场景不适合使用CopyOnWrite容器。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/Java/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.html#%E4%B8%80%E3%80%81%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E5%9F%9F">CS Note</a></p>
+</blockquote>
+<p><strong>基础知识</strong></p>
+<ul>
+<li>GC ROOTS的四类对象</li>
+<li>垃圾收集算法；</li>
+<li>CMS 和 G1 收集器</li>
+<li>JVM 的内存分配与回收策略</li>
+<li>类的加载过程</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li><p>运行时数据区域</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java_2.jpg" class=""></li>
+<li><p>JVM的回收过程：大致如下，调用垃圾回收器——判断对象是否可回收（引用计数法和根搜索算法）——调用垃圾回收算法（标记—清除算法、复制算法、标记—整理算法、分代收集算法）</p>
+</li>
+<li><p>双亲委派模型</p>
+<ul>
+<li>类加载器之间有层级关系，从上到下依次为：启动类加载器、扩展类加载器、应用程序类加载器和用户自定义类加载器。除了顶层的启动加载类（又称引导加载类），其他的类加载器（扩展类加载器、应用程序类加载器、用户自定义加载器）都要有自己的父类加载器</li>
+<li>类加载器间的父子关系一般通过组合关系实现，而不是继承关系</li>
+<li>一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成时才尝试自己加载。</li>
+</ul>
+<p> <strong>好处：</strong>使得 Java 类随着它的类加载器一起具有一种带有优先级的层次关系，从而使得基础类得到统一。</p>
+<p> <strong>补充：</strong>两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类名称空间。</p>
+</li>
+<li><p>内存泄漏相关</p>
+<ul>
+<li>定义：内存泄漏是指程序动态分配的堆内存因某种原因程序未释放或无法释放，造成系统内存浪费的情况。它会导致程序运行速度减慢甚至系统崩溃的后果</li>
+<li>Java的内存泄漏和C++的内存泄露有什么不同：在C++中，如果需要动态分配一块内存，程序员需要负责这块内存的整个生命周期，这样很灵活，但过程却很繁琐，程序员容易因为疏忽忘记释放内存，从而导致内存泄漏；在Java有垃圾回收机制，它负责自动回收不再使用的内存</li>
+<li>Java中还会有内存泄漏的情况吗？ 有，Java 的内存泄露通常情况下表现为一个内存对象的生命周期超出了程序需要它的时间长度。比如无效的使用static字段</li>
+</ul>
+</li>
+<li><p>引用计数法和根搜索算法（或可达性分析法）</p>
+<ul>
+<li>引用计数法根据对象的引用计数判断对象是否可回收，若对象的引用计数为0，则回收对象；根搜索算法回收的是从GC ROOTS开始搜索不可达的对象</li>
+<li>引用计数法存在循环引用的问题，根搜索算法可能导致浮动垃圾和对象消失问题</li>
+</ul>
+</li>
+<li><p>JVM的根搜索算法——三色标记</p>
+<ul>
+<li>三色标记分别是：黑色、灰色、白色<br>黑色：根对象，或者该对象与它的子对象都被扫描过<br>灰色：对象本身被扫描，但是还有没扫描该对象的子对象<br>白色：未被扫描的对象，如果扫描完成所有对象之后，最终为白色的为不可达对象，即垃圾对象</li>
+<li>浮动垃圾：GC中已经标黑的对象，在并发过程中引用链断掉，导致应为白色的垃圾对象仍是黑色的现象。解决办法：留给下次垃圾回收处理</li>
+<li>对象消失问题需满足以下两个必要条件：<ol>
+<li>赋值器插入了一条或多条从黑色对象到白色对象的引用</li>
+<li>赋值器删除了全部从灰色对象到该白色对象的直接或间接引用</li>
+</ol>
+</li>
+</ul>
+<p>   <strong>解决办法</strong></p>
+<ul>
+<li>增量更新（CMS使用）：当一个白色对象被黑色对象引用，将黑色对象重新标记为灰色，让垃圾回收器重新扫描。</li>
+<li>原始快照（G1使用）：在灰色对象要删除和白色对象的引用时，将该引用记录下来，在并发扫描结束后，重现这些记录的引用对象，类似浮动垃圾的处理。</li>
+</ul>
+</li>
+<li><p>JVM的栈和堆</p>
+<ul>
+<li>栈中存放基本类型的数据或对象的引用变量，堆存放的是new创建的数组或对象</li>
+<li>栈中的对象可以共享，堆中的不可以</li>
+<li>栈的存取速度较快</li>
+<li>栈中数据大小和生命周期可以确定，当没有引用指向数据时，数据便会消失；堆中的对象由垃圾回收器负责回收，因此大小和生命周期都不确定</li>
+</ul>
+</li>
+<li><p>Java类加载机制</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.png" class=""></li>
+</ul>
+<h2 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://dunwu.github.io/javacore/concurrent/Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html#_1-%E7%89%A9%E7%90%86%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B">Java 内存模型</a></p>
+</blockquote>
+<ul>
+<li><p>Java内存模型</p>
+<ul>
+<li>Java内存模型规定了所有变量都存储在主内存内，此处主内存隶属于Java虚拟机内存的一部分，而虚拟机内存是操作系统分配的。每条Java线程还有自己的工作内存(类比上面的高速缓存)，工作内存中保存了被该线程使用到的变量的主内存的副本，线程对变量的所有操作都在工作内存中进行，Java线程之间的变量值传递都通过主内存来完成。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/5.jpg" class=""></li>
+</ul>
+<p>  <strong>Java内存模型定义了8种原子性操作，其中前4条是作用于主内存，后4条作用于工作内存：</strong></p>
+<ul>
+<li>lock 锁定，将一个变量标识为线程独占状态</li>
+<li>unlock 解锁，将锁定状态的变量解除锁定，释放后的变量才可以被其他变量锁定</li>
+<li>read 读取，将变量从主内存传输到线程的工作内存中，待之后的load加载</li>
+<li>write 写入，把store操作从工作内存中得到的变量值写入主内存的变量中</li>
+<li>load 加载，将read后从主内存得到的变量值加载到工作内存的变量副本中</li>
+<li>use 使用，把工作内存中的一个变量值传递给字节码执行引擎，等待字节码指令使用</li>
+<li>assign 赋值，把一个从执行引擎接收到的值赋值给工作内存的变量</li>
+<li>store 存储，把工作内存中一个变量的值传送到主内存中，以便随后的write使用</li>
+</ul>
+</li>
+<li><p>硬件层的内存屏障</p>
+<ul>
+<li>分类：Load Barrier 和 Store Barrier，即读屏障和写屏障。</li>
+<li>作用：<ul>
+<li>阻止屏障两侧的指令重排序；</li>
+<li>强制把写缓冲区/高速缓存中的脏数据等写回主内存，让缓存中相应的数据失效。</li>
+</ul>
+</li>
+<li>Load Barrier：在指令前插入 Load Barrier，可以让高速缓存中的数据失效，强制重新从主内存加载数据；</li>
+<li>Store Barrier：在指令后插入 Store Barrier，能让写入缓存中的最新数据更新写入主内存，让其他线程可见。</li>
+</ul>
+</li>
+<li><p>java 内存屏障</p>
+<ul>
+<li>分类：LoadLoad、StoreStore、LoadStore、StoreLoad，即上述两种的组合，以完成一系列的屏障和数据同步功能。</li>
+<li>LoadLoad 屏障：对于这样的语句 Load1; LoadLoad; Load2，在 Load2 及后续读取操作要读取的数据被访问前，保证 Load1 要读取的数据被读取完毕。</li>
+<li>StoreStore 屏障：对于这样的语句 Store1; StoreStore; Store2，在 Store2 及后续写入操作执行前，保证 Store1 的写入操作对其它处理器可见。</li>
+<li>LoadStore 屏障：对于这样的语句 Load1; LoadStore; Store2，在 Store2 及后续写入操作被刷出前，保证 Load1 要读取的数据被读取完毕。</li>
+<li>StoreLoad 屏障：对于这样的语句 Store1; StoreLoad; Load2，在 Load2 及后续所有读取操作执行前，保证 Store1 的写入对所有处理器可见。它的开销是四种屏障中最大的。在大多数处理器的实现中，这个屏障是个万能屏障，兼具其它三种内存屏障的功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p><strong>基本知识</strong></p>
+<ul>
+<li>Object类中的通用方法（至少背6个）</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li><p>ArrayList</p>
+<ul>
+<li>因为 ArrayList 是基于数组实现的，所以支持快速随机访问。RandomAccess 接口标识着该类支持快速随机访问。</li>
+<li>数组的默认大小逻辑为 10，实际大小为数组内的元素个数。</li>
+</ul>
+<p>  <strong>添加元素</strong></p>
+<ul>
+<li>添加元素时使用 ensureCapacityInternal() 方法来保证容量足够</li>
+<li>如果不够时，需要使用 grow() 方法进行扩容，新容量大约是旧容量的 1.5 倍左右。</li>
+<li>扩容操作需要调用 Arrays.copyOf() 把原数组整个复制到新数组中</li>
+</ul>
+</li>
+<li><p>Hashmap</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/java1024/p/13488714.html">HashMap面试题及答案</a></p>
+</blockquote>
+<ul>
+<li>Hashmap 的存储结构为数组 + 链表，使用拉链法解决冲突，JDK1.7 使用头插法插入结点，JDK1.8 使用尾插法插入节点（避免循环引用）</li>
+<li>默认大小为 16，容量必须为 2 的整数次幂，每次扩容为原来容量的两倍</li>
+<li>默认装载因子为 0.75，即当 Hashmap 中键值对数量大于等于容量 * 0.75时，Hashmap 将自动扩容</li>
+<li>从 JDK 1.8 开始，一个桶存储的链表长度大于 8 时会将链表转换为红黑树。</li>
+<li>Hashmap 是线程不安全的</li>
+</ul>
+<p>  <strong>get 过程（JDK 1.8）</strong></p>
+<ol>
+<li>调用 hash 方法计算 hash 值；</li>
+<li>调用 getNode() 方法。若数组为 null 则直接返回 null；</li>
+<li>若数组不为 null，则位运算 hashcode &amp; (n - 1) 获取索引位置（n 为 map 的容量大小）；</li>
+<li>对比索引位置首元素/key 的 hash 值和首元素的 key/查询 key 的值，若相同，则直接返回该首元素；</li>
+<li>否则，若该索引位置是红黑树，则调用红黑树的 get 方法获取 value；</li>
+<li>若不是红黑树，则进行 do while 循环比较获取。</li>
+</ol>
+<p>  <strong>put操作过程（JDK 1.8）</strong></p>
+<ol>
+<li>调用 hash 方法计算 hash 值；</li>
+<li>再去看数组是否为空，为空的话就对数组进行初始化；</li>
+<li>利用计算出来的 hash 值计算索引位置；</li>
+<li>若该索引位置上的元素为 null，则直接插入 key/value 对；（插入后需 ++size 看容量是否超过阈值，若超过则需扩容）；</li>
+<li>若不为 null，则 put 的 key 和索引位置的第一个元素进行比较（比较 hash 值和 key 值）<ol>
+<li>若相同，则覆盖新 value 值，并返回旧 value 值；</li>
+<li>若不相同，判断当前链表是否是红黑树：<ol>
+<li>若不是，则遍历链表。若存在该 key 则更新 value；否则尾插法该 key/value 对；</li>
+<li>若是，则调用红黑树的 put 方法。（插入后需 ++size 看容量是否超过阈值，若超过则需扩容）</li>
+</ol>
 </li>
 </ol>
-<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="需要注意的对比-1"><a href="#需要注意的对比-1" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>三种O(n2)时间复杂度和三种O(nlogn)时间复杂度排序算法的比较</li>
-<li>计数排序、基数排序和桶排序</li>
-</ol>
-<h3 id="补充-2"><a href="#补充-2" class="headerlink" title="补充"></a>补充</h3><ol>
-<li><p>数组和链表的区别</p>
-<ul>
-<li>数组大小固定，链表大小可动态扩展</li>
-<li>数组在内存中是顺序存储的，链表不一定</li>
-<li>数组可通过下标访问，访问效率高；链表除了两端结点，都需要通过遍历访问元素，访问效率低</li>
-<li>数组从栈上分配内存，链表从堆上分配内存</li>
-</ul>
-</li>
-<li><p>异或运算的特点</p>
-<ul>
-<li>任何数和自身异或的结果为0</li>
-<li>0和任何数异或的结果为该数</li>
-</ul>
-</li>
-<li><p>栈和堆的区别</p>
-<ul>
-<li>栈由系统自动分配，堆是人为申请开辟</li>
-<li>栈由系统分配，分配速度较快，堆分配速度较慢</li>
-<li>栈获得的空间较小，堆获得的空间较大</li>
-<li>栈是连续的存储空间，堆是不连续的空间（地址空间连续，物理存储空间不连续）</li>
-<li>栈一般存放基本类型的变量或对象的引用变量；堆一般存储new创建的数组或对象</li>
-</ul>
-</li>
-<li><p>2的31次方=2147483648</p>
 </li>
 </ol>
-<h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><h3 id="需要注意的对比-2"><a href="#需要注意的对比-2" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>MySQL的InnoDB存储引擎和MyISAM存储引擎比较</li>
+<p>  <strong>核心：</strong></p>
+<ol>
+<li>计算得到 hashcode 后，通过 hashcode &amp; (n - 1) 计算得到索引位置；</li>
+<li>查询 key 的语句：first.hash == hash &amp;&amp; first.key = key。需对比查询结点的 hash 值和 key 值。</li>
+<li>确定索引位置后，需判断当前索引位置是否为 null，是否是红黑树。</li>
+</ol>
+<p>  <strong>扩容过程</strong></p>
+<ul>
+<li>创建一个新的HashMap，该map的容量为原容量的两倍</li>
+<li>调用resize()把原HashMap中的键值对重新插入到newTable中</li>
+</ul>
+<p>  <strong>Map的容量为什么必须为2的n次方</strong></p>
+<ul>
+<li>在查找过程中，根据key计算得到hash值后，需取模计算桶下标。若桶的大小为2的整数次方，则对capacity取模的过程可转化为对capacity - 1做与运算的过程，这个计算方式效率更高</li>
+<li>在扩容重新计算桶下标过程中，若容量为2的整数次方，以原容量为16为例，则新容量为32。则原来hash值在第五位为0的键值对在新map中仍在与原map相同下标的桶处；为1的键值对在新map中为在原map桶中下标+16的桶处</li>
+</ul>
+<p>  <strong>HashMap为什么是线程不安全</strong></p>
+<ul>
+<li>JDK1.7中会在transfer()过程中出现循环引用</li>
+<li>JDK1.8中会在put操作过程中造成数据覆盖</li>
+</ul>
+<p>  <strong>循环引用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    Entry&lt;K,V&gt; next = e.next;   <span class="comment">// 第一步，假设线程一执行到这里就被调度挂起了</span></span><br><span class="line">    <span class="keyword">int</span> i = indexFor(e.hash, newCapacity);</span><br><span class="line">    e.next = newTable[i];       <span class="comment">// 第二步</span></span><br><span class="line">    newTable[i] = e;            <span class="comment">// 第三步</span></span><br><span class="line">    e = next;                   <span class="comment">// 第四步</span></span><br><span class="line">&#125; <span class="keyword">while</span> (e != <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>初始情况，线程1 和线程2 都执行到该步；<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A81.png" class=""></li>
+<li>线程1 执行 <code>Entry&lt;K,V&gt; next = e.next;</code>、<code>e.next = newTable[i];</code> 后被挂起；<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A82.png" class=""></li>
+<li>线程2 开始执行，执行完一轮、及 <code>Entry&lt;K,V&gt; next = e.next;</code> 后如图；<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A84.png" class=""></li>
+<li>线程2 执行 <code>e.next = newTable[i];</code>，造成循环引用<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A85.png" class=""></li>
+</ul>
+</li>
+<li><p>Hashtable 和 ConcurrentHashMap</p>
+<ul>
+<li>HashTable 类使用 synchronize 来做线程安全，全局只有一把锁</li>
+<li>ConcurrentHashMap 在 JDK1.7 使用 segmant（分段锁）实现，自 JDK 1.8 使用 CAS（Compare and Swap）操作实现，</li>
+<li>ConcurrentHashMap 也实现了在链表长度大于等于8时自动转化为红黑树</li>
+</ul>
+<p>  <strong>CAS 操作</strong></p>
+<ul>
+<li>概念：CompareAndSwap 的缩写，即比较并替换。CAS 需要有 3 个操作数：内存地址 V，旧的预期值 A，即将要更新的目标值 B。</li>
+<li>执行：当且仅当内存地址 V 的值与预期值 A 相等时，将内存地址 V 的值修改为 B，否则就什么都不做。整个比较并替换的操作是一个原子操作。</li>
+<li>存在的问题：<ul>
+<li>ABA 问题：变量更新若为 A-B-A，则无法识别。解决办法：添加版本号。</li>
+<li>若循环时间过长，将导致 CPU 开销变大。</li>
+<li>只适用于变量，不能保证代码块的原子性。</li>
+</ul>
+</li>
+<li>适用场景：线程冲突小的场景（可能还有任务执行时间短的场景）</li>
+</ul>
+<p>  <strong>ConcurrentHashMap 中的 size 操作（JDK1.7）</strong></p>
+<ul>
+<li>每个 segment 中维护一个 count 变量，记录该 segment 中键值对的数量</li>
+<li>size 操作会统计所有    segment 的 count 并累计起来</li>
+<li>ConcurrentHashMap 在执行 size 操作时先尝试不加锁，如果连续两次不加锁操作得到的结果一致，那么可以认为这个结果是正确的。重试次数使用 RETRIES_BEFORE_LOCK 定义，该值为 2，retries 初始值为 -1，因此重试次数为 3。如果重试的次数超过 3 次，就需要对每个 Segment 加锁。</li>
+</ul>
+</li>
+<li><p>String相关</p>
+<ul>
+<li>String 类用 final 修饰，代表 String 类不可被继承。</li>
+<li>用于存储字符串值的 char[] value 数组用 private 和 final 修饰，其中，final 可以保证 value 的引用地址不会被修改，但是不能保证数组中的值不会被修改，而 private 能够保证值不会被外部修改。这样就能保证 String 类的不可变性。</li>
+</ul>
+<p>  <strong>不可变性的好处</strong></p>
+<ul>
+<li>使得JVM可以实现字符串常量池；字符串常量池可以在程序运行时节约很多内存空间，因为不同的字符串变量指向相同的字面量时，都是指向字符串常量池中的同一个对象。这样一方面能够节约内存，另一方面也提升了性能。</li>
+<li>保证了安全性。比如：若在 HashMap 中使用 StringBuilder 作为键的类型，因为 StringBuilder 可以改变，则可能导致 HashMap 中某个键被改变成与另一键相同，从而出现键不唯一的情况</li>
+</ul>
+<p>  <strong>equals源码分析</strong></p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/6.png" class=""></li>
+<li><p>哈夫曼树：带权路径长度最小的二叉树。</p>
+<ul>
+<li>路径长度：指结点到根结点的分支次数</li>
+<li>带权：指叶结点的权值；</li>
+<li>叶结点的带权路径长度：指叶结点的权值与路径长度的乘积值；</li>
+<li>树的带权路径长度：指树的所有叶结点的带权路径长度之和。</li>
+</ul>
+</li>
+<li><p>Java 的 “==” 和 “equals”</p>
+<ul>
+<li>“==” 仅适用于基本类型数据（如字符）比较，若用于对象（如字符串），则比较的是对象地址；</li>
+<li>“equals” 用于比较对象，但该方法不能作用于基本数据类型的变量。此外，equalsIgnoreCase() 方法还可实现不区分大小写比较两个字符串</li>
+</ul>
+</li>
+<li><p>Java 的 static 关键字<br>  <strong>static 方法（静态方法）</strong></p>
+<ul>
+<li>静态方法不依赖于任何对象就可以进行访问，因此对于静态方法来说，是没有 this 的；一般使用类名访问；</li>
+<li>静态方法中不能访问类的非静态成员变量和非静态成员方法，但非静态成员方法中是可以访问静态成员方法/变量的</li>
+<li>最常见的 static 方法就是 main 方法，因为程序在执行 main 方法的时候没有创建任何对象，因此只有通过类名来访问。</li>
+</ul>
+<p>  <strong>static 变量（静态变量）</strong></p>
+<ul>
+<li>静态变量被所有的对象所共享，在内存中只有一个副本，它当且仅当在类初次加载时会被初始化。</li>
+<li>非静态变量是对象所拥有的，在创建对象的时候被初始化，存在多个副本，各个对象拥有的副本互不影响。</li>
+<li>static 成员变量的初始化顺序按照定义的顺序进行初始化。</li>
+</ul>
+<p>  <strong>static 代码块（静态代码块）</strong></p>
+<ul>
+<li>static 块可以置于类中的任何地方，类中可以有多个 static 块。在类初次被加载的时候，会按照 static 块的顺序来执行每个 static 块，并且只会执行一次。</li>
+</ul>
+<p>  <strong>补充</strong></p>
+<ul>
+<li>通过 this 能够访问静态成员变量</li>
+<li>static 不允许用来修饰局部变量（Java 中是这样）</li>
+<li>static 代码块先于构造方法执行，因为 static 代码块在类加载的时候就执行，构造方法在创建对象的时候才执行</li>
+</ul>
+</li>
+<li><p>Java 的 final 关键字<br>  <strong>final 类</strong></p>
+<ul>
+<li>当用 final 修饰一个类时，表明这个类不能被继承。</li>
+<li>final类中的所有成员方法都会被隐式地指定为 final 方法。</li>
+</ul>
+<p>  <strong>final 方法</strong></p>
+<ul>
+<li>把方法锁定，以防任何继承类重写</li>
+<li>类的 private 方法会隐式地被指定为 final 方法</li>
+</ul>
+<p>  <strong>final 变量</strong></p>
+<ul>
+<li>如果是基本数据类型的变量，则其数值一旦在初始化之后便不能更改</li>
+<li>如果是引用类型的变量，则在对其初始化之后便不能再让其指向另一个对象</li>
+</ul>
+</li>
+</ul>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/design-pattern/design-pattern-tutorial.html">设计模式</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Blue-Keroro/p/8875898.html">Java 泛型详解 </a></p>
+</blockquote>
+<p><strong>基本知识</strong></p>
+<ul>
+<li>Java 反射</li>
+</ul>
+<p><strong>详细</strong></p>
+<ul>
+<li><p>Java 单例模式</p>
+<ul>
+<li>组成：<ul>
+<li>一个私有构造函数：确保不能通过构造函数来创建对象示例；</li>
+<li>一个私有静态变量：确认对象地址不会被改变；</li>
+<li>一个公有静态函数：返回唯一的静态变量（对象）。</li>
+</ul>
+</li>
+<li>实现：<ul>
+<li>懒汉式：线程不安全<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton uniqueInstance;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getUniqueInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (uniqueInstance == <span class="keyword">null</span>) &#123;</span><br><span class="line">            uniqueInstance = <span class="keyword">new</span> Singleton();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> uniqueInstance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>饿汉式：线程安全<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton uniqueInstance = <span class="keyword">new</span> Singleton();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getUniqueInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> uniqueInstance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>泛型</p>
+<ul>
+<li>定义：泛型，即“参数化类型”。本质是在不创建新类型的情况下，通过泛型指定不同类型来控制形参具体限制的类型。</li>
+<li>特性：<ul>
+<li>泛型只在编译阶段有效，在编译之后程序会采取去泛型化的措施。</li>
+<li>泛型的类型参数只能是类类型，不能是简单类型。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Java里的几种内部类：</p>
+<ul>
+<li>成员内部类</li>
+<li>局部内部类</li>
+<li>嵌套内部类</li>
+<li>匿名内部类<br>内部类可以访问外部类的成员，在内部类构造的时候，会将外部类的引用传递进来，并且作为内部类的一个属性，所以内部类会持有一个其外部类的引用。</li>
+</ul>
+</li>
+<li><p>迭代器：Iterator 类的访问方式就是把不同集合类的访问逻辑抽象出来，使得不用暴露集合内部的结构而达到循环遍历集合的效果。</p>
+</li>
+<li><p>常见的五种运行时异常</p>
+<ul>
+<li>IndexOutOfBoundsException - 下标越界异常</li>
+<li>NullPointerException - 空指针引用异常</li>
+<li>ClassCastException - 类型强制转换异常</li>
+<li>ArithmeticException - 算术运算异常</li>
+<li>NegativeArraySizeException - 数组大小错误异常（数组大小为负数）</li>
+</ul>
+</li>
+<li><p>重写和重载</p>
+<ul>
+<li>Override：重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。（返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类</li>
+<li>Overload：重载是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。最常用的地方就是构造器的重载。</li>
+</ul>
+</li>
+<li><p>Java 引用和 C++ 指针的区别</p>
+<ul>
+<li>类型：引用的值是 Java 封装了的地址，可以转换成字符串查看，长度也可以不必担心。C++ 指针是一个装地址的变量，长度一般是计算机字长，可以认为是个 int。</li>
+<li>所占内存：引用声明时没有实体，不占空间。C++ 指针在声明之后用到才会赋值，若用不到则不会分配内存。</li>
+<li>初始值：引用初始值为 java 关键字 null。C++ 指针是 int 类型，若不初始化指针，则值不固定，这很危险。</li>
+<li>计算：引用不可以计算。C++ 指针是 int，他可以计算，如 ++ 或 –，所以经常用指针来代替数组下标。</li>
+<li>内存泄露：Java 引用不会产生内存泄露。C++ 指针是容易产生内存泄露的，所以程序员要小心使用，及时回收。</li>
+</ul>
+</li>
+<li><p>抽象类和接口<br>  <strong>相同点</strong></p>
+<ul>
+<li>都不能被实例化</li>
+</ul>
+<p>  <strong>不同点</strong></p>
+<ul>
+<li>接口是对某一个行为动作的抽象，而抽象类是对类的抽象（包括了属性和对应的行为）</li>
+<li>接口可以实现多实现，抽象类只能单继承</li>
+<li>接口中定义的方法不能实现，抽象类中的方法可以部分实现。</li>
+<li>接口中的域默认的为public static final，即不可更改的动作。而抽象类中可以被任意权限修饰符修饰，static/非static，final/非final，可以有抽象方法和非抽象方法。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/4.png" class=""></li>
+</ul>
+<p>  <strong>interface的应用场合</strong></p>
+<ul>
+<li>类与类之前需要特定的接口进行协调，而不在乎其如何实现。</li>
+<li>作为能够实现特定功能的标识存在，也可以是什么接口方法都没有的纯粹标识。</li>
+<li>需要将一组类视为单一的类，而调用者只通过接口来与这组类发生联系。</li>
+<li>需要实现特定的多项功能，而这些功能之间可能完全没有任何联系。</li>
+</ul>
+<p>  <strong>abstract class的应用场合</strong><br>  <em>一句话，在既需要统一的接口，又需要实例变量或缺省的方法的情况下，就可以使用它。最常见的有：</em></p>
+<ul>
+<li>定义了一组接口，但又不想强迫每个实现类都必须实现所有的接口。可以用abstract class定义一组方法体，甚至可以是空方法体，然后由子类选择自己所感兴趣的方法来覆盖。</li>
+<li>某些场合下，只靠纯粹的接口不能满足类与类之间的协调，而需要类中表示状态的变量来区别不同的关系。abstract的中介作用可以很好地满足这一点。</li>
+<li>规范了一组相互协调的方法，其中一些方法是共同的，与状态无关的，可以共享的，无需子类分别实现；而另一些方法却需要各个子类根据自己特定的状态来实现特定的功能</li>
+</ul>
+</li>
+<li><p>类与接口</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java_1.png" class="">
+<ul>
+<li>实现关系：类实现接口</li>
+<li>泛化关系：类继承类</li>
+<li>依赖关系：表现为四种形式，以 A 类依赖于 B 类举例来说<ul>
+<li>B 为 A 的局部变量</li>
+<li>调用 B 的静态方法</li>
+<li>B 作为 A 的方法参数</li>
+<li>B 作为 A 的方法的返回值</li>
+</ul>
+</li>
+<li>聚合关系：体现的是整体与部分的拥有关系。此时整体与部分之间是可分离的，它们可以具有各自的生命周期</li>
+<li>组合关系：体现整体与部分间的包含关系。此时整体与部分是不可分的</li>
+</ul>
+<p>  <strong>在Java中，仅从类代码本身是区分不了聚合和组合的。</strong></p>
+</li>
+</ul>
+<hr>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/o9zra2/">校招基础知识详解</a><br><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86.html#%E4%B8%80%E3%80%81%E4%BA%8B%E5%8A%A1">CS-Notes</a></p>
+</blockquote>
+<h2 id="需要注意的对比"><a href="#需要注意的对比" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h2><ul>
 <li>数据库的事务四大特性、四种并发一致性问题和四个隔离级别</li>
-<li>背下InnoDB（第8点）</li>
-<li>索引优化</li>
+<li>封锁</li>
+<li>MVCC</li>
+<li>Next-Key Locks</li>
 <li>关系数据库设计理论</li>
-<li>redis的数据类型、数据结构</li>
-<li>redis的8种数据淘汰策略</li>
-<li>redis的两种数据持久化方法</li>
-<li>mysql的主从复制</li>
-<li>再看一遍封锁</li>
-<li>再看一遍MVCC</li>
-<li>再看一遍Next-Key Locks</li>
-</ol>
-<h3 id="补充-3"><a href="#补充-3" class="headerlink" title="补充"></a>补充</h3><ol>
+<li>索引优化</li>
+<li>MySQL 的 InnoDB 存储引擎和 MyISAM 存储引擎比较</li>
+<li>mysql 的主从复制</li>
+<li>redis 的数据类型、数据结构</li>
+<li>redis 的 8 种数据淘汰策略</li>
+<li>redis 的两种数据持久化方法</li>
+</ul>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><ol>
 <li><p>数据库索引：<br>索引是对数据库表中的一个或多个列进行排序的结构。它有以下优点：</p>
 <ul>
 <li>通过创建唯一索引，能够在索引和数据上建立一对一的映射，增加数据的唯一性的特点；</li>
@@ -771,113 +1460,43 @@
 </ul>
 </li>
 </ol>
-<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><h3 id="需要注意的对比-3"><a href="#需要注意的对比-3" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>再看一遍Linux的文件系统、文件、进程管理</li>
-<li>再看一遍socket</li>
+<hr>
+<h1 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构"></a>数据结构</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/sort-algorithms/euivj1/">排序算法全解析</a></p>
+</blockquote>
+<h2 id="需要注意的对比-1"><a href="#需要注意的对比-1" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h2><ol>
+<li>三种O(n2)时间复杂度和三种O(nlogn)时间复杂度排序算法的比较</li>
+<li>计数排序、基数排序和桶排序</li>
 </ol>
-<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><ol>
-<li><p>IO多路复用</p>
+<h2 id="补充-1"><a href="#补充-1" class="headerlink" title="补充"></a>补充</h2><ol>
+<li><p>数组和链表的区别</p>
 <ul>
-<li>指单个进程同时处理多个网络连接的IO的能力</li>
-<li>Linux下提供了select、poll和epoll系统调用实现IO多路复用</li>
-<li>当用户进程调用了select，会进入阻塞状态。select会轮询负责的所有socket，当select中的某个socket数据准备好时，select会返回。这个时候用户进程再调用read操作，将数据从内核缓冲区拷贝到用户进程缓冲区</li>
+<li>数组大小固定，链表大小可动态扩展</li>
+<li>数组在内存中是顺序存储的，链表不一定</li>
+<li>数组可通过下标访问，访问效率高；链表除了两端结点，都需要通过遍历访问元素，访问效率低</li>
+<li>数组从栈上分配内存，链表从堆上分配内存</li>
 </ul>
 </li>
-<li><p>进程的内存结构</p>
-</li>
-</ol>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/1.png" class="">
-
-<ol start="3">
-<li><p>Nginx的优点</p>
+<li><p>异或运算的特点</p>
 <ul>
-<li>内存消耗少</li>
-<li>稳定性高： 用于反向代理，宕机的概率微乎其微</li>
-<li>支持高并发连接：原因主要是Nginx使用了最新的epoll（Linux2.6内核）和kqueue（freeBSD）网路I/O模型</li>
-<li>支持热部署：启动容易，且能够在不间断服务的情况下，对软件版本进行升级</li>
-<li>支持Rewrite重写 </li>
-<li>成本低廉</li>
-<li>配置简单  </li>
+<li>任何数和自身异或的结果为0</li>
+<li>0和任何数异或的结果为该数</li>
 </ul>
 </li>
-<li><p>常用操作<br><strong>查看端口号被哪个进程占用</strong></p>
+<li><p>栈和堆的区别</p>
 <ul>
-<li>lsof -i:端口号</li>
-<li>netstat -tunlp|grep 端口号</li>
-</ul>
-<p><strong>进程查看和杀死命令</strong></p>
-<ul>
-<li>ps命令用于查看当前正在运行的进程</li>
-<li>kill命令用于终止进程</li>
+<li>栈由系统自动分配，堆是人为申请开辟</li>
+<li>栈由系统分配，分配速度较快，堆分配速度较慢</li>
+<li>栈获得的空间较小，堆获得的空间较大</li>
+<li>栈是连续的存储空间，堆是不连续的空间（地址空间连续，物理存储空间不连续）</li>
+<li>栈一般存放基本类型的变量或对象的引用变量；堆一般存储new创建的数组或对象</li>
 </ul>
 </li>
-<li><p>硬链接和软链接</p>
-<ul>
-<li>硬链接：文件名指向索引节点</li>
-<li>软链接：特殊的文件，存储另一文件的路径信息</li>
-</ul>
-</li>
-<li><p>零拷贝对比</p>
-<table>
-<thead>
-<tr>
-<th align="center">拷贝方式</th>
-<th align="center">CPU拷贝次数</th>
-<th align="center">DMA拷贝次数</th>
-<th align="center">上下文切换次数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">传统方式</td>
-<td align="center">2</td>
-<td align="center">2</td>
-<td align="center">4</td>
-</tr>
-<tr>
-<td align="center">mmap + write</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">4</td>
-</tr>
-<tr>
-<td align="center">sendfile</td>
-<td align="center">1</td>
-<td align="center">2</td>
-<td align="center">2</td>
-</tr>
-<tr>
-<td align="center">sendfile + DMA</td>
-<td align="center">0</td>
-<td align="center">2</td>
-<td align="center">2</td>
-</tr>
-</tbody></table>
-<p><strong>缺点</strong></p>
-<ul>
-<li>mmap + write：当mmap一个文件时，若该文件被另一个进程所截获，则write系统调用会因为访问非法地址而被SIGBUS信号终止。 可通过使用文件的租界锁解决</li>
-<li>sendfile：仅适用于无需用户态处理的程序</li>
-<li>sendfile + DMA：除了sendfile一样的问题，还有需要硬件和驱动程序的支持</li>
-</ul>
-</li>
-<li><p>Ctrl + C/Z</p>
-<ul>
-<li>ctrl + C：强制中断执行当前交互程序的进程</li>
-<li>ctrl + Z：将任务中断,但是此任务并没有结束,他仍然在进程中他只是维持挂起的状态</li>
-</ul>
-</li>
-<li><p>实体链接和符号链接的区别</p>
-<ul>
-<li>实体链接不能对目录进行链接，符号链接可以</li>
-</ul>
-</li>
-<li><p>waitpid()和wait()相比的区别</p>
-<ul>
-<li>多了参数pid，指示一个子进程的ID，表示只关心这个子进程退出的SIGCHILD信号</li>
-<li>多了options参数，可选为 WNOHANG 和 WUNTRACED 两个选项，若参数为 WNOHANG，可以使 waitpid() 调用变成非阻塞的，也就是说它会立即返回，父进程可以继续执行其它任务。</li>
-</ul>
+<li><p>2的31次方=2147483648</p>
 </li>
 </ol>
-<h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><ol>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><ol>
 <li><p>一个日志有用户登入登出时间，求该日志覆盖的时间段里同时在线人数的峰值</p>
 <ul>
 <li>创建时间数组，遍历log，若该条数据的登入登出时间在某个时间段内，则将该时间段内对应的数组元素的值+1</li>
@@ -889,7 +1508,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="智力题"><a href="#智力题" class="headerlink" title="智力题"></a>智力题</h2><ol>
+<h1 id="智力题"><a href="#智力题" class="headerlink" title="智力题"></a>智力题</h1><ol>
 <li><p>小明有100根香蕉，他离家50米。小明一次最多能背50根香蕉，但他每走一米要吃掉一根香蕉，那么小明最多能背回家多少根香蕉？<br><strong>答：</strong>设小明走了x米后停下，回去取剩下的50根香蕉，则小明再折回x处时，总共剩下的香蕉需小于等于50，方可一次背回家中，故得到方程：（50-2x + 50-x）&lt;= 50，解得x=17，那么50-17*2 = 16根</p>
 </li>
 <li><p>记a = x + y, b = xy, 求xn + yn</p>
@@ -899,421 +1518,44 @@
 </ul>
 </li>
 </ol>
-<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="需要注意的对比-4"><a href="#需要注意的对比-4" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>关键字 synchronized 和 volatile 的区别（五种）（再看一遍）</li>
-<li>Object类中的通用方法（至少背6个）</li>
-<li>再看一遍synchronized和ReentrantLock</li>
-<li>再看一遍线程池参数</li>
-<li>再看一遍向线程池提交任务的过程</li>
-<li>再看一遍关闭线程池的方法</li>
-<li>再看一遍Java反射和泛型</li>
-<li>再看一遍ArrayList、HashMap、ConcurrentHashMap</li>
-<li>背下HashMap和HashTable的区别</li>
-<li>Java并发里的JUC-AQS</li>
-<li>再看一遍设计模式中的单例模式</li>
-<li>再看一遍面向对象思想</li>
-</ol>
-<h3 id="补充-4"><a href="#补充-4" class="headerlink" title="补充"></a>补充</h3><ol>
-<li><p>ArrayList相关</p>
-<ul>
-<li>因为 ArrayList 是基于数组实现的，所以支持快速随机访问。RandomAccess 接口标识着该类支持快速随机访问。</li>
-<li>数组的默认大小为 10。</li>
-</ul>
-<p><strong>扩容过程</strong></p>
-<ul>
-<li>添加元素时使用 ensureCapacityInternal() 方法来保证容量足够</li>
-<li>如果不够时，需要使用 grow() 方法进行扩容，新容量大约是旧容量的 1.5 倍左右。</li>
-<li>扩容操作需要调用 Arrays.copyOf() 把原数组整个复制到新数组中</li>
-</ul>
-</li>
-<li><p>Hashmap相关</p>
-<ul>
-<li>Hashmap的存储结构为Entry类型的数组，使用拉链法解决冲突，JDK1.7使用头插法插入结点，JDK1.8使用尾插法插入节点（避免循环引用）</li>
-<li>默认大小为16，容量必须为2的整数次幂，每次扩容为原来容量的两倍</li>
-<li>默认装载因子为0.75，即当Hashmap中键值对数量大于等于容量*0.75时，Hashmap将自动扩容</li>
-<li>从 JDK 1.8 开始，一个桶存储的链表长度大于 8 时会将链表转换为红黑树。</li>
-<li>Hashmap是线程不安全的</li>
-</ul>
-<p><strong>put操作过程</strong></p>
+<hr>
+<h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><p>您好，我叫邹润鑫。本科在南京理工大学 - 材料科学与工程学院就读，获学士学位；目前在北京大学软件与微电子学院就读研二。<br>我于 2021.07 - 2022.01 在字节跳动实习，主要做广告实时数据架构相关，较了解 kafka、flink 等工具。<br>研二时参加北京大学“挑战杯”比赛，参赛项目是“基于深度学习的颈椎操训练”小程序，我负责后端开发，获二等奖。<br>主要使用 java 语言。大概是这些，谢谢。</p>
+<hr>
+<h1 id="实习经历"><a href="#实习经历" class="headerlink" title="实习经历"></a>实习经历</h1><p>字节跳动（2021.07.05 - 2022.01.21）</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%AE%9E%E4%B9%A0_1.jpg" class="" title="核心链路架构图">
+<h2 id="sss-任务迁移-flink"><a href="#sss-任务迁移-flink" class="headerlink" title="sss 任务迁移 flink"></a>sss 任务迁移 flink</h2><blockquote>
+<p>基本背景：待迁移的是三个 spark 引擎核心粒度（ad、adv、creative）聚合任务，迁至 flink streaming 引擎。<br>请求 flink 同学新支持 feature：将 map 类型字段（metric_data）在 sink kafka 时展开。</p>
+</blockquote>
+<p><strong>验数</strong><br>新 feature 存在问题时：flink 任务各指标统计比 spark 多 30% - 50%。<br>解决办法：</p>
 <ol>
-<li>判定键是否为null，若为null，则插入到或更新第0个桶的位置处；</li>
-<li>若不为null，计算hash值并确定桶下标</li>
-<li>遍历该桶上的链表的所有结点，查看是否有待插入key的键值对</li>
-<li>若有，则更新该key的值</li>
-<li>否则，插入该键值对</li>
+<li>新建另一不带 feature 的 flink 任务，与 spark 对比验数，值对齐，但开会和 flink 同学讨论，不认可结果；</li>
+<li>去掉带 feature flink 任务的新 feature，与 spark 对比验数，值对齐；重新添加 feature，值不对齐。flink 同学认可结果，修复上线。<strong>（关键词：主观能动性、问题复现）</strong></li>
 </ol>
-<p><strong>扩容过程</strong></p>
-<ul>
-<li>创建一个新的HashMap，该map的容量为原容量的两倍</li>
-<li>调用resize()把原HashMap中的键值对重新插入到newTable中</li>
-</ul>
-<p><strong>Map的容量为什么必须为2的n次方</strong></p>
-<ul>
-<li>在查找过程中，根据key计算得到hash值后，需取模计算桶下标。若桶的大小为2的整数次方，则对capacity取模的过程可转化为对capacity - 1做与运算的过程，这个计算方式效率更高</li>
-<li>在扩容重新计算桶下标过程中，若容量为2的整数次方，以原容量为16为例，则新容量为32。则原来hash值在第五位为0的键值对在新map中仍在与原map相同下标的桶处；为1的键值对在新map中为在原map桶中下标+16的桶处</li>
-</ul>
-<p><strong>HashMap为什么是线程不安全</strong></p>
-<ul>
-<li>JDK1.7中会在transfer()过程中出现循环引用</li>
-<li>JDK1.8中会在put操作过程中造成数据覆盖</li>
-</ul>
-<p><strong>循环引用</strong></p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A81.png" class="">
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A82.png" class="">
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A83.png" class="">
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A84.png" class=""></li>
-<li><p>Hashtable和ConcurrentHashMap</p>
-<ul>
-<li>HashTable类使用synchronize来做线程安全，全局只有一把锁</li>
-<li>ConcurrentHashMap在JDK1.7使用segmant（分段锁）实现，自JDK 1.8使用CAS（Compare and Swap）操作实现，</li>
-<li>ConcurrentHashMap也实现了在链表长度大于等于8时自动转化为红黑树</li>
-</ul>
-<p><strong>CAS操作</strong></p>
-<ul>
-<li>CAS的问题：在高并发情况下，CPU开销较大；只适用于变量，不能保证代码块的原子性；ABA问题</li>
-<li>CAS适用场景：线程冲突小的场景（可能还有任务执行时间短的场景）</li>
-</ul>
-<p><strong>ConcurrentHashMap中的size操作（JDK1.7）</strong></p>
-<ul>
-<li>每个segment中维护一个count变量，记录该segment中键值对的数量</li>
-<li>size操作会统计所有segment的count并累计起来</li>
-<li>ConcurrentHashMap 在执行 size 操作时先尝试不加锁，如果连续两次不加锁操作得到的结果一致，那么可以认为这个结果是正确的。尝试次数使用 RETRIES_BEFORE_LOCK 定义，该值为 2，retries 初始值为 -1，因此尝试次数为 3。如果尝试的次数超过 3 次，就需要对每个 Segment 加锁。</li>
-</ul>
-</li>
-<li><p>Java单例模式</p>
-<ul>
-<li>饿汉式：在类初始化时即实例化自己，天生线程安全（背下代码）</li>
-<li>懒汉式：在调用的时候才实例化，非线程安全，可通过在方法上加同步、在代码块上加同步或使用静态内部类实现线程安全</li>
-</ul>
-</li>
-<li><p>Java里的几种内部类：</p>
-<ul>
-<li>成员内部类</li>
-<li>局部内部类</li>
-<li>嵌套内部类</li>
-<li>匿名内部类<br>内部类可以访问外部类的成员，在内部类构造的时候，会将外部类的引用传递进来，并且作为内部类的一个属性，所以内部类会持有一个其外部类的引用。</li>
-</ul>
-</li>
-<li><p>为什么要有迭代器<br>Iterator类的访问方式就是把不同集合类的访问逻辑抽象出来，使得不用暴露集合内部的结构而达到循环遍历集合的效果。</p>
-</li>
-<li><p>synchronized 是怎么实现的</p>
-<ul>
-<li>若是同步代码块，则在代码块前后分别添加monitorenter和monitorexit字节码指令。</li>
-<li>若是同步方法，则JVM从方法常量池的方法表结构中的ACC_SYNCHRONIZED访问标志得知一个方法是否声明为同步方法</li>
-</ul>
-</li>
-<li><p>synchronized 的四种锁状态</p>
-<ul>
-<li>无锁状态</li>
-<li>偏向锁：通过对比 Mark Word 解决加锁问题，避免执行CAS操作。</li>
-<li>轻量级锁：通过用 CAS 操作和自旋来解决加锁问题，避免线程阻塞和唤醒而影响性能。</li>
-<li>重量级锁：将除了拥有锁的线程以外的线程都阻塞。</li>
-</ul>
-<p><strong>膨胀式锁分配策略：</strong>锁可以升级但不可以降级</p>
-</li>
-<li><p>常见的五种运行时异常</p>
-<ul>
-<li>IndexOutOfBoundsException - 下标越界异常</li>
-<li>NullPointerException - 空指针引用异常</li>
-<li>ClassCastException - 类型强制转换异常</li>
-<li>ArithmeticException - 算术运算异常</li>
-<li>NegativeArraySizeException - 数组大小错误异常（数组大小为负数）</li>
-</ul>
-</li>
-<li><p>Java常见的几种线程池（五种）</p>
-<ul>
-<li>newCachedThreadPool：创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程（数量没有限制）。</li>
-<li>newFixedThreadPool：创建一个指定工作线程数量的线程池。每当提交一个任务就创建一个工作线程，如果工作线程数量达到线程池初始的最大数，则将提交的任务存入到池队列中。</li>
-<li>newSingleThreadExecutor：只创建一个工作者线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。</li>
-<li>newScheduleThreadPool：创建一个定长的线程池，而且支持定时的以及周期性的任务执行</li>
-</ul>
-</li>
-<li><p>AQS相关（AbstractQueuedSynchronizer–抽象队列同步器）</p>
-<ul>
-<li>就ReentrantLock来说，AQS是它的一个对象，是ReentrantLock用来实现加锁和释放锁的关键性的核心组件</li>
-<li>核心变量state：0表示未上锁，非0表示已上锁，非0值表示上锁的线程重入该锁的次数</li>
-<li>记录加锁线程的变量：该变量记录加锁的线程，用于实现可重入锁</li>
-<li>阻塞队列：ReentrantLock是互斥锁，所有申请锁失败的线程都会进入阻塞队列 </li>
-</ul>
-</li>
-<li><p>Java的锁分类（7大类）</p>
-<ul>
-<li>偏向锁/轻量级锁/重量级锁</li>
-<li>可重入锁/非可重入锁</li>
-<li>共享锁/独占锁</li>
-<li>公平锁/非公平锁</li>
-<li>悲观锁/乐观锁</li>
-<li>自旋锁/非自旋锁</li>
-<li>可中断锁/不可中断锁</li>
-</ul>
-</li>
-<li><p>start()和run()的区别</p>
-<ul>
-<li>当程序调用Thread类start()方法，会创建一个新线程。此时该线程处于就绪（可运行）状态，并没有运行，一旦得到cpu时间片，才开始执行run()方法。</li>
-<li>当直接调用run()方法时，程序并不会创建新线程，run方法内部的代码将在当前线程上运行。</li>
-</ul>
-</li>
-<li><p>Java创建线程的方式（也即如何实现多线程）</p>
-<ul>
-<li>通过继承Thread类：重写run()方法，调用start()方法创建新线程</li>
-<li>通过实现Runnable接口或者Callable接口</li>
-</ul>
-<p><strong>补充</strong>：run()方法的方法体就是线程要完成的任务</p>
-</li>
-<li><p>ThreadLocal()类</p>
-<ul>
-<li>ThreadLocal是JDK包提供的一个线程内部的存储类，可以在指定线程内存储数据，数据存储以后，只有指定线程可以得到存储数据。通过get和set方法可以获取和设置当前线程对应的值。</li>
-</ul>
-</li>
-<li><p>CopyOnWrite</p>
-<ul>
-<li>写时复制，在往集合中更新数据的时候，先拷贝存储的数组，然后添加元素到拷贝好的数组中，然后用现在的数组去替换成员变量的数组</li>
-</ul>
-</li>
-<li><p>Scanner相关</p>
-<ul>
-<li>nextLine()在nextInt()方法后时，需添加多一个nextLine()在nextLine()之前，以捕获nextInt()方法后的回车符、</li>
-</ul>
-</li>
-<li><p>重写和重载</p>
-<ul>
-<li>Override：重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。（返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类</li>
-<li>Overload：重载是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。每个重载的方法（或者构造函数）都必须有一个独一无二的参数类型列表。最常用的地方就是构造器的重载。</li>
-</ul>
-</li>
-<li><p>Java引用和C++指针的区别</p>
-<ul>
-<li>类型：引用其值为地址的数据元素，Java封装了的地址，可以转换成字符串查看，长度也可以不必担心。C++指针是一个装地址的变量，长度一般是计算机字长，可以认为是个int。</li>
-<li>所占内存：引用声明时没有实体，不占空间。C++指针如果声明之后会用到才会赋值。如果用不到不会分配内存。</li>
-<li>初始值：引用初始值为java关键字null。C++指针是int，如不初始化指针，那它的值就不是固定的了，这很危险。</li>
-<li>计算：引用不可以计算。C++指针是int，他可以计算，如++或–，所以经常用指针来代替数组下标。</li>
-<li>内存泄露：Java引用不会产生内存泄露。C++指针是容易产生内存泄露的，所以程序员要小心使用，及时回收。</li>
-</ul>
-</li>
-<li><p>volatile为什么不能保证原子性？<br><strong>先解释下可见性</strong></p>
-<ul>
-<li>可见性与Java的内存模型有关，模型采用缓存与主存的方式对变量进行操作，也就是说，每个线程都有自己的缓存空间，对变量的操作都是在缓存中进行的，之后再将修改后的值返回到主存中，这就带来了问题，有可能一个线程在将共享变量修改后，还没有来的及将缓存中的变量返回给主存中，另外一个线程就对共享变量进行修改，那么这个线程拿到的值是主存中未被修改的值，这就是可见性的问题。</li>
-<li>volatile很好的保证了变量的可见性，变量经过volatile修饰后，对此变量进行写操作时，汇编指令中会有一个LOCK前缀指令，并引发两件事情：</li>
-</ul>
+<p>问题原因：新 feature 在反序列化过程中复⽤了上⼀条数据 map 的 json node。但因为⼴告数据每个 map 的 key 不完全⼀样，因此导致下⼀条数据反序列化时会带上上⼀条数据的 key 值。</p>
+<p><strong>flink 反压</strong><br>上线 creative 粒度（粒度最细）聚合任务时，flink 任务反压明显，表现为输出算子的 inpool 利用率极高；<br>解决办法：调大输出算子并发度 parallelism，由 30 -&gt; 50。（最初 30 的确定，是为了 kafka 攒 batch）。并发度低，输出算子压力大。</p>
+<p><strong>logstash 输出乱序问题</strong></p>
+<blockquote>
+<p>任务上线后，发现数据和真实的对不上。有两个小时对不上，这两个小时里各有一次上线，因此猜测是上线导致。</p>
+</blockquote>
+<p>原因猜测：logstash 并发读数据时，因为各线程消费数据后处理速度有快有慢，若先消费数据的后处理完，则某指标的小数值将覆盖大数值，导致数变小。<br>解决办法：logstash 写 es 时，新增 version 字段。每次写 es 前会对比该字段（同一 doc_id)，若值比 es 中的要小，则丢弃。（es 中 doc_id 是主键）</p>
+<h2 id="pre-agg-spark-迁-flink"><a href="#pre-agg-spark-迁-flink" class="headerlink" title="pre_agg spark 迁 flink"></a>pre_agg spark 迁 flink</h2><blockquote>
+<p>基本背景：待迁移的是 pre_agg_common 和 pre_agg_core 两个任务，由 spark streaming(1.5min 聚合) 迁至 flink streaming(1min 聚合) 引擎，聚合字段使用的是数据进来时新添加的处理时刻 process_time。<br>请求 flink 同学支持新 feature：flink sql 的无状态聚合。</p>
+</blockquote>
+<p><strong>为什么需要无状态聚合：</strong>pre_agg 任务的目的是减少数据量，降低下游维度拼接任务的输入 qps；且下游有各粒度聚合任务，因此必须保证每条聚合输出的数据彼此无关联。<br><strong>无状态聚合基本原理：</strong>每次 cp 不记录聚合状态，只记录 commit offset，如此，每次聚合都是从 0 开始。<br><strong>迁 flink 过程遇到的问题：</strong>无状态聚合 feature 没有问题，但任务若需要新增减维度，则需要切 checkpoint，但我们需要的是不切 checkpoint。<br><strong>为什么需要不切 cp：</strong>若切了 cp，在任务停止和重新启动成功的这段时间里，可能存在数据丢失。因为没有上次 cp 的 commit offset 保存，则会从 kafka 最新消息处开始消费，因此导致数据丢失。</p>
+<p><strong>原来是怎么做到的：切 cp，流程如下：</strong></p>
 <ol>
-<li>将当前处理器缓存行的数据写回到系统内存</li>
-<li>这个写回内存的操作会使得在其他处理器缓存了该内存地址无效</li>
+<li>主 spark 任务在某时刻停止产出；</li>
+<li>备 spark 任务在某时刻开始产出，该时刻与主 spark 任务停止产出时刻相同；同时设置另一停止产出时刻；切 checkpoint；</li>
+<li>备 spark 任务停止，启动主 spark 任务。主 spark 任务和备 spark 任务的 cp 相同。<br> <strong>为什么 flink 不用这个方式切 cp：因为 flink 任务不支持指定 checkpoint 存储地址，存储地址依据任务名自动生成。同时也解释了为什么不用核心粒度聚合任务切 cp 的方式。</strong></li>
 </ol>
-<ul>
-<li>即当一个共享变量被volatile修饰时，它会保证修改的值被立即更新到主存，当有其他线程需要读取时，它会去内存中读取新值，这就保证了可见性。</li>
-</ul>
-<p><strong>但原子性上</strong></p>
-<ul>
-<li>在某一时刻线程1将i的值load取出来，放置到cpu缓存中，然后再将此值放置到寄存器A中，然后A中的值自增1（寄存器A中保存的是中间值，没有直接修改i，因此其他线程并不会获取到这个自增1的值）。如果在此时线程2也执行同样的操作，获取值i==10,自增1变为11，然后马上刷入主内存。此时由于线程2修改了i的值，实时的线程1中的i==10的值缓存失效，重新从主内存中读取，变为11。接下来线程1恢复。将自增过后的A寄存器值11赋值给cpu缓存i。这样就出现了线程安全问题。</li>
-</ul>
-</li>
-<li><p>抽象类和接口<br><strong>相同点</strong></p>
-<ul>
-<li>都不能被实例化</li>
-</ul>
-<p><strong>不同点</strong></p>
-<ul>
-<li>接口是对某一个行为动作的抽象，而抽象类是对类的抽象（包括了属性和对应的行为）</li>
-<li>接口可以实现多实现，抽象类只能单继承</li>
-<li>接口中定义的方法不能实现，抽象类中的方法可以部分实现。</li>
-<li>接口中的域默认的为public static final，即不可更改的动作。而抽象类中可以被任意权限修饰符修饰，static/非static，final/非final，可以有抽象方法和非抽象方法。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/4.png" class=""></li>
-</ul>
-<p><strong>interface的应用场合</strong></p>
-<ul>
-<li>类与类之前需要特定的接口进行协调，而不在乎其如何实现。</li>
-<li>作为能够实现特定功能的标识存在，也可以是什么接口方法都没有的纯粹标识。</li>
-<li>需要将一组类视为单一的类，而调用者只通过接口来与这组类发生联系。</li>
-<li>需要实现特定的多项功能，而这些功能之间可能完全没有任何联系。</li>
-</ul>
-<p><strong>abstract class的应用场合</strong><br><em>一句话，在既需要统一的接口，又需要实例变量或缺省的方法的情况下，就可以使用它。最常见的有：</em></p>
-<ul>
-<li>定义了一组接口，但又不想强迫每个实现类都必须实现所有的接口。可以用abstract class定义一组方法体，甚至可以是空方法体，然后由子类选择自己所感兴趣的方法来覆盖。</li>
-<li>某些场合下，只靠纯粹的接口不能满足类与类之间的协调，而需要类中表示状态的变量来区别不同的关系。abstract的中介作用可以很好地满足这一点。</li>
-<li>规范了一组相互协调的方法，其中一些方法是共同的，与状态无关的，可以共享的，无需子类分别实现；而另一些方法却需要各个子类根据自己特定的状态来实现特定的功能</li>
-</ul>
-</li>
-<li><p>Java内存模型</p>
-<ul>
-<li>Java内存模型规定了所有变量都存储在主内存内，此处主内存隶属于Java虚拟机内存的一部分，而虚拟机内存是操作系统分配的。每条Java线程还有自己的工作内存(类比上面的高速缓存)，工作内存中保存了被该线程使用到的变量的主内存的副本，线程对变量的所有操作都在工作内存中进行，Java线程之间的变量值传递都通过主内存来完成。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/5.jpg" class=""></li>
-</ul>
-<p><strong>Java内存模型定义了8种原子性操作，其中前4条是作用于主内存，后4条作用于工作内存：</strong></p>
-<ul>
-<li>lock 锁定，将一个变量标识为线程独占状态</li>
-<li>unlock 解锁，将锁定状态的变量解除锁定，释放后的变量才可以被其他变量锁定</li>
-<li>read 读取，将变量从主内存传输到线程的工作内存中，待之后的load加载</li>
-<li>write 写入，把store操作从工作内存中得到的变量值写入主内存的变量中</li>
-<li>load 加载，将read后从主内存得到的变量值加载到工作内存的变量副本中</li>
-<li>use 使用，把工作内存中的一个变量值传递给字节码执行引擎，等待字节码指令使用</li>
-<li>assign 赋值，把一个从执行引擎接收到的值赋值给工作内存的变量</li>
-<li>store 存储，把工作内存中一个变量的值传送到主内存中，以便随后的write使用</li>
-</ul>
-</li>
-<li><p>Java的”==”和”equals”</p>
-<ul>
-<li>“==”仅适用于基本类型数据（如字符）比较，若用于对象（如字符串），则比较的是对象地址；”equals”用于比较对象，但该方法不能作用于基本数据类型的变量</li>
-<li>此外，”euqals”用于对象的比较，比如：”Hello”.equals(greating)，而equalsIgnoreCase()方法还可实现不区分大小写比较两个字符串</li>
-</ul>
-</li>
-<li><p>String相关</p>
-<ul>
-<li>String类用final修饰，代表String类不可被继承。</li>
-<li>用于存储字符串值的char[] value数组用private和final修饰，其中，final可以保证value的引用地址不会被修改，但是不能保证数组中的值不会被修改，而private修饰符能够保证值不会被外部修改。这样就能保证String类的不可变性。</li>
-</ul>
-<p><strong>不可变性的好处</strong></p>
-<ul>
-<li>使得JVM可以实现字符串常量池；字符串常量池可以在程序运行时节约很多内存空间，因为不同的字符串变量指向相同的字面量时，都是指向字符串常量池中的同一个对象。这样一方面能够节约内存，另一方面也提升了性能。</li>
-<li>保证了安全性。比如：若在HashMap中使用StringBuilder作为键的类型，因为StringBuilder可以改变，则可能导致HashMap中某个键被改变成与另一键相同，从而出现键不唯一的情况</li>
-</ul>
-<p><strong>equals源码分析</strong></p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/6.png" class=""></li>
-<li><p>Java线程的状态</p>
-<ul>
-<li>初始状态（NEW）：线程已经构建，尚未启动。</li>
-<li>运行状态（RUNNABLE）：包括就绪（READY）和运行中（RUNNING）两种状态，统称为运行状态。</li>
-<li>阻塞状态（BLOCKED）：线程被锁阻塞。</li>
-<li>等待状态（WAITING）：线程需要等待其他线程做出特定动作（通知或中断）。</li>
-<li>超时等待状态（TIME_WAITING）：不同于等待状态，超时等待状态可以在指定的时间自行返回。</li>
-<li>终止状态（TERMINATED）：当前线程已经执行完毕。</li>
-</ul>
-<p><strong>阻塞状态</strong></p>
-<ul>
-<li>线程争用锁失败进入阻塞状态</li>
-</ul>
-<p><strong>等待状态</strong></p>
-<ul>
-<li>锁对象调用wait()方法（无指定超时时间）后线程进入等待状态</li>
-</ul>
-<p><strong>超时等待状态</strong></p>
-<ul>
-<li>线程调用sleep(int timeout)或锁对象wait(int timeout)方法后线程进入超时等待状态，在等待指定时间后会返回</li>
-</ul>
-<p><strong>sleep()和wait()方法区别</strong></p>
-<ul>
-<li>sleep()方法仅支持超时等待，wait()支持等待和超时等待状态</li>
-<li>sleep()释放CPU执行权，但不释放同步锁；wait()释放CPU执行权，也释放同步锁，使得其他线程可以使用同步控制块或者方法。</li>
-<li>只有锁对象才能调用wait()和notify()方法，sleep()方法不由锁对象调用</li>
-</ul>
-</li>
-<li><p>Java的static关键字<br><strong>static方法（静态方法）</strong></p>
-<ul>
-<li>静态方法不依赖于任何对象就可以进行访问，因此对于静态方法来说，是没有this的</li>
-<li>静态方法中不能访问类的非静态成员变量和非静态成员方法，但非静态成员方法中是可以访问静态成员方法/变量的</li>
-<li>最常见的static方法就是main方法，因为程序在执行main方法的时候没有创建任何对象，因此只有通过类名来访问。</li>
-</ul>
-<p><strong>static变量（静态变量）</strong></p>
-<ul>
-<li>静态变量被所有的对象所共享，在内存中只有一个副本，它当且仅当在类初次加载时会被初始化。</li>
-<li>非静态变量是对象所拥有的，在创建对象的时候被初始化，存在多个副本，各个对象拥有的副本互不影响。</li>
-<li>static成员变量的初始化顺序按照定义的顺序进行初始化。</li>
-</ul>
-<p><strong>static代码块（静态代码块）</strong></p>
-<ul>
-<li>static块可以置于类中的任何地方，类中可以有多个static块。在类初次被加载的时候，会按照static块的顺序来执行每个static块，并且只会执行一次。</li>
-</ul>
-<p><strong>补充</strong></p>
-<ul>
-<li>通过this能够访问静态成员变量</li>
-<li>static不允许用来修饰局部变量（Java中是这样）</li>
-<li>static代码块先于构造方法执行，因为static代码块在类加载的时候就执行，构造方法在创建对象的时候才执行</li>
-</ul>
-</li>
-<li><p>Java的final关键字<br><strong>final类</strong></p>
-<ul>
-<li>当用final修饰一个类时，表明这个类不能被继承。</li>
-<li>final类中的所有成员方法都会被隐式地指定为final方法。</li>
-</ul>
-<p><strong>final方法</strong></p>
-<ul>
-<li>把方法锁定，以防任何继承类重写</li>
-<li>类的private方法会隐式地被指定为final方法</li>
-</ul>
-<p><strong>final变量</strong></p>
-<ul>
-<li>如果是基本数据类型的变量，则其数值一旦在初始化之后便不能更改</li>
-<li>如果是引用类型的变量，则在对其初始化之后便不能再让其指向另一个对象</li>
-</ul>
-</li>
-<li><p>Java类加载机制</p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.png" class=""></li>
-<li><p>线程安全问题</p>
-<ul>
-<li>运算结果错误（i++）</li>
-<li>对象没有在正确的时间、地点被发布或初始化</li>
-<li>活跃性问题，如死锁、活锁、饥饿</li>
-</ul>
-</li>
+<p><strong>目前的解决办法：</strong>聚合的维度使用 concat 拼接成一个字段，在 select 时用 first_value() 方法选 key 的各维度第一个值。</p>
+<p><strong>补充：核心粒度聚合任务切 cp 流程：</strong></p>
+<ol>
+<li>设置主 flink 任务停止产出时间；</li>
+<li>设置备 flink 任务开始产出时间，与主 flink 任务停止产出时间一致；新增备 flink 任务停止产出时间；切 checkpoint；</li>
+<li>设置主 flink 任务开始产出时间，与备 flink 任务停止产出时间一致，启动主 flink 任务；切 cp；<br>因为是 1 小时聚合，使用的字段 monitor_ts 是整点的（不含分秒），因此即使任务不是整点上线，group by tumble(monitor_ts, INTERVAL 1 HOUR)，但基于字段形成的 1 小时窗口，仍是整点的。因此整点切换 cp 是没有问题的。</li>
 </ol>
-<h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><h3 id="需要注意的对比-5"><a href="#需要注意的对比-5" class="headerlink" title="需要注意的对比"></a>需要注意的对比</h3><ol>
-<li>背下JVM的运行时数据区域</li>
-<li>背下类的加载过程</li>
-<li>背下GC ROOTS的四类对象</li>
-<li>再看一遍CMS和G1收集器</li>
-<li>背下JVM的内存分配与回收策略</li>
-</ol>
-<h3 id="补充-5"><a href="#补充-5" class="headerlink" title="补充"></a>补充</h3><ol>
-<li>JVM的回收过程<br>它的过程大致如下：调用垃圾回收器——判断对象是否可回收（引用计数法和根搜索算法）——调用垃圾回收算法（标记—清除算法、复制算法、标记—整理算法、分代收集算法）</li>
-</ol>
-<ol start="2">
-<li><p>双亲委派模型</p>
-<ul>
-<li>类加载器之间有层级关系，从上到下依次为：启动类加载器、扩展类加载器、应用程序类加载器和用户自定义类加载器。除了顶层的启动加载类（又称引导加载类），其他的类加载器（扩展类加载器、应用程序类加载器、用户自定义加载器）都要有自己的父类加载器</li>
-<li>类加载器间的父子关系一般通过组合关系实现，而不是继承关系</li>
-<li>一个类加载器首先将类加载请求转发到父类加载器，只有当父类加载器无法完成时才尝试自己加载。</li>
-</ul>
-<p><strong>好处：</strong>使得 Java 类随着它的类加载器一起具有一种带有优先级的层次关系，从而使得基础类得到统一。</p>
-<p><strong>补充：</strong>两个类相等，需要类本身相等，并且使用同一个类加载器进行加载。这是因为每一个类加载器都拥有一个独立的类名称空间。</p>
-</li>
-<li><p>内存泄漏相关</p>
-<ul>
-<li>定义：内存泄漏是指程序动态分配的堆内存因某种原因程序未释放或无法释放，造成系统内存浪费的情况。它会导致程序运行速度减慢甚至系统崩溃的后果</li>
-<li>Java的内存泄漏和C++的内存泄露有什么不同：在C++中，如果需要动态分配一块内存，程序员需要负责这块内存的整个生命周期，这样很灵活，但过程却很繁琐，程序员容易因为疏忽忘记释放内存，从而导致内存泄漏；在Java有垃圾回收机制，它负责自动回收不再使用的内存</li>
-<li>Java中还会有内存泄漏的情况吗？ 有，Java 的内存泄露通常情况下表现为一个内存对象的生命周期超出了程序需要它的时间长度。比如无效的使用static字段</li>
-</ul>
-</li>
-<li><p>引用计数法和根搜索算法（或可达性分析法）</p>
-<ul>
-<li>引用计数法根据对象的引用计数判断对象是否可回收，若对象的引用计数为0，则回收对象；根搜索算法回收的是从GC ROOTS开始搜索不可达的对象</li>
-<li>引用计数法存在循环引用的问题，根搜索算法可能导致浮动垃圾和对象消失问题</li>
-</ul>
-</li>
-<li><p>JVM的根搜索算法——三色标记</p>
-<ul>
-<li>三色标记分别是：黑色、灰色、白色<br>黑色：根对象，或者该对象与它的子对象都被扫描过<br>灰色：对象本身被扫描，但是还有没扫描该对象的子对象<br>白色：未被扫描的对象，如果扫描完成所有对象之后，最终为白色的为不可达对象，即垃圾对象</li>
-<li>浮动垃圾：GC中已经标黑的对象，在并发过程中引用链断掉，导致实际应为白色的垃圾对象仍是黑色的现想。解决办法：留给下次垃圾回收处理</li>
-<li>对象消失问题需满足以下两个必要条件：<ol>
-<li>赋值器插入了一条或多条从黑色对象到白色对象的引用</li>
-<li>赋值器删除了全部从灰色对象到该白色对象的直接或间接引用</li>
-</ol>
-<strong>解决办法</strong><ul>
-<li>增量更新（CMS使用）：当一个白色对象被黑色对象引用，将黑色对象重新标记为灰色，让垃圾回收器重新扫描。</li>
-<li>原始快照（G1使用）：在灰色对象要删除和白色对象的引用时，将该引用记录下来，在并发扫描结束后，重现这些记录的引用，类似浮动垃圾的处理</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>JVM的栈和堆</p>
-<ul>
-<li>栈中存放基本类型的数据或对象的引用变量，堆存放的是new创建的数组或对象</li>
-<li>栈中的对象可以共享，堆中的不可以</li>
-<li>栈的存取速度较快</li>
-<li>栈中数据大小和生命周期可以确定，当没有引用指向数据时，数据便会消失；堆中的对象由垃圾回收器负责回收，因此大小和生命周期都不确定</li>
-</ul>
-</li>
-</ol>
-<h2 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h2><ol>
-<li>Spring AOP实现原理<ul>
-<li>AOP（Aspect-OrientedProgramming，面向方面编程），可以说是OOP（Object-Oriented Programing，面向对象编程）的补充和完善。</li>
-<li>OOP引入封装、继承和多态性等概念来建立一种对象层次结构，用以模拟公共行为的一个集合。当我们需要为分散的对象引入公共行为的时候，OOP则显得无能为力。也就是说，OOP允许你定义从上到下的关系，但并不适合定义从左到右的关系。例如日志功能。</li>
-<li>而AOP技术则恰恰相反，它利用一种称为“横切”的技术，剖解开封装的对象内部，并将那些影响了多个类的公共行为封装到一个可重用模块，并将其名为“Aspect”，即方面。所谓“方面”，简单地说，就是将那些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可操作性和可维护性。</li>
-</ul>
-<strong>实现AOP的技术，主要分为两大类：</strong><ul>
-<li>一是采用动态代理技术，利用截取消息的方式，对该消息进行装饰，以取代原有对象行为的执行；</li>
-<li>二是采用静态织入的方式，引入特定的语法创建“方面”，从而使得编译器可以在编译期间织入有关“方面”的代码。</li>
-</ul>
-</li>
-</ol>
-<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><p>  您好，我叫邹润鑫，本科毕业于南京理工大学，专业是材料科学与工程，获学士学位。目前就读于北京大学软件与微电子学院电子信息专业软件工程方向。目前我研一，即将进入研二。我主要使用的编程语言是Java，同时会一点python。了解计算机网络、操作系统和数据库方面的基础知识。目前做过微信小程序的项目开发和爬虫，希望今天的面试能有个良好的表现，谢谢</p>
-<h2 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h2><h3 id="挑战杯"><a href="#挑战杯" class="headerlink" title="挑战杯"></a>挑战杯</h3><ol>
+<h1 id="项目准备"><a href="#项目准备" class="headerlink" title="项目准备"></a>项目准备</h1><h2 id="挑战杯"><a href="#挑战杯" class="headerlink" title="挑战杯"></a>挑战杯</h2><ol>
 <li><p>Flask + SQLAlchemy + MySQL的颈椎操——挑战杯项目<br><strong>介绍项目</strong></p>
 <ul>
 <li>我们的项目是一个叫“轻松颈椎操”的微信小程序，因为目前现代人看电脑和手机的时间很长，颈椎负担比较大，因此开发这个小程序，人们可以按照小程序上的提示进行颈椎操的锻炼，保护颈椎。这个小程序大概实现以下功能：用户登录进入小程序后，首先进入训练室页面（这也是我们的主界面），在训练室界面会展示可选的颈椎操项目，用户点击任意一个项目，会进入颈椎操视频教学的播放界面，用户按照视频教学进行颈椎锻炼。此外，每个用户有自己的个人信息界面和打卡记录界面，并可以查看自己的历史得分记录。</li>
@@ -1428,4 +1670,4 @@
 <li>每周能做到全勤吗</li>
 </ol>
 <p>反问：如果顺利入职，我需要准备那些方面的内容</p>
-</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/"><img class="prev-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">选调相关</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/05/Java/"><img class="next-cover" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">勤加注释！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%9A"><span class="toc-text">需要注意的对比：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-1"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-1"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-2"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-2"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-3"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-3"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-text">思考题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%BA%E5%8A%9B%E9%A2%98"><span class="toc-text">智力题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80"><span class="toc-text">Java基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-4"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-4"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-text">JVM</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-5"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-5"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spring"><span class="toc-text">Spring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D"><span class="toc-text">自我介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87"><span class="toc-text">项目准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%91%E6%88%98%E6%9D%AF"><span class="toc-text">挑战杯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E7%BB%8F"><span class="toc-text">面经</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><time datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E4%BD%9C%E7%A7%AF%E7%B4%AF/" title="工作积累">工作积累</a><time datetime="2021-10-25T05:16:26.000Z" title="Created 2021-10-25 13:16:26">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><time datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/22/hello-world/" title="Hello World">Hello World</a><time datetime="2021-09-22T15:33:18.000Z" title="Created 2021-09-22 23:33:18">2021-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/" title="选调相关">选调相关</a><time datetime="2021-05-31T14:57:21.000Z" title="Created 2021-05-31 22:57:21">2021-05-31</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/"><img class="prev-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">选调相关</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/05/Java/"><img class="next-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">勤加注释！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E8%AF%95%E9%97%AE%E4%B8%80%E5%8F%A5%E7%AD%94%E4%B8%80%E5%8F%A5%EF%BC%8C%E4%B8%8D%E8%A6%81%E8%87%AA%E9%A1%BE%E8%87%AA%E7%AD%94"><span class="toc-text">面试问一句答一句，不要自顾自答</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leetcode"><span class="toc-text">Leetcode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%88%AC"><span class="toc-text">一般</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-text">递归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF"><span class="toc-text">回溯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="toc-text">广度优先遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-text">动态规划</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80"><span class="toc-text">网络基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP"><span class="toc-text">HTTP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E7%B3%BB%E7%BB%9F"><span class="toc-text">一般系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-text">JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">内存模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1"><span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94-1"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85-1"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-text">思考题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%99%BA%E5%8A%9B%E9%A2%98"><span class="toc-text">智力题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D"><span class="toc-text">自我介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86"><span class="toc-text">实习经历</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#sss-%E4%BB%BB%E5%8A%A1%E8%BF%81%E7%A7%BB-flink"><span class="toc-text">sss 任务迁移 flink</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pre-agg-spark-%E8%BF%81-flink"><span class="toc-text">pre_agg spark 迁 flink</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87"><span class="toc-text">项目准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%91%E6%88%98%E6%9D%AF"><span class="toc-text">挑战杯</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%A2%E7%BB%8F"><span class="toc-text">面经</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/26/%E9%87%91%E8%9E%8D%E6%9C%AF%E8%AF%AD/" title="金融术语">金融术语</a><time datetime="2022-01-26T05:47:08.000Z" title="Created 2022-01-26 13:47:08">2022-01-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/23/hello-world/" title="Hello World">Hello World</a><time datetime="2022-01-23T14:49:13.969Z" title="Created 2022-01-23 22:49:13">2022-01-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/19/%E7%94%9F%E6%B4%BB%E6%94%BB%E7%95%A5/" title="生活攻略">生活攻略</a><time datetime="2022-01-19T02:39:43.000Z" title="Created 2022-01-19 10:39:43">2022-01-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/18/%E4%B9%B0%E4%B9%B0%E4%B9%B0%E6%94%BB%E7%95%A5/" title="买买买攻略">买买买攻略</a><time datetime="2022-01-18T14:52:34.000Z" title="Created 2022-01-18 22:52:34">2022-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><time datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>

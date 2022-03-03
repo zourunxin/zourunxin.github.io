@@ -53,7 +53,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-10-25 21:16:51'
+  postUpdate: '2022-03-03 13:40:01'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,8 +142,45 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T13:15:32.043Z" title="Updated 2021-10-25 21:15:32">2021-10-25</time></span></div><div class="content">Hexo
-参考从0开始搭建个人博客(详细步骤)mac os下搭建hexo+github博客hexo-theme-hiker
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a></div></div></div><hr/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/05/03/%E9%9D%A2%E8%AF%95/" title="面试">面试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-02T14:58:48.149Z" title="Updated 2022-03-02 22:58:48">2022-03-02</time></span></div><div class="content">面试问一句答一句，不要自顾自答Leetcode一般
+字符串个数统计相关：无论字符串是数字 or 字符形式，统计方式可利用一维数组统计各字符出现次数。
+数字：int[10]，cnt[c - ‘0’]++；
+小写字母：int[26]，cnt[c - ‘97’]（97 - 122）；
+大写字母：int[26]，cnt[c - ‘65’]（65 - 90）；
+
+
+
+递归
+实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序/中序/后序遍历。
+本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：二叉树的序列化与反序列化有两种回溯处理方式：
+递归利用回溯：即当前层的处理结果依赖下面层的处理返回结果，递归方法需有返回值；一般递归语句后有其他处理逻辑。
+递归不利用回溯：即当前层的处理结果不依赖下面层的处理返回结果，仅与该层及前面层有关；一般递归语句后无其他处理逻辑。
+需注意：
+递归函数的参数建议是中间值；
+不变的变量用作全局变量，不要作为参数使用。
+
+
+
+回溯
+实现方式：在循环体里进行递归。
+本质：循环的作用是枚举所有情况；递归的作用是若在某种情况下若不符合题解 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/02/05/Java/" title="Java">Java</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-02-05T13:10:50.000Z" title="Created 2021-02-05 21:10:50">2021-02-05</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-02T08:25:13.310Z" title="Updated 2022-03-02 16:25:13">2022-03-02</time></span></div><div class="content">数据结构数组Array
+以数组 nums 为例
+
+
+声明：
+int[] nums = new int[1];
+int[] nums = new int[]&#123;0&#125;;
+Object[] nums = list.toArray(); ArrayList 转 Array，类型只能转为 Object
+
+
+Arrays.toString(nums)：将数组转为字符串以方便打印，否则若直接打印则输出为数组地址；
+Arrays.fill(nums, 0) 元素赋统一值。数组 nums 的所有元素统一赋值 0，nums 可为任意维数组
+Arrays.stream(nums).sum() 元素求和
+Arrays.stream(nums).min()/max().getAsInt(); 获取最大值/最小值，返回值为 int 类型数字
+复制数组：
+Arrays.copyOfRange(T[] original, int from, int to) 将一个原始数组 original，从下标 from 的元素开始复制，直至下标 to 的前一个元素，生成一个新的数组作为返回值返回;
+System ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-02T02:33:08.003Z" title="Updated 2022-03-02 10:33:08">2022-03-02</time></span></div><div class="content">Hexo
+参考从0开始搭建个人博客(详细步骤)mac os下搭建hexo+github博客hexo-theme-hikerhexo 文章加密hexo笔记：文章排序
 
 Hexo 安装cnpm 命令无效问题问题描述在安装Hexo admin过程中，输入命令 cnpm install --save hexo-admin光标在控制器中静止不动，且无任何输出响应内容。此时按 crtl C 退出过程解决办法重新输入代码：npm config set registry http://registry.cnpmjs.org再重新运行 hexo admin 安装指令即可
 Hexo 终端命令
@@ -157,14 +194,84 @@ Hexo 终端命令
 
 Hexo 相关报错
 hexo d中报443Time out错误，尝试翻墙解决
-hexo d中报Connection was reset, errno 10054， ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/02/05/Java/" title="Java">Java</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-02-05T13:10:50.000Z" title="Created 2021-02-05 21:10:50">2021-02-05</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T11:13:48.317Z" title="Updated 2021-10-25 19:13:48">2021-10-25</time></span></div><div class="content">数据结构及方法数组——Array方法：
-数组元素排序：Arrays.sort(T[] original)
-数组元素求和：Arrays.stream(T[] original).sum()
-从数组中获取最大值/最小值：Arrays.stream(nums).min()/max().getAsInt();
-数组元素统一赋值：Arrays.fill(T[] original, a) —— 数组original所有元素统一赋值为a，original可为一维或二维数组
-复制数组1：Arrays.copyOfRange(T[] original, int from, int to) —— 将一个原始的数组original，从下标from开始复制，复制到上标to（不包括上标to），生成一个新的数组（返回值）;
-复制数组2：System.arraycopy(T[] org1, a, T[] org2, b, k) —— 将数组org1起始索引为a（含），长度为k的元素复制（替换）到数组org2起始索引为b（含）的后续元素中。
-指定方式排序123456Arrays.sort(array, new Com ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T10:54:07.279Z" title="Updated 2021-10-25 18:54:07">2021-10-25</time></span></div><div class="content">OS
+hexo d中报Connection was ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/01/26/%E9%87%91%E8%9E%8D%E6%9C%AF%E8%AF%AD/" title="金融术语">金融术语</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-01-26T05:47:08.000Z" title="Created 2022-01-26 13:47:08">2022-01-26</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-28T16:00:43.831Z" title="Updated 2022-03-01 00:00:43">2022-03-01</time></span></div><div class="content">股市
+股票代码：
+沪 A：600、601、603 开头的股票；
+深 A：000 开头的股票；
+中小板：002 开头的股票；
+创业板：300 开头的股票。
+
+  股市新户可买沪深 A 股，中小板股，不能买创业板股票。
+
+K 线图基本概念
+蜡烛线：即单个时间周期内形成的 K 线；
+
+蜡烛图：在某时间周期单位内，多个蜡烛线形成的图像，如分钟蜡烛图、日蜡烛图、周蜡烛图；
+
+影线：有上影线和下影线之分。根据影线长短可判断当前趋势下多空双方的实力；
+
+纺锤线：实体极小、上下影线明显的蜡烛线；
+
+星线：实体极小，且与上一蜡烛线实体无重叠的蜡烛线；
+
+十字线：开市价与收市价处于同一水平上的蜡烛线；
+
+支撑水平：指多个下影线或蜡烛图构成的股票价格支撑位；
+
+阻挡水平：指多个上影线或蜡烛图构成的股票价格阻挡位；
+
+成百的整数大点位有可能成为支撑或阻挡水平；
+
+支撑水平被突破后会变为阻挡水平，阻挡水平同理；
+
+蜡烛线簇：一群蜡烛线或若干蜡烛图信号相互验证，集中加强了某个支撑区域或阻挡区域的作用；
+
+突破：指某蜡烛线的收市价高于阻挡水平或低于支撑水平；
+
+跳空：相邻两个蜡烛线间实体没有重叠的空隙；
+
+窗口：前 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E5%B7%A5%E4%BD%9C%E7%A7%AF%E7%B4%AF/" title="工作积累">工作积累</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T05:16:26.000Z" title="Created 2021-10-25 13:16:26">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-26T02:23:37.179Z" title="Updated 2022-02-26 10:23:37">2022-02-26</time></span></div><div class="content">组会
+Stanford吴恩达教授网课笔记
+
+8.28 – one_hot 总结这是进行数据 one_hot 编码的第三周，困难比较多。目前的尝试：
+1. 在数据喂入模型前进行 one_hot 编码。在 model_exp.py 中，训练模型的 train() 方法，在数据喂入模型前loss, match = self._train_step(features, labels)  # batch loss，对数据进行 one_hot 编码：
+123features = tf.cast(features, tf.int32)features = tf.one_hot(indices=features, depth=256, on_value=1, off_value=0, axis=-1, dtype=None)features = tf.cast(features, tf.float32)
+这里面有问题：features 的形式为 tf.tensor(256,20,256)。各数据含义如下：
+
+256：batch_size 大小
+20：样本的包数量
+256：每个包的字节大小此时输入数据是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/01/19/%E7%94%9F%E6%B4%BB%E6%94%BB%E7%95%A5/" title="生活攻略">生活攻略</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-01-19T02:39:43.000Z" title="Created 2022-01-19 10:39:43">2022-01-19</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-15T09:44:20.337Z" title="Updated 2022-02-15 17:44:20">2022-02-15</time></span></div><div class="content">职业规划编制类
+政策行：国家开发银行、中国进出口银行、中国农业发展银行
+军工系统（待遇好） – 计算机文职招聘
+电网（听说改制后不大行，考试内容类似计算机考研客观题）、烟草
+定向选调、人才引进项目
+研究院、计算机研究机构 – 国家/省级人工智能研究院、大数据中心
+出版社的科技类责编岗
+国企/央企
+国有行(政策行)、股份行、城商行、农商行科技岗（但可能边缘）
+医院的计算机系统
+
+外企私企win10 装机准备
+win 电脑重要数据备份（存到磁盘）；
+win 电脑下载 win10 iso 镜像到 u 盘。
+
+官方方法装机
+将 u 盘设为第一启动项：
+快捷键法：华硕笔记本 – 开机后一直按 esc，进入界面后选中自己 u 盘 + UEFI/Legacy 引导模式（无 UEFI 前缀的为 Legacy 引导模式）装机。
+BIOS 法：开机后一直按 delete 键进入 BIOS 界面（F7 切换简单/复杂模式），把自己的 u 盘 + UEFI/Legacy 引导模式拖到最前面/最上面，按 F10 保存设置并重启。
+
+
+启动后简单设置 – 点击现在安装
+激活界面选“我没有产品密钥” – 选 win ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2022/01/18/%E4%B9%B0%E4%B9%B0%E4%B9%B0%E6%94%BB%E7%95%A5/" title="买买买攻略">买买买攻略</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-01-18T14:52:34.000Z" title="Created 2022-01-18 22:52:34">2022-01-18</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-01-19T02:39:14.570Z" title="Updated 2022-01-19 10:39:14">2022-01-19</time></span></div><div class="content">眼镜镜片品牌： 蔡司 &gt; 依视路 &gt; 豪雅（进口）；明月（国产）蔡司系列：佳锐 &lt; A系列莲花膜 &lt;（前面的不推荐）（后面的都含铂金膜） 新清锐 &lt; 臻锐 &lt; 铭睿依视路系列：白晶 &lt; 钻晶A+ &lt;（前面的已被淘汰） 钻晶A3（性能最好，但是不防蓝光） &lt; 钻晶A4（含蓝光） &lt; X4 &lt; X6（依视路要小心可能是被收购的品牌镜片）
+
+
+基材：
+
+制作镜片的材料，它影响镜片的透光率、阿贝数、折射率
+
+折射率：1.56 &lt; 1.61 &lt; 1.67 &lt; 1.74，折射率越高镜片越薄价格也就更贵，不过度数不高没必要配薄镜片，因为折射率越高清晰度（阿贝数）越差。阿贝数：阿贝数指的是色散系数，它是衡量镜片成像清晰度的重要指标。其数值越高，镜片的成像越清晰。其数值越低，镜片的成像越模糊。它还和镜片自身的折射率也是息息相关的。一般来说，镜片的折射率越高，阿贝数就越低。耐磨性：树脂材质基本条件：防紫外线、防辐射防蓝光适用我
+镀膜工艺：好的镜片膜层耐油污、耐磨损、耐腐蚀，防静电抗反射，镜片就能高清、易清洁、防尘。
+镜框品 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T10:54:07.260Z" title="Updated 2021-10-25 18:54:07">2021-10-25</time></span></div><div class="content">OS
 该笔记由观看哈工大的李治军老师的操作系统整理而成
 
 
@@ -194,88 +301,6 @@ BIOS：base I/O system
 数据预处理的作用？（判断题）
 
 现实世界的数据库易受噪声、缺失值和不一致数据的侵扰，由于数据库太大，并且很有可能来自多个异种数据源，不正确、不完整、不一致是现实世界大型数据库和数据仓库的共同特点
-低质量的数据将导致低质量的挖 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/10/25/%E5%B7%A5%E4%BD%9C%E7%A7%AF%E7%B4%AF/" title="工作积累">工作积累</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-25T05:16:26.000Z" title="Created 2021-10-25 13:16:26">2021-10-25</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-10-25T10:48:31.472Z" title="Updated 2021-10-25 18:48:31">2021-10-25</time></span></div><div class="content">组会
-Stanford吴恩达教授网课笔记
-
-8.28 – one_hot 总结这是进行数据 one_hot 编码的第三周，困难比较多。目前的尝试：
-1. 在数据喂入模型前进行 one_hot 编码。在 model_exp.py 中，训练模型的 train() 方法，在数据喂入模型前loss, match = self._train_step(features, labels)  # batch loss，对数据进行 one_hot 编码：
-123features = tf.cast(features, tf.int32)features = tf.one_hot(indices=features, depth=256, on_value=1, off_value=0, axis=-1, dtype=None)features = tf.cast(features, tf.float32)
-这里面有问题：features 的形式为 tf.tensor(256,20,256)。各数据含义如下：
-
-256：batch_size 大小
-20：样本的包数量
-256：每个包的字节大小此时输入数据是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/05/03/%E9%9D%A2%E8%AF%95/" title="面试">面试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-09-23T04:23:33.280Z" title="Updated 2021-09-23 12:23:33">2021-09-23</time></span></div><div class="content">准备
-leetcode的《校招基础知识讲解》leetcode的《计算机网络面试突击》leetcode的《Java面试突击》leetcode的《排序算法全解析》以下内容是基于以上书籍的总结和补充：
-
-计算机网络需要注意的对比
-http的九种请求方法
-get和post方法的对比（六种）
-http和https的请求过程
-http和https的对比（http的缺点，https的缺点）
-http1.1的新特性，http2.0的新特性
-cookie和session的对比（三点）
-TCP粘包问题及解决方法
-http请求用到的协议
-路由算法
-http五类状态码和9个状态码
-再看一遍HTTP/3
-
-补充
-TCP四次挥手过程中的CLOSED_WAIT和TIME_WAIT：服务器在收到客户端发送的FIN报文并回答了ACK报文后，会进入CLOSED_WAIT状态，以保证服务器在关闭连接之前将待发送的数据发送完成。客户端在收到服务器发送的FIN报文并回答了ACK报文后，会进入TIME_WAIT状态。TIME_WAIT本质是一个2MSL的计时器，MSL（Maximum Segment Lifetime）指一段 T ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/" title="选调相关">选调相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-31T14:57:21.000Z" title="Created 2021-05-31 22:57:21">2021-05-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-05-31T15:02:52.000Z" title="Updated 2021-05-31 23:02:52">2021-05-31</time></span></div><div class="content">选调各部门
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/01/31/%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86/" title="简历">简历</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-01-31T09:48:37.000Z" title="Created 2021-01-31 17:48:37">2021-01-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-05-26T08:50:28.000Z" title="Updated 2021-05-26 16:50:28">2021-05-26</time></span></div><div class="content">邹润鑫
-个人信息
-性 别：男　　　　　　　　　　　　　　　　　年 龄：22
-联系方式：18801126241　　　　　　　　　　    邮 箱：&#x7a;&#x31;&#x33;&#x32;&#x33;&#54;&#x35;&#55;&#56;&#48;&#x39;&#51;&#64;&#x69;&#99;&#108;&#x6f;&#x75;&#x64;&#46;&#99;&#x6f;&#109;
-专 业：电子信息/软件工程　　　　　　　    　　    岗 位：研发工程师/算法工程师
-
-
-教育经历：
-南京理工大学　　　　　2016.9 ~ 2020.7　　　　材料科学与工程 / 本科 / 学士学位
-北京大学　　　　　　　2020.9 ~ 至今　　　　　电子信息 / 研究生
-
-
-专业技能
-JAVA、python语言均有掌握，解算法题多用java。也了解一点PHP、C++等编程语言
-有后端开发的经验，会用tomcat、mysql、jsp开发网站
-研究生期间综合实践课题是“基于深度学习的入侵检测”，目前在学机器学习相关的理论知识和算法。
-掌握基础数据结构和算法的基本原理等等
-
-
-项目经 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/02/02/%E5%AE%BF%E8%88%8D%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%A4%8D%E7%9B%98/" title="宿舍管理系统复盘">宿舍管理系统复盘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-02-02T06:30:19.000Z" title="Created 2021-02-02 14:30:19">2021-02-02</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-02-22T11:15:52.000Z" title="Updated 2021-02-22 19:15:52">2021-02-22</time></span></div><div class="content">
-
-整体介绍项目大体结构为：Dao、Dao-Impl层；Service、Service-Impl层；Servlet层；entity类(JavaBean)；filter过滤器；和Util工具类
-基本功能：
-
-登录、注册功能；
-分页展示用户数据功能；
-修改用户信息功能；
-删除和批量删除用户数据功能；
-模糊查询功能
-
-用的不是SpringMVC框架，而是自己写的servlet，这个过程参考网上教程完成，但计划学到新的技术后持续更新优化
-
-1. Servlet1.1 Servlet生命周期分为三个部分：
-初始化阶段，调用init()方法
-
-响应客户请求阶段，调用service()方法
-
-终止阶段，调用destroy()方法
-
-
-1.2 项目需要完成的Servlet
-
-DelAdminByIdServlet根据id来删除用户。在show.jsp中，客户端在点击删除后，jsp页面获取被删用户id并传入到该servlet中执行删除操作。该servlet根据id，调用Service中的delAdminById方法完成删除指定用户数据操作。
-DelAdminByCheckBoxServlet批量删除用户 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/09/22/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-09-22T15:33:18.000Z" title="Created 2021-09-22 23:33:18">2021-09-22</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-01-30T16:19:34.000Z" title="Updated 2021-01-31 00:19:34">2021-01-31</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">勤加注释！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><time datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E4%BD%9C%E7%A7%AF%E7%B4%AF/" title="工作积累">工作积累</a><time datetime="2021-10-25T05:16:26.000Z" title="Created 2021-10-25 13:16:26">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><time datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/09/22/hello-world/" title="Hello World">Hello World</a><time datetime="2021-09-22T15:33:18.000Z" title="Created 2021-09-22 23:33:18">2021-09-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/" title="选调相关">选调相关</a><time datetime="2021-05-31T14:57:21.000Z" title="Created 2021-05-31 22:57:21">2021-05-31</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">October 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">September 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">February 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">January 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
+低质量的数据将导致低质量的挖 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/05/31/%E9%80%89%E8%B0%83%E7%9B%B8%E5%85%B3/" title="选调相关">选调相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-31T14:57:21.000Z" title="Created 2021-05-31 22:57:21">2021-05-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-05-31T15:02:52.000Z" title="Updated 2021-05-31 23:02:52">2021-05-31</time></span></div><div class="content">选调各部门
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2021/01/31/%E6%88%91%E7%9A%84%E7%AE%80%E5%8E%86/" title="简历">简历</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-01-31T09:48:37.000Z" title="Created 2021-01-31 17:48:37">2021-01-31</time><span class="article-meta__separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-05-26T08:50:28.000Z" title="Updated 2021-05-26 16:50:28">2021-05-26</time></span></div><div class="content">
+  7a0991aa6268b9fe39295680a594d01829878aa56a2c8a11343a0a783e02affcc7763166ed55cd2d7ec3ebfbbbde492e556de17d0066b6944360e0ad30b0cc49abe5d839a280c76c2780e53db9507bb3bd141cec396d52017ef519c55a7d3c8b5645b0c77bd1796633b50eee8821f4e7aefe1c919eca8fb92683123c2ab8517fe61cc1f2ec0b5ed4a6b9020dc269ef4d19ba790865a6c61c3beaa6fefd8b1646d4d2dc814924cb603e78ad7edb71bcfa0a2be57316b1a2e5a1fa69b143b0409355ccd3aa6e4e94fb9202f004827082648c19c273c5213c8a60da2dd8fabc06d0053dc351757ae67731247fc2421b4da92dfc4e9e7798f97f7 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">12</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">勤加注释！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/26/%E9%87%91%E8%9E%8D%E6%9C%AF%E8%AF%AD/" title="金融术语">金融术语</a><time datetime="2022-01-26T05:47:08.000Z" title="Created 2022-01-26 13:47:08">2022-01-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/23/hello-world/" title="Hello World">Hello World</a><time datetime="2022-01-23T14:49:13.969Z" title="Created 2022-01-23 22:49:13">2022-01-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/19/%E7%94%9F%E6%B4%BB%E6%94%BB%E7%95%A5/" title="生活攻略">生活攻略</a><time datetime="2022-01-19T02:39:43.000Z" title="Created 2022-01-19 10:39:43">2022-01-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/18/%E4%B9%B0%E4%B9%B0%E4%B9%B0%E6%94%BB%E7%95%A5/" title="买买买攻略">买买买攻略</a><time datetime="2022-01-18T14:52:34.000Z" title="Created 2022-01-18 22:52:34">2022-01-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E8%AF%BE%E7%A8%8B/" title="课程">课程</a><time datetime="2021-10-25T05:20:25.000Z" title="Created 2021-10-25 13:20:25">2021-10-25</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">January 2022</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">October 2021</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/05/"><span class="card-archive-list-date">May 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">February 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">January 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
