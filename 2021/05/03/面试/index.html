@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="保持冷静，多总结Leetcode递归（dfs）看见树一般都是递归，可能还会用到回溯  实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序&#x2F;中序&#x2F;后序遍历。 本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：二叉树的序列化与反序列化有两种回溯处理方式： 递归利用回溯：即当前层的处理结果依赖下面层的处理返回结果，递归方法需有返回值；一般递归语句后有其他处理逻">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>面试 | Hexo</title><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="保持冷静，多总结Leetcode代码优化有两个方向：一是性能；二是鲁棒性（指程序在面对异常和错误输入的健壮性）。 递归（dfs）看见树一般都是递归  实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序&#x2F;中序&#x2F;后序遍历。 本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：有两种返回值处理方式： 无返回值：即当前层的处理结果不依赖下面层的处理返回结果，仅与该">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试">
 <meta property="og:url" content="http://example.com/2021/05/03/%E9%9D%A2%E8%AF%95/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="保持冷静，多总结Leetcode递归（dfs）看见树一般都是递归，可能还会用到回溯  实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序&#x2F;中序&#x2F;后序遍历。 本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：二叉树的序列化与反序列化有两种回溯处理方式： 递归利用回溯：即当前层的处理结果依赖下面层的处理返回结果，递归方法需有返回值；一般递归语句后有其他处理逻">
+<meta property="og:description" content="保持冷静，多总结Leetcode代码优化有两个方向：一是性能；二是鲁棒性（指程序在面对异常和错误输入的健壮性）。 递归（dfs）看见树一般都是递归  实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序&#x2F;中序&#x2F;后序遍历。 本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：有两种返回值处理方式： 无返回值：即当前层的处理结果不依赖下面层的处理返回结果，仅与该">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/img/beijing.jpg">
 <meta property="article:published_time" content="2021-05-03T07:37:48.000Z">
-<meta property="article:modified_time" content="2022-03-24T05:58:54.548Z">
+<meta property="article:modified_time" content="2022-04-19T07:02:17.435Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/img/beijing.jpg"><link rel="shortcut icon" href="/img/touxiang.jpg"><link rel="canonical" href="http://example.com/2021/05/03/%E9%9D%A2%E8%AF%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-03-24 13:58:54'
+  postUpdate: '2022-04-19 15:02:17'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -146,12 +146,13 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/beijing.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-24T05:58:54.548Z" title="Updated 2022-03-24 13:58:54">2022-03-24</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="保持冷静，多总结"><a href="#保持冷静，多总结" class="headerlink" title="保持冷静，多总结"></a>保持冷静，多总结</h1><h1 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h1><h2 id="递归（dfs）"><a href="#递归（dfs）" class="headerlink" title="递归（dfs）"></a>递归（dfs）</h2><p><strong>看见树一般都是递归，可能还会用到回溯</strong></p>
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/beijing.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-04-19T07:02:17.435Z" title="Updated 2022-04-19 15:02:17">2022-04-19</time></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="保持冷静，多总结"><a href="#保持冷静，多总结" class="headerlink" title="保持冷静，多总结"></a>保持冷静，多总结</h1><h1 id="Leetcode"><a href="#Leetcode" class="headerlink" title="Leetcode"></a>Leetcode</h1><p>代码优化有两个方向：一是性能；二是鲁棒性（指程序在面对异常和错误输入的健壮性）。</p>
+<h2 id="递归（dfs）"><a href="#递归（dfs）" class="headerlink" title="递归（dfs）"></a>递归（dfs）</h2><p><strong>看见树一般都是递归</strong></p>
 <ul>
 <li>实现方式：深度优先遍历，隐式使用了栈。对于树而言，有三种实现方式：先序/中序/后序遍历。</li>
-<li>本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/">二叉树的序列化与反序列化</a><br>有两种回溯处理方式：<ul>
-<li>递归利用回溯：即当前层的处理结果依赖下面层的处理返回结果，递归方法需有返回值；一般递归语句后有其他处理逻辑。（可利用记忆化）</li>
-<li>递归不利用回溯：即当前层的处理结果不依赖下面层的处理返回结果，仅与该层及前面层有关；一般递归语句后无其他处理逻辑。</li>
+<li>本质是遍历结点，多应用于树和图类的数据结构。如，可用于遍历树结点或构造树：<br>有两种返回值处理方式：<ul>
+<li>无返回值：即当前层的处理结果不依赖下面层的处理返回结果，仅与该层及前面层有关；一般递归语句后无其他逻辑。</li>
+<li>有返回值：即当前层的处理结果依赖下面层的处理返回结果，一般递归语句后有其他处理逻辑。（可利用记忆化）</li>
 </ul>
 </li>
 <li>需注意：<ul>
@@ -159,14 +160,85 @@
 <li>不变的变量用作全局变量，不要作为参数使用。</li>
 </ul>
 </li>
+<li>总体流程：<ol>
+<li>递归终止条件；</li>
+<li>异常处理；</li>
+<li>递归主逻辑；</li>
+<li>返回值（回退到上一层节点前需做的事）。</li>
+</ol>
+</li>
 </ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/">二叉树的序列化与反序列化</a><br>输入一个二叉树，要求实现序列化函数，使其按结点值转化为字符串；同时要求实现反序列化函数，使字符串转化回原二叉树。<br>使用先序遍历：</p>
+<ul>
+<li><p>序列化函数 <code>String serialize(TreeNode root)</code>：</p>
+<ol>
+<li>返回值 <code>StringBuilder sb = new StringBuilder(&quot;&quot;);</code>；</li>
+<li>调用递归函数 <code>rserialize(root, sb);</code>；</li>
+<li>返回 <code>return sb.toString();</code>。</li>
+</ol>
+</li>
+<li><p>序列化实现函数（先序遍历）<code>void rserialize(TreeNode root, StringBuilder sb)</code>：</p>
+<ol>
+<li>递归终止条件 <code>if (root == null) sb.append(&quot;None,&quot;); return;</code>；</li>
+<li>拼接 <code>sb.append(root.val).append(&quot;,&quot;);</code>；</li>
+<li>递归 <code>rserialize(root.left, sb); rserialize(root.right, sb);</code>。</li>
+</ol>
+</li>
+<li><p>反序列化函数 <code>TreeNode deserialize(String data)</code>：</p>
+<ol>
+<li>按 ‘,’ 切割字符串 <code>List&lt;String&gt; dataList = new LinkedList&lt;String&gt;(Arrays.asList(data.split(&quot;,&quot;)));</code>，使用 LinkedList 是因为每次只取表头结点；</li>
+<li>调用递归函数 <code>return rdeserialize(dataList);</code>。</li>
+</ol>
+</li>
+<li><p>反序列化实现函数 <code>TreeNode rdeserialize(List&lt;String&gt; dataList)</code>：</p>
+<ol>
+<li>递归终止条件 <code>if (dataList.get(0).equals(&quot;None&quot;)) dataList.remove(0); return null;</code>；</li>
+<li>构建新结点 <code>TreeNode root = new TreeNode(Integer.parseInt(dataList.get(0))); dataList.remove(0);</code>；</li>
+<li>递归构建孩子结点 <code>root.left = rdeserialize(dataList); root.right = rdeserialize(dataList);</code>；</li>
+<li>返回 <code>return root;</code>。</li>
+</ol>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/">二叉搜索树的第k大节点</a><br>输入一个二叉树搜索树 root 和一个整数 k，要求返回二叉树第 k 大结点的值。<br>因为一颗二叉搜索树中序遍历时得到的序列为递增序列，则逆中序遍历得到的序列为递减序列，在遍历过程中即可获取返回值并提前返回。</p>
+<ol>
+<li>定义全局变量 <code>int res, k;</code>；</li>
+<li>待实现函数 <code>int kthLargest(TreeNode root, int k)</code>：<ol>
+<li>存储 k <code>this.k = k;</code>；</li>
+<li>中序遍历 <code>dfs(root);</code>；</li>
+<li>返回 <code>return res;</code>。</li>
+</ol>
+</li>
+<li>中序遍历函数 <code>void dfs(TreeNode root)</code>：<ol>
+<li>递归中止条件 <code>if (root == null) return;</code>；</li>
+<li>先遍历右孩子 <code>dfs(root.right);</code>；</li>
+<li>若已获取第 k 大结点值，直接返回 <code>if (k == 0) return;</code>；</li>
+<li>否则访问当前结点，并判断是否是第 k 大结点，若是，则存储返回值 <code>if (--k == 0) res = root.val; return;</code>；</li>
+<li>遍历左孩子 <code>dfs(root.left);</code>。</li>
+</ol>
+</li>
+</ol>
 <h2 id="回溯（backTrack）"><a href="#回溯（backTrack）" class="headerlink" title="回溯（backTrack）"></a>回溯（backTrack）</h2><ul>
 <li>实现方式：在循环体里进行递归。</li>
-<li>本质：循环的作用是枚举所有情况；递归的作用是若某种结果不符合题解要求，则回溯，若符合题解要求，则立即返回。</li>
-<li>回溯的本质是利用循环 + 递归枚举所有可能的情况。</li>
+<li>本质：循环的作用是枚举所有情况；递归的作用是若某种结果不符合题解要求，则返回；若符合题解要求，则存储并返回。<ul>
+<li>循环：循环范围为 [0, 待排列元素个数]，需使用数组 <code>boolean[] visited</code> 标记元素是否被访问过。</li>
+<li>递归：需传参 start，表示当前层确定元素所在的位置。或通过当前层 <code>list.add(); backTrack(list); list.remove();</code> 添加元素，在递归结束后移除元素解决。</li>
+</ul>
+</li>
 <li>记忆化：回溯的当前层的状态与未来层的状态关联，与过去层的状态无关。因此若当前层状态计算得到，则可存储以记忆，此后再来到当前层，则可直接返回。</li>
 </ul>
-<p><strong>回溯与动态规划的不同之处在于，回溯需要更换前面已经确定的值</strong></p>
+<p><strong>回溯与动态规划的不同之处在于，回溯需要更换前面已经确定的值</strong><br><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/permutations/">全排列</a><br>输入一个数组，数组各元素值不相同，要求输出所有元素的全排列。通过回溯解决：</p>
+<ul>
+<li>数据结构：<code>List&lt;List&lt;Integer&gt;&gt; ret; boolean[] visited;</code>；</li>
+<li><code>backTrack(List&lt;Integer&gt; list, int[] nums)</code> 函数：<ul>
+<li>返回条件 <code>if (list.size() == n) &#123;ret.add(new ArrayList&lt;&gt;(list)); return;&#125;</code>。</li>
+<li>循环数组元素 <code>for (int i = 0; i &lt; n; i++)</code>：<ul>
+<li>判断当前元素未被访问过 <code>if (!visited[i])</code>，若为 false，则跳过。</li>
+<li>若为 true，则 <code>list.add(nums[i]); visited[i] = true; dfs(list, nums);</code>；然后再 <code>visited[i] = false; list.remove((Integer) nums[i]);</code>。</li>
+</ul>
+</li>
+</ul>
+  <strong>时间复杂度 O(n * n!)，空间复杂度 O(n)（若不考虑返回数组大小）。</strong></li>
+</ul>
 <h2 id="广度优先遍历"><a href="#广度优先遍历" class="headerlink" title="广度优先遍历"></a>广度优先遍历</h2><ul>
 <li>实现方式：将每一层次遍历的结点存入队列中，在访问时取出来。循环 + 队列实现。</li>
 <li>本质是遍历结点，多应用于树和图类的数据结构。</li>
@@ -197,7 +269,66 @@
 <li>若想优化，则使用三维 dp 数组，使用三重循环。dp[k][i][j] 表示步长为 k 时，到达第 (i,k-i+1)、(j,k-j+1) 两个点的路径的最大求和。</li>
 </ol>
 </li>
+<li>当需要对结果取模时，不能使用动态规划。因为假设 a 比 b 大，但取模后 a 比 b 小，则状态转移方程若取模则会造成应该为 a，实际为 b 的情况。</li>
 </ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/">把数字翻译成字符串</a><br>输入一个整数 num，要求按 <code>0 - a，1 - b，...，25 - z</code> 将整数转为字符串，返回可转为不同字符串的个数。<br>使用动态规划，dp[i] 表示到 i 位置索引的数字为止，可转为不同字符串的个数。则 <code>dp[i] = dp[i - 1];</code>，且若 [i - 1, i] 构成的两位数在 [10, 25] 区间内，则又有 <code>dp[i] += dp[i - 2];</code>：</p>
+<ol>
+<li>将数字 num 转为字符串 <code>String s = String.valueOf(num);</code>。</li>
+<li>定义两个初始状态，分别代表 dp[i - 2]，dp[i - 1] <code>int p = 0, q = 1;</code>。</li>
+<li>循环字符串 s <code>for (int i = 0; i &lt; n; i++)</code>：<ol>
+<li>定义当前状态值 <code>int cur = q;</code>；</li>
+<li>若 i - 2 状态存在，则考虑它 <code>if (i &gt; 0)</code>：<ol>
+<li>若 [i - 1, i] 位置形成的两位数满足条件，则求和 i - 2 状态 <code>int tmp = Integer.parseInt(s.substring(i - 1, i + 1)); if (tmp &gt;= 10 &amp;&amp; tmp &lt;= 25) cur += p;</code>。</li>
+</ol>
+</li>
+<li>更新 p、q <code>p = q; q = cur;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return q;</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/jian-sheng-zi-lcof/">剪绳子</a><br>输入一个整数 n（n &gt; 1），表示绳子的长度。要求将 n 切割为 m 份（m 为任意正整数，m &gt; 1），使得切割的 m 份长度的乘积最大，返回最大乘积值。<br>使用动态规划，<code>int[] dp = new int[n + 1];</code>，dp[i] 表示绳子长度为 i 时能切割出的最大乘积值。状态转移方程 <code>dp[i] = Math.max(dp[i], Math.max(j * (i - j), j * dp[i - j]));</code>，其中 j（j &lt; i）是当绳子长度为 i 时，将第一段切割的长度为 j。</p>
+<ol>
+<li><code>dp[2] = 1;</code>，因为 n 为 2 时，只能切割成 1 + 1，故最大乘积值只能为 1。</li>
+<li><code>for(int i = 3; i &lt;= n; i++) &#123;for(int j = 2; j &lt; i; j++) dp[i] = Math.max(dp[i], Math.max(j * (i - j), j * dp[i - j]));&#125;</code></li>
+<li><code>return dp[n];</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/">剪绳子 II</a><br>同上题，但数据量比上题要大，同时要求对结果取模 1000000007。<br>因为要对结果取模，因此不能使用动态规划。该题存在数学结论：1. 当所有绳段长度相等时，乘积最大。2. 最优的绳段长度为 3。但对应于不同时间复杂度，有两种方法：</p>
+<ol>
+<li>时间复杂度 O(n)。计算因子为 3 时的个数，边乘积边取模即可。</li>
+<li>时间复杂度 O(logn)。使用快速幂法：<ol>
+<li>特殊情况判断 <code>if (n &lt; 4) return n - 1;</code>。</li>
+<li>计算因子 3 的个数和余数 <code>int a = n / 3; int b = n % 3;</code>。创建返回值变量 <code>long res = 1;</code>。</li>
+<li>根据余数分类讨论：<ol>
+<li><code>if (b == 0) res = pow(3, a) % MOD;</code>；</li>
+<li><code>else if (b == 1) res = pow(3, a - 1) * 4 % MOD;</code>；</li>
+<li><code>else res = pow(3, a) * 2 % MOD;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return (int) res;</code>。</li>
+</ol>
+ <strong>快速幂法 <code>long pow(long base, int n)</code></strong><br> 该方法还需处理：若 <code>n &lt; 0</code>，则令 <code>base = 1 / base; n = -n;</code>。此外，保险起见，应令 <code>long N = n;</code>，此后使用 N 代替 n。因为若 n 可取 -2^31，则 -n 会越界。<ol>
+<li>定义返回值 <code>long res = 1;</code>。</li>
+<li>循环 <code>while (n != 0)</code>。<ol>
+<li>判断最低位为 1 <code>if ((n &amp; 1) == 1) &#123;res *= base; res %= MOD;&#125;</code>。</li>
+<li>更新 base <code>base *= base; base %= MOD;</code>，更新 n 值 <code>n &gt;&gt;= 1;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return res;</code>。</li>
+</ol>
+</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/">n个骰子的点数</a><br>输入一个整数 n 表示骰子的个数，要求返回一个 <code>double[]</code> 数组，里面各元素表示 n 个骰子点数和出现的概率。<br>使用动态规划，dp[i][j] 表示 i 个骰子点数和为 j 出现的概率：</p>
+<ol>
+<li>定义初始数组 <code>double[] dp = new double[6]; Arrays.fill(dp, 1 / 6.0);</code>。使用一维 dp 是因为每个状态仅与上一状态相关，dp 用于存储当前状态，并计算下一状态。</li>
+<li>循环 n 次，表示计算 n 个骰子各点数和出现的概率 <code>for (int i = 2; i &lt;= n; i++)</code>：<ol>
+<li>定义下一状态 dp 数组 <code>double[] tmp = new double[5 * i + 1];</code>；</li>
+<li>循环当前状态 dp 数组 <code>for (int j = 0; j &lt; dp.length; j++)</code>；<ol>
+<li>循环 6 次，k 表示 dp[j] 可计算得到的 tmp[j + k] <code>for (int k = 0; k &lt; 6; k++) tmp[j + k] += dp[j] * 1 / 6;</code>。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
 <h2 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h2><p>本质是一个递归函数里使用二分法。<br>如传入的是一个二维数组，里面的每一维数组均有序，目的是把这个二维数组拼接成一个有序的一维数组：<code>List&lt;List&lt;Integer&gt;&gt; nums;</code>。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-k-sorted-lists/">合并K个升序链表</a><br>分治把二维数组从大切小，当切到刚好仅有一个一维数组时，该数组和另一一维数组进行拼接：</p>
 <ol>
 <li>定义分治函数 <code>merge(List&lt;List&lt;Integer&gt;&gt; nums, int left, int right)</code>；</li>
@@ -205,11 +336,28 @@
 <li>二分 <code>int mid = (left + right) &gt;&gt; 1;</code></li>
 <li>递归 <code>merging(merge(nums, left, mid), merge(nums, mid + 1, right);</code>，merging 为对两个一维有序数组合并的函数。</li>
 </ol>
+<p>进一步扩展，可理解为在递归函数里根据左右边界找到新的分割点进一步递归。<br>如传入一个字符串 s 和整数 k，要求找到 s 中的最长子串，该子串里每个字符出现次数不少于 k。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-substring-with-at-least-k-repeating-characters/">至少有 K 个重复字符的最长子串</a><br>计算字符串 s 中各字符出现次数，不满 k 次出现次数的字符作为分割点，分治计算分割后的子串，更新最长子串的长度：</p>
+<ol>
+<li>进入递归函数 <code>dfs(s, 0, s.length() - 1, k);</code>。</li>
+<li>在 <code>dfs(String s, int left, int right, int k)</code> 函数里：<ol>
+<li>统计 left、right 区间内各字符出现次数 <code>int[] cnt;</code>；</li>
+<li>对于出现次数少于 k 次的字符，标记为分割点 <code>split = (char) (&#39;a&#39; + i);</code>，其中 i 满足 <code>cnt[i] &lt; k</code>；</li>
+<li>若区间内字符出现次数均大于等于 k，返回 <code>return right - left + 1;</code>；</li>
+<li>基于 split 进行分治 <code>int i = left; while (i &lt;= right)</code>：<ol>
+<li>找到分割区间 <code>while (i &lt;= right &amp;&amp; s.charAt(i) == split) i++;</code>，<code>int j = i; while (j &lt;= right &amp;&amp; s.charAt(j) != split) j++;</code>。</li>
+<li>分治更新最长子串长度 <code>ret = Math.max(ret, dfs(s, i, j - 1, k));</code>；</li>
+<li>更新 i <code>i = j;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return ret;</code>。</li>
+</ol>
+</li>
+</ol>
 <h2 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h2><h3 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h3><ul>
 <li>流程：<ul>
 <li>需要两个指针：pre、cur；</li>
 <li>初始值：pre = null、cur = head；</li>
-<li><code>while(cur != null)</code>，循环体里需记录 cur 的 next listnode。</li>
+<li><code>while(cur != null) ListNode next = cur.next; cur.next = pre; pre = cur; cur = next;</code>。</li>
 <li><code>return pre;</code></li>
 </ul>
 </li>
@@ -217,18 +365,20 @@
 <h3 id="删除链表的第-N-个结点"><a href="#删除链表的第-N-个结点" class="headerlink" title="删除链表的第 N 个结点"></a>删除链表的第 N 个结点</h3><p>输入是一个链表的头结点 <code>ListNode head</code>, 和一个整数 <code>int k</code>，表示删除链表的倒数第 k 个结点。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">删除链表的倒数第 N 个结点</a><br>使用双指针，快慢指针法：</p>
 <ul>
 <li>定义快慢指针 <code>ListNode fast = head, slow = head;</code>；    </li>
-<li>循环使快指针先走 <code>while(k &gt; 0) fast = fast.next;</code>；</li>
+<li>循环使快指针先走 k 步 <code>while(k &gt; 0) fast = fast.next; k--;</code>；</li>
 <li>循环使快慢指针同步走 <code>while(fast.next != null) fast = fast.next; slow = slow.next;</code>；</li>
 <li>循环结束后 slow.next 所指结点即为要删除的结点 <code>slow.next = slow.next.next;</code>。</li>
 </ul>
 <h3 id="K-个一组翻转链表"><a href="#K-个一组翻转链表" class="headerlink" title="K 个一组翻转链表"></a>K 个一组翻转链表</h3><p>输入是一个链表，要求 k 个一组反转链表。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-nodes-in-k-group/">K 个一组翻转链表</a><br>把反转链表的过程抽象出来作为一个函数，指定 k 个一组的左右结点进行反转：</p>
 <ol>
 <li>定义结点 <code>ListNode last = null, next = head;</code>，last 作为 k 个结点反转后的最后一个结点，next 作为 k 个结点的下一组结点的始结点；</li>
-<li>循环 <code>while(true)</code>，定义一组结点的左右指针 <code>ListNode left = next, right = right;</code>，定义目前该组的结点个数 <code>int cnt = 1;</code>；</li>
+<li>循环 <code>while(true)</code>，定义一组结点的左右指针 <code>ListNode left = next, right = next;</code>，定义目前该组的结点个数 <code>int cnt = 1;</code>；<ol>
 <li>右指针右移到该组结点的右端点 <code>while(right != null &amp;&amp; cnt &lt; k) right = right.next; cnt++;</code>；</li>
 <li>若 <code>if(right == null) break;</code>，若最后一组结点不足 k 个，直接跳出；否则，令 <code>next = right.next;</code>，保存下一组起始端点；</li>
 <li>翻转该组结点 <code>reversing(left, right.next);</code>，reversing() 是自定义反转函数；</li>
 <li>若 <code>if(last == null) last = left; else &#123;last.next = right; last = left;&#125;</code>，令相邻两组结点的首尾结点相连；</li>
+</ol>
+</li>
 </ol>
 <h3 id="环形链表"><a href="#环形链表" class="headerlink" title="环形链表"></a>环形链表</h3><p>输入是一个链表，要求判断链表中是否有环。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">环形链表</a></p>
 <ol>
@@ -256,17 +406,17 @@
 <li>创建虚拟头结点 <code>ListNode pre = new ListNode(0, head);</code>，创建移动指针 <code>ListNode cur = pre;</code>；</li>
 <li>遍历结点 <code> while (cur.next != null &amp;&amp; cur.next.next != null)</code>；</li>
 <li>若结点值不重复，右移 cur 指针 <code>if (cur.next.val != cur.next.next.val) cur = cur.next;</code>；</li>
-<li>否则，修改 <code>cur.next</code> 指针 <code>else&#123;int x = cur.next.val; while (cur.next.next != null &amp;&amp; cur.next.next.val == x) &#123;cur.next = cur.next.next;&#125; cur.next = cur.next.next;&#125;</code>；</li>
+<li>否则，修改 <code>cur.next</code> 指针 <code>else&#123;int x = cur.next.val; while (cur.next != null &amp;&amp; cur.next.val == x) &#123;cur.next = cur.next.next;&#125;&#125;</code>；</li>
 <li>返回头结点 <code>return pre.next;</code>。</li>
 </ol>
 </li>
 </ol>
-<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="回文串"><a href="#回文串" class="headerlink" title="回文串"></a>回文串</h3><p>回文串即左右两端的字母对称的字符串。</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="回文串"><a href="#回文串" class="headerlink" title="回文串"></a>回文串</h3><p>回文串即左右两端对称位置的字母相同的字符串。</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-permutation/">回文排列Ⅰ</a>：输入一个字符串 s，判断该字符串能否通过排列组合形成一个回文串。<br>统计字符串 s 的各字符出现次数，若各字符出现次数均为偶数或仅有一个字符出现次数为奇数，则说明该字符串是回文串。</li>
-<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-permutation-ii/">回文排列 II</a>：输入一个字符串 s，若其能排列组合形成回文串，则返回所有该字符能形成的回文串；否则返回空 list。<ol>
+<li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-permutation-ii/">回文排列 II</a>：输入一个字符串 s，若其能排列组合形成回文串，则返回其能形成的所有回文串；否则返回空 list。<ol>
 <li>首先判断该字符串能否形成回文串，与上题的判断方法一致；若不能，则直接返回空 list；</li>
-<li>若能形成回文串，按各字符出现次数，取一半字符形成一个中间字符串 sb，对 sb 的所有字符全排列（回溯 + 递归），对每种排列，都在补齐另一半字符串后加入到 set 中，最后返回该 set 即可。</li>
+<li>若能形成回文串，按各字符出现次数，取一半字符形成一个中间字符串 sb，对 sb 的所有字符全排列（回溯），对每种排列，都在补齐另一半字符串后加入到 set 中，最后返回该 set 即可。</li>
 </ol>
 </li>
 <li><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-palindromic-substring/">最长回文子串</a>：给定一个字符串，返回它的最长回文子串。时间复杂度只能为 O(n2)。<br>使用动态规划，<code>boolean[][] dp = new boolean[n][n];</code>，n 为字符串长度：<ol>
@@ -285,9 +435,11 @@
 <h3 id="移掉-K-位数字"><a href="#移掉-K-位数字" class="headerlink" title="移掉 K 位数字"></a>移掉 K 位数字</h3><p>输入是一个以字符串形式表示的非负整数 num 和一个整数 k。要求移掉 k 位数字后使剩下的数字最小。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-k-digits/">移掉 K 位数字</a><br>使用 贪心 + 单调栈 实现：</p>
 <ol>
 <li>构建双端队列伪装栈 <code>Deque&lt;Integer&gt; queue = new LinkedList&lt;&gt;();</code>；</li>
-<li>循环字符串每个数字 <code>for(int i = 0; i &lt; num.length; i++) int x = num.charAt(i);</code>；</li>
+<li>循环字符串每个数字 <code>for(int i = 0; i &lt; num.length; i++) int x = num.charAt(i);</code>；<ol>
 <li>若栈顶元素大于数字，则弹出 <code>while (!queue.isEmpty() &amp;&amp; queue.peekLast() &gt; x &amp;&amp; k &gt; 0) queue.pollLast(); k--;</code>；</li>
-<li>压入新数字，此时栈元素保证有序 <code>queue.addLast(x);</code>；</li>
+<li> 压入新数字，此时栈元素保证有序 <code>queue.addLast(x);</code>；</li>
+</ol>
+</li>
 <li>2 跳出后，判断 k 个数字是否完全删完，若未删完，则继续删 <code>for (int i = 0; i &lt; k; i++) queue.pollLast();</code>；</li>
 <li>删掉 k 个数字后需确保剩下的数不含前导 0 <code>while (!queue.isEmpty() &amp;&amp; queue.peekFirst() == 0) queue.pollFirst();</code>；</li>
 <li>弹出剩余栈中的所有元素，构建字符串数字 <code>while (!queue.isEmpty()) sb.append(queue.pollFirst());</code>，其中 sb 是 StringBuilder 类型对象；</li>
@@ -295,14 +447,15 @@
 </ol>
 <h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><p>多用递归、回溯、和广度优先遍历。</p>
 <ul>
-<li>一些性质：<ul>
-<li>完全二叉树：第 k 层最多有 2 ^ (k - 1) 个结点，该树最多有 2 ^ k - 1 个结点。</li>
+<li>完全二叉树的特点：<ul>
+<li>第 k 层最多有 2 ^ (k - 1) 个结点，该树最多有 2 ^ k - 1 个结点。</li>
+<li>必定有 <code>n / 2</code> 个非叶节点，有 <code>n / 2取上</code> 个叶结点。</li>
 </ul>
 </li>
 <li>后序遍历：类似回溯，当前结点仅与左右子孩子的值相关。若回溯过程发现返回一个值不够，应当考虑返回两个值（组成一个数组）。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/house-robber-iii/">打家劫舍 III</a></li>
 <li>若树结点含标号，且标号各不相同，则可使用数组来存储。其中，数组下标为树结点标号，元素值为树根节点到标号结点的路径长度。对于计算路径长度相关的题极有帮助。<code>nodes[y] = nodes[x] + val;</code>，其中 y 为当前标号结点，x 为 y 的父节点，val 为从 x 到 y 的路径值大小。</li>
 </ul>
-<h3 id="二叉树的最近公共祖先"><a href="#二叉树的最近公共祖先" class="headerlink" title="二叉树的最近公共祖先"></a>二叉树的最近公共祖先</h3><p>输入是一个树的根结点 root，和两个树结点 p、q，要求返回 p、q 的最近公共祖先。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/">二叉树的最近公共祖先</a><br>使用 dfs 的后序遍历</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/">二叉树的最近公共祖先</a><br>输入是一个树的根结点 root，和两个树结点 p、q，要求返回 p、q 的最近公共祖先。<br>使用 dfs 的后序遍历</p>
 <ol>
 <li>置 p、q 为全局变量，免去传参 <code>this.p = p, this.q = q;</code>，定义存储祖先结点的全局变量 <code>TreeNode ans = null;</code>，进入 dfs 函数 <code>dfs(root);</code>；</li>
 <li>在 <code>dfs(TreeNode root)&#123;&#125;</code> 函数内：<ol>
@@ -313,6 +466,25 @@
 </ol>
 </li>
 </ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/implement-trie-prefix-tree/">实现 Trie (前缀树)</a><br>实现一颗前缀树及以下四个方法：</p>
+<ol>
+<li>Trie()：前缀树构造方法；</li>
+<li>void insert(String word)：插入字符串；</li>
+<li>boolean search(String word)：搜索字符串；</li>
+<li>boolean startsWith(String prefix)：搜索字符串前缀。<br>本质是构造一个树，该树的孩子结点有 26 个 <code>Trie[] child;</code>，分别与 26 个小写字母一一对应。同时需添加 <code>boolean isEnd</code> 变量，判断当前字母及父节点字母是否构成一个字符串。<code>child[i] != null;</code> 表示 <code>(char) (i + &#39;a&#39;)</code> 字母存在。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/">对称的二叉树</a><br>输入一棵树，判断该树是否以根节点轴对称，返回 boolean 值。<br>深度优先遍历，从 root.left 和 root.right 开始，若 left 取左孩子则 right 取右孩子，并对比 root.val。</p>
+<ol>
+<li><code>if (root == null) return true;</code>。</li>
+<li><code>return check(root.left, root.right);</code>。</li>
+<li><code>boolean check(TreeNode left, TreeNode right)</code>：<ol>
+<li><code>if (left == null &amp;&amp; right == null) return true;</code>；</li>
+<li><code>if (left == null || right == null) return false;</code>；</li>
+<li><code>return left.val == right.val &amp;&amp; check(left.left, right.right) &amp;&amp; check(left.right, right.left);</code>。</li>
+</ol>
+</li>
+</ol>
+<p><strong>补充：</strong>该题不可用中序遍历 + 双指针方法解。对于 <code>[1,2,2,2,null,2]</code> 的输入，该方法解答错误。</p>
 <h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><p>图结点标号习惯为 <code>0 ~ n - 1</code>，n 为图结点的个数。如此标号的作用是，可以和数组下标一一对应，存储边端点的时候也可只存储标号，然后到存储结点的数组中根据标号取出结点即可。</p>
 <ul>
 <li>图的输入一般是：<ul>
@@ -356,6 +528,7 @@
 </ol>
 </li>
 </ol>
+<p>时间复杂度为 O(n + m)，其中 n 为图结点个数，m 为 图中边的个数。</p>
 <h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><p>并查集的最终形态是，每个集合都是一棵树。</p>
 <ul>
 <li>核心组成：<ul>
@@ -381,7 +554,7 @@
 </ul>
 <h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><ul>
 <li>实现方式：定义左边界和右边界，循环 <code>while(left &lt; right&gt;</code>，在循环体里计算 mid，再进行元素比较。</li>
-<li>若需要在循环结束后保留 mid 的值，则在比较元素时可设置 <code>right = mid, left = mid + 1</code>。</li>
+<li>一般边界更新 <code>right = mid, left = mid + 1</code>。</li>
 </ul>
 <p><strong>延伸</strong><br>对两个有序数组二分查找它们的中位数，在不能合并数组的情况下，对 k (k = (n1 + n2) / 2) 进行二分。n1、n2 分别是两个数组的长度。<br>即上面的问题可转化为查找两个数组所有元素的第 k 大元素，流程：</p>
 <ol>
@@ -390,7 +563,44 @@
 <li>对比 nums1[mid1] 和 nums2[mid2]，缩小 k 值，更新 idx1 或 idx2；</li>
 <li>直至其中一个数组元素遍历完或 k == 1，即可返回中位数。</li>
 </ol>
-<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/">在排序数组中查找数字 I</a><br>输入一个有序的一维数组 nums 和一个整数 target，要求返回 target 在数组中出现的次数；若 nums 中不含 target，则返回 0。<br>因为数组有序，因此可用二分查找，分别查找出 target 在 nums 的左边界/右边界：</p>
+<ol>
+<li>计算左边界/右边界 <code>int leftIdx = binarySearch(nums, target, true); int rightIdx = binarySearch(nums, target, false);</code>，其中 rightIdx 是 target 右边界后一位元素位置；</li>
+<li>若不存在 target，则返回 0 <code>if (leftIdx == rightIdx) return 0;</code>；</li>
+<li>返回 target 个数 <code>return rightIdx - leftIdx;</code>。</li>
+</ol>
+<ul>
+<li>函数 <code>int binarySearch(int[] nums, int target, boolean l)</code>：<ol>
+<li>定义二分左右界 <code>int left = 0, right = nums.length - 1;</code>；</li>
+<li>定义返回值 <code>int ans = nums.length;</code>；</li>
+<li>二分 <code>while (left &lt;= right)</code>：<ol>
+<li>计算 mid <code>int mid = (left + right) &gt;&gt; 1;</code>；</li>
+<li>判断 <code>if (nums[mid] &gt; target || (l &amp;&amp; nums[mid] &gt;= target))</code>，若 l 为 true，则表示计算左边界 leftIdx。更新 <code>right = mid - 1; ans = mid;</code>；</li>
+<li>否则，更新 <code>else left = mid + 1;</code>；</li>
+</ol>
+</li>
+<li>返回 <code>return ans;</code>。</li>
+</ol>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-increasing-subsequence/">最长递增子序列长度</a><br>输入一个数组，要求计算其最长递增子序列的长度，该子序列不要求连续。<br>使用贪心 + 二分：</p>
+<ol>
+<li>新建 <code>int[] dp</code> 数组，大小与无序数组大小相同；</li>
+<li>遍历无序数组元素，<ol>
+<li>若元素比 dp 数组的最右侧元素（最大值）要大，则新增成为 dp 数组最大元素值（dp 数组最右侧）；</li>
+<li>否则使用二分查找定位 dp 数组替换该元素的位置，替换该元素；</li>
+</ol>
+</li>
+<li>无序数组遍历结束后，dp 数组元素个数即为该无序数组最长递增子序列长度。<br>补充：dp 数组为遍历无序数组过程中构建的有序数组。整个过程时间复杂度 O(nlogn)，也用到了贪心算法的思想。</li>
+</ol>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>排序 = 元素比较 + 交换。</p>
+<ul>
+<li>选择排序：每次选择一个最小/最大的元素放在首位置。时间复杂度 O(n2)，每轮比较次数为 O(n)，交换次数为 1。选择排序不稳定。</li>
+<li>冒泡排序：每轮两两元素比较，最大/最小的元素被交换到了末位置。时间复杂度 O(n2)，每轮比较次数为 O(n)，交换次数为 O(n)。冒泡排序是稳定的。</li>
+<li>插入排序：每轮是左侧部分已排好序的元素和待排序的元素两两比较，确定在已排好序元素中待排序元素的插入位置。时间复杂度 O(n2)，每轮比较次数近似 O(n)，交换次数近似 O(n)。插入排序是稳定的。</li>
+<li>计数排序：适用元素大小有特定范围的数组排序。新建适用元素范围的新数组 <code>int[] cnt;</code>，遍历待排序数组 nums <code>for (int num : nums)</code>，令 <code>cnt[num]++;</code>，最后遍历 cnt 数组，从小到大按个数取出元素，即完成排序。</li>
+</ul>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><ul>
 <li>流程：<ol>
 <li>选首元素作为待排序元素，后面的所有元素与首元素一一比较。</li>
 <li>left 指针为首元素后一位，right 指针为最后一位元素。</li>
@@ -403,24 +613,74 @@
 </ol>
 </li>
 </ul>
-<h3 id="无序数组计算最长递增子序列长度（不要求连续）"><a href="#无序数组计算最长递增子序列长度（不要求连续）" class="headerlink" title="无序数组计算最长递增子序列长度（不要求连续）"></a>无序数组计算最长递增子序列长度（不要求连续）</h3><ul>
-<li>流程：<ol>
-<li>新建 <code>int[] dp</code> 数组，大小与无序数组大小相同；</li>
-<li>遍历无序数组元素，使用二分查找定位 dp 数组替换该元素的位置，替换该元素；</li>
-<li>若元素比 dp 数组的最右侧元素（最大值）要大，则新增成为 dp 数组最大元素值（dp 数组最右侧）；</li>
-<li>无序数组遍历结束后，dp 数组元素个数即为该无序数组最长递增子序列长度。<br>补充：dp 数组为遍历无序数组过程中构建的有序数组。整个过程时间复杂度 O(nlogn)，也用到了贪心算法的思想。</li>
+<h3 id="计数排序"><a href="#计数排序" class="headerlink" title="计数排序"></a>计数排序</h3><p>计数排序适用元素有指定范围大小，且与元素个数统计相关的问题。<br><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30545684&qid=1701885&tid=55336149">找不同</a><br>输入一个整数数组 nums，要求返回数组中只出现一次的最小元素值。（元素取值范围 [1, 1000]）<br>使用计数排序，新建计数数组 <code>int[] cnt = new int[1001];</code>，计数每个元素出现的次数（元素值为计数数组下标）：</p>
+<ol>
+<li>定义计数数组 <code>int[] cnt = new int[1001];</code>。</li>
+<li>遍历 nums 数组元素 <code>for(int num : nums)</code>。<ol>
+<li>元素计数 <code>cnt[num]++;</code>；</li>
 </ol>
 </li>
-</ul>
-<h2 id="经典算法"><a href="#经典算法" class="headerlink" title="经典算法"></a>经典算法</h2><h3 id="0-1-背包问题"><a href="#0-1-背包问题" class="headerlink" title="0-1 背包问题"></a>0-1 背包问题</h3><p>假设有 N 个物品，每个物品有重量和价值两个属性，其中第 i 个物品的重量为 w[i]，价值为 v[i]。张三现在有一个可装 W 重量物品的背包，问如何才能实现价值最大化？<br>一般解决一种问题：该问题似乎通过对 价值/重量 排序，然后从大到小取物品即可。但是，在边界上，细节非常多，所以这道题，看起来这么解可以。但实际上，仍需使用动态规划。<br>通用是使用二维 dp 数组，但一维空间复杂度更好，为 O(W)。时间复杂度只能为 O(NW)。理论上，计算得到的 dp 数组必须有序。</p>
+<li>遍历 cnt 数组，找到第一个值为 1 的数组下标，返回：<code>for(int i = 0; i &lt;= 1000; i++) if(cnt[i] == 1) return i;</code>。</li>
+</ol>
+<h2 id="其它算法"><a href="#其它算法" class="headerlink" title="其它算法"></a>其它算法</h2><h3 id="0-1-背包问题"><a href="#0-1-背包问题" class="headerlink" title="0-1 背包问题"></a>0-1 背包问题</h3><p>假设有 N 个物品，每个物品有重量和价值两个属性，其中第 i 个物品的重量为 w[i]，价值为 v[i]。张三现在有一个可装 W 重量物品的背包，问如何才能实现价值最大化？<br>一般解决一种问题：该问题似乎通过对 价值/重量 排序，然后从大到小取物品即可。但是，在边界上，细节非常多，所以这道题，看起来这么解可以。但实际上，仍需使用动态规划。<br>通用是使用二维 dp 数组，但一维空间复杂度更好，为 O(W)。时间复杂度只能为 O(NW)。理论上，计算得到的 dp 数组必须有序，dp[i] 表示当背包容量为 i 时能装下物品的最大价值。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[W + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = W; j &gt;= w[i]; j--) &#123;</span><br><span class="line">                dp[j] = Math.max(dp[j], dp[j - w[i]] + v[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[W];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p>给定一个数组 nums 和目标值 target，找到数组中满足和为 target 的两个元素的下标（保证答案唯一）。</p>
+<h3 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h3><p>输入一个无序数组 nums 和目标值 target，找到数组中满足和为 target 的两个元素的下标（保证答案唯一）。</p>
 <ol>
 <li>O(n2) 时间复杂度<br>两次循环即可。</li>
-<li>O(logn) 时间复杂度<br>先对数组排序，使用双指针一前一后，分别向右移、左移求和。与 target 比大小，若和比 target 小，则右移左指针；若和比 target 大，则左移右指针。<br>排序花费时间复杂度 O(nlogn)，双指针时间复杂度 O(n)。因此总时间复杂度 O(nlogn)。</li>
+<li>O(nlogn) 时间复杂度<br>先对数组排序，使用双指针一前一后，分别向右移、左移求和。与 target 比大小，若和比 target 小，则右移左指针；若和比 target 大，则左移右指针。<br>排序花费时间复杂度 O(nlogn)，双指针时间复杂度 O(n)。因此总时间复杂度 O(nlogn)。</li>
 <li>O(n) 时间复杂度<br>遍历 nums，使用 <code>Map&lt;Integer, List&lt;Integer&gt;&gt; map</code> 存储元素值和下标。在遍历过程中判断 <code>if(map.containsKey(target - nums[i]))</code>，若为 true，则返回 <code>new int[]&#123;i, map.get(target - nums[i]).get(0)&#125;;</code>。</li>
 </ol>
+<h3 id="最小代价"><a href="#最小代价" class="headerlink" title="最小代价"></a>最小代价</h3><p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30545684&qid=1701884&tid=55345951">最小代价</a><br>输入两个一维数组 <code>int[] a; int[] b;</code>，其中 b[i] 是令 a[i] 加 1 的代价。现要求返回使数组 a 中各元素互不相同所需的最小代价。同时要求时间复杂度不超过 O(nlogn)。<br>在遇到相同的元素时，令其中自增 1 所需最大代价的元素保持不变，其余元素自增 1，直到所有元素互不相同。得到的代价总和为最小代价：</p>
+<ol>
+<li>合并两个一维数组 <code>int[][] nums = new int[n][2];</code>；优先按第一个元素升序排序，其次按第二个元素升序排序。</li>
+<li>新建大根堆 <code>PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;(new Comparator&lt;Integer&gt;()&#123;排序算法&#125;);</code>。</li>
+<li>记录上一个数组元素（同时也是 queue 中存储的各代价对应的元素值） <code>int last = nums[0][0];</code>；记录堆中存储的代价和 <code>long all = 0;</code>；记录花费的代价和 <code>long ans = 0;</code>。</li>
+<li>遍历 nums 元素 <code>for (int[] num : nums)</code>：<ol>
+<li>若当前元素值与上一个元素值不相等 <code>if (!queue.isEmpty() &amp;&amp; num[0] != last)</code>；<ol>
+<li>计算代价总和 <code>while (!queue.isEmpty() &amp;&amp; num[0] != last++) &#123;all -= queue.poll(); ans += all;&#125;</code></li>
+<li>更新 last <code>last = num[0];</code>。</li>
+</ol>
+</li>
+<li>更新 all <code>all += num[1];</code>；</li>
+<li>更新 queue <code>queue.add(num[1]);</code>。</li>
+</ol>
+</li>
+<li>若 queue 中仍有元素（说明仍有重复元素）<code>while (!queue.isEmpty())</code>:<ol>
+<li>更新 all <code>all -= queue.poll();</code>；</li>
+<li>更新代价和 <code>ans += all;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return ans;</code>。</li>
+</ol>
+<p><em>另一种解法：遍历元素，使用 Map&lt;Integer, Integer&gt; 存储 &lt;a[i], b[i]&gt;。若 a[i] 在 map 中已存在，则令 cost 加上较小代价，a[i]++。最坏情况下，该方案时间复杂度为 O(n2)。</em></p>
+<h3 id="分割数组的最大值最小"><a href="#分割数组的最大值最小" class="headerlink" title="分割数组的最大值最小"></a>分割数组的最大值最小</h3><p>输入一个数组 nums 和一个整数 m，要求把数组分成 m 段，使所有子数组的和的最大值最小。<br><strong>二分 + 贪心</strong><br>二分指二分子数组的和，区间为 [nums 最大值, nums 的和]。通过二分确定分割的子数组和的大小，再尝试按该大小分割子数组，直到二分结束。</p>
+<ol>
+<li>获取二分的左右区间 <code>int left = Max(nums), right = sum(nums);</code>，伪码。</li>
+<li>二分 <code>while (left &lt; right)</code>：<ol>
+<li>确定 mid <code>int mid = (left + right) / 2;</code>；</li>
+<li>判断该和是否能将数组分割为 m 段，若能，更新 right <code>if (check(nums, mid, m)) right = mid;</code>；</li>
+<li>否则更新 left <code>else left = mid + 1;</code>。</li>
+</ol>
+</li>
+<li>返回 <code>return right;</code>。</li>
+<li>判断和为 mid 时是否能将数组分割为 m 段 <code>boolean check(int[] nums, int x, int m)</code>：<ol>
+<li>定义当前子数组的和 <code>int sum = 0;</code>，目前已分割子数组数量 <code>int cnt = 1;</code>；</li>
+<li>遍历数组 <code>for (int num : nums)</code></li>
+<li>若当前子数组和大于 m，新分割子数组 <code>if (sum + num &gt; x) &#123;sum = num; cnt++;&#125;</code>；</li>
+<li>否则，将当前元素继续添加进子数组 <code>else sum += num;</code>。</li>
+</ol>
+</li>
+</ol>
+<p><strong>动态规划</strong><br>构建二维数组 <code>int[][] dp = new int[n + 1][m + 1];</code>，其中 <code>n = nums.length;</code>，dp[i][j] 表示数组前 i 个数分成 j 段的和的最大值的最小值。</p>
+<ol>
+<li>先计算前缀和 <code>int[] preSum = new int[n + 1]; for (int i = 0; i &lt; n; i++) preSum[i + 1] = preSum[i] + nums[i];</code>。</li>
+<li>构建 dp 数组，同时赋初始值为最大 <code>int[][] dp = new int[n + 1][m + 1]; for (int i = 0; i &lt;= n; i++) Arrays.fill(dp[i], Integer.MAX_VALUE);</code>；</li>
+<li>令 <code>dp[0][0] = 0;</code>。</li>
+<li>三重循环，第一重循环 i，表示选取数组前 i 个数；第二重循环 j，表示前 i 个数切成 j 段；第三重循环 k，表示将前 k 个数切割成 j - 1 段。</li>
+<li>状态转移方程 <code>dp[i][j] = Math.min(dp[i][j], Math.max(dp[k][j - 1], preSum[i] - preSum[k]));</code>。</li>
+</ol>
+<h3 id="小红杀怪"><a href="#小红杀怪" class="headerlink" title="小红杀怪"></a>小红杀怪</h3><p>有两个怪物，血量分别为 a，b。小红有两个技能，分别能对单个怪物造成 x 伤害，对群体怪物造成 y 伤害。现要求最少使用多少次技能小红能把两个怪物击杀（血量小于等于 0）。<a href="">网易 3.27 笔试题</a>。<br>小红最多使用 <code>int maxP = Math.max(a / x + 1 + b / x + 1, Math.max(a / y, b / y));</code> 次技能能把两个怪物击杀。设单体伤害技能使用 i 次，则群体伤害技能使用 <code>j = maxP - i;</code> 次。分别计算单体伤害技能和群体伤害技能的实际使用次数（当怪物血量小于等于 0 时，跳出循环），更新技能最少使用次数。</p>
 <h3 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h3><p>输入一个二维数组，每一维数组由两个元素组成，记为 start、end，分别表示一段时间长度的起止时刻。要求返回最大窗口重叠数。<a target="_blank" rel="noopener" href="https://www.nowcoder.com/test/question/0c6f76c0817e4610b8ba2bcecb8c1881?pid=29855855&tid=54011759">小猿的时间管理</a><br>遍历每个数组，遇到一个起点增加一个窗口，遇到一个终点减少一个窗口，如此可求得每个时刻新增的窗口数量。累加即为最大窗口重叠数：</p>
 <ol>
 <li>使用 map 存储每个时刻新增的窗口数量 <code>Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();</code>；</li>
@@ -428,22 +688,138 @@
 <li>记录当前时刻累计的窗口数量 <code>int cnt = 0;</code>，记录所有时刻最大的重叠窗口数量 <code>int ans = 0;</code>；</li>
 <li>遍历 map，对每个 key，累计 cnt，更新最大的重叠窗口数量 <code>for (int i : map.keySet()) &#123;cnt += map.get(i); ans = Math.max(ans, cnt);&#125;</code>。</li>
 </ol>
-<h3 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h3><p>计算数组中满足某条件的所有子窗口的个数。<br>使用双指针标记窗口左边界和有边界，窗口内状态的记录（如各元素出现的次数）通过新数组（若给定数组元素有范围）或 Map 保存。优先移动右指针，若窗口满足所需条件，开始统计计算并移动左指针。</p>
-<h3 id="整数分解"><a href="#整数分解" class="headerlink" title="整数分解"></a>整数分解</h3><p>输入一个整数 n，输出该整数的质因数的乘积。如输入 90，输出 90=2<em>3</em>3*5。（阿里电话面试题）<br>这道题不用想复杂，不需要思考寻找质因数，因为质因数在从 2 开始逐渐递增的过程中，会自动筛掉不符合为质因数的情况。<br>普通循环解掉即可。</p>
+<h3 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h3><p>计算数组中满足某条件的所有子窗口的个数/最小子窗口大小。<br>使用双指针标记窗口左边界和右边界，窗口内状态的记录（如各元素出现的次数）通过新数组（若给定数组元素有范围）或 Map 保存。优先移动右指针，若窗口满足所需条件，开始统计计算并移动左指针。</p>
+<h3 id="整数分解"><a href="#整数分解" class="headerlink" title="整数分解"></a>整数分解</h3><p>输入一个整数 n，输出该整数的质因数的乘积。如输入 90，输出 90=2 * 3 * 3 * 5。（阿里电话面试题）<br>这道题不用想复杂，不需要思考寻找质因数，因为质因数在从 2 开始逐渐递增的过程中，会自动筛掉不符合为质因数的情况。<br>普通循环解掉即可。</p>
 <ol>
 <li>循环 <code>for(int i = 2; i &lt;= n;)</code>，其中 i 是质因数，n 是输入的整数；</li>
 <li>判断是否是最后一个质因数 <code>if (i == n) System.out.println(i); break;</code>；</li>
 <li>判断 i 是否是 n 的质因数 <code>else if (n % i == 0) n /= i; System.out.print(i + &quot;*&quot;);</code>；</li>
 <li>若都不是，则 i 递增 <code>else i++;</code>，i 递增过程中会出现非质数的情况，但该情况也不会是 n 的质因数，即不会进入 3，所以无需特别计算质数。</li>
 </ol>
-<h3 id="只有一个不同字符的字符串"><a href="#只有一个不同字符的字符串" class="headerlink" title="只有一个不同字符的字符串"></a>只有一个不同字符的字符串</h3><p>输入一个字符串列表，其中所有字符串长度均相等，各字符串均不相同。当存在两个字符串，其对应索引处仅一个字符不一样时返回 true，否则返回 false。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/strings-differ-by-one-character/">只有一个不同字符的字符串</a><br>使用字符串哈希，保存每个字符串将其中任意一个字符替换成 “*” 后的字符串。在循环过程中，若发现 hashset 中存在相同的被替换了一个字符的字符串后，即存在只相差一个字符的字符串，返回 true：</p>
-<h3 id="编辑距离"><a href="#编辑距离" class="headerlink" title="编辑距离"></a>编辑距离</h3><p><strong><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30440638&qid=1664953&tid=53022867">两个序列</a></strong><br>虽然给的是两个数组的比较，但解法类似。<br>如题目要求：存在两个数组，所有元素和个数均相同，但顺序可能不同，问最少经过多少次操作后 ａ 数组和 b 完全相同（操作限于在 a 数组两端元素取出并插入任一位置，cost 为 1）。<br>该题可转化为，根据 a 数组元素值在 b 数组中的位置，更新元素值为 b 数组的索引。即若 <code>a[i] = b[j]; a[i] = j;</code>，如此，可通过求 a 数组中最长连续递增子序列的长度，通过 n - 长度即为编辑距离（n 为 a 数组元素个数）。</p>
-<p><strong><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30579184&qid=1712511&tid=53354990">多多的字符变换</a></strong><br>题目：有两个字符串，可进行如下两种操作：1. 交换任意两个相邻的字符，代价为 0；2. 将任意一个字符 a 修改成字符 b，代价为 |a - b|（绝对值）。问最少经过多少代价可使 a 和 b 字符串相同。<br>解：因为交换任意两个相邻字符 cost 为 0，则可对两个字符串排序，再一一比较，不相同便计算 cost，累加的 cost 值即为编辑距离。</p>
-<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><p>输入一个整数数组，有正有负，其中有两个数出现次数为 1，其余数的出现次数为 2，要求返回两个出现次数为 1 的整数组成的数组。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/single-number-iii/">只出现一次的数字 III</a><br>对所有数做异或运算得到结果 x，x 为两个出现一次的数的异或值。对 x 和 -x 做与运算得到 x 的最低位为 1，且仅该位为 1 的数 lsp。然后再遍历一次数组，分别与 lsp 做与运算：</p>
+<h3 id="只有一个不同字符的字符串"><a href="#只有一个不同字符的字符串" class="headerlink" title="只有一个不同字符的字符串"></a>只有一个不同字符的字符串</h3><p>输入一个字符串列表，其中所有字符串长度均相等，各字符串均不相同。当存在两个字符串，其对应索引处仅一个字符不一样时返回 true，否则返回 false。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/strings-differ-by-one-character/">只有一个不同字符的字符串</a><br>使用字符串哈希，保存每个字符串将其中任意一个字符替换成 “*” 后的字符串。在循环过程中，若发现 hashset 中存在相同的被替换了一个字符的字符串后，即存在只相差一个字符的字符串，返回 true。</p>
+<h3 id="数字序列中某一位的数字"><a href="#数字序列中某一位的数字" class="headerlink" title="数字序列中某一位的数字"></a>数字序列中某一位的数字</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/">数字序列中某一位的数字</a><br>数字以 0123456789101112131415… 顺序排列，其中，第 5 位（从下标0开始计数）是 5。现输入一个正整数 n，要求返回 n 所指下标对应的数字。<br>该题是数学题，找规律有：记位数为 digit（如 2），位数起始值为 start（如 10），则位数为 digit 的数字组成的序列长度为 <code>int count = 9 * digit * start;</code>。故有：</p>
+<ol>
+<li>声明初始变量 <code>long count = 9; long start = 1; int digit = 1;</code>。</li>
+<li>循环 <code>while (n &gt; count)</code>：<ol>
+<li>更新 n 值 <code>n -= count;</code>；</li>
+<li>更新声明的三个变量 <code>start *= 10; digit++; count = 9 * digit * start;</code>；</li>
+</ol>
+</li>
+<li>计算 n 所指数字大小 <code>long num = start + (n - 1) / digit;</code>。</li>
+<li>返回 n 所指数位的数字 <code>return String.valueOf(num).charAt((n - 1) % digit) - &#39;0&#39;;</code>。</li>
+</ol>
+<h3 id="编辑距离"><a href="#编辑距离" class="headerlink" title="编辑距离"></a>编辑距离</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/edit-distance/">编辑距离</a><br>输入两个字符串 A、B，要求计算将 A、B 变为相同字符串所需的最小编辑距离。共有三种编辑操作：1. 字符串新增一个字符；2. 字符串删除一个字符；3. 字符串修改一个字符。这三种操作的编辑距离都是 1。<br>观看题意可知，对这两个字符串共有六种编辑操作，但其中两两编辑操作的效果等同。因此，实际上可视为仅需三种编辑操作即可实现 A、B 相同：1. A 新增一个字符；2. B 新增一个字符；3. A 修改一个字符。可使用动态规划来解，dp[i][j] 表示 A 的前 i 个字符和 B 的前 j 个字符相同所需的最小编辑距离：</p>
+<ol>
+<li>异常判断，若其中一个为空字符串，则编辑距离为非空字符串的长度 <code>if (m * n == 0) return m + n;</code>，其中 <code>int m = word1.length(), n = word2.length();</code>。</li>
+<li>构建 dp 数组 <code>int[][] dp = new int[m + 1][n + 1];</code>。</li>
+<li>初始化：同 1 的逻辑。<ol>
+<li><code>for (int i = 0; i &lt;= m; i++) dp[i][0] = i;</code>；</li>
+<li><code>for (int i = 0; i &lt;= n; i++) dp[0][i] = i;</code>。</li>
+</ol>
+</li>
+<li>循环 <code>for (int i = 1; i &lt;= m; i++)</code>：<ol>
+<li><code>for (int j = 1; j &lt;= n; j++)</code>：<ol>
+<li>dp[i - 1][j] A 新增一个字符 <code>int up = dp[i - 1][j] + 1;</code>；</li>
+<li>dp[i][j - 1] B 新增一个字符 <code>int left = dp[i][j - 1] + 1;</code>；</li>
+<li>dp[i - 1][j - 1] A 修改一个字符 <code>int left_up = dp[i - 1][j - 1]; if (word1.charAt(i - 1) != word2.charAt(j - 1)) left_up += 1;</code>；</li>
+<li>状态转移方程 <code>dp[i][j] = Math.min(up, Math.min(left, left_up));</code>。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>返回 <code>return dp[m][n];</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30440638&qid=1664953&tid=53022867">两个序列</a><br>虽然给的是两个数组的比较，但解法类似。<br>如题目要求：存在两个数组，所有元素均相同，且数字无重复，但顺序可能不同，问最少经过多少次操作后 ａ 数组和 b 完全相同（操作限于在 a 数组两端元素取出并插入任一位置，cost 为 1）。<br>该题可转化为，根据 a 数组元素值在 b 数组中的位置，更新元素值为 b 数组的索引。即若 <code>a[i] = b[j]; a[i] = j;</code>（构造 b 数组的 map，key 为元素值，val 为下标）。如此，可通过求 a 数组中最长连续递增子序列的长度，通过 n - 长度即为编辑距离（n 为 a 数组元素个数）。</p>
+<p><a target="_blank" rel="noopener" href="https://www.nowcoder.com/question/next?pid=30579184&qid=1712511&tid=53354990">多多的字符变换</a><br>题目：有两个字符串，可进行如下两种操作：1. 交换任意两个相邻的字符，代价为 0；2. 将任意一个字符 a 修改成字符 b，代价为 |a - b|（绝对值）。问最少经过多少代价可使 a 和 b 字符串相同。<br>解：因为交换任意两个相邻字符 cost 为 0，则可对两个字符串排序，再一一比较，不相同便计算 cost，累加的 cost 值即为编辑距离。该题是因为 cost 计算方式为 |a - b|，才可以用这个方法。</p>
+<h3 id="Boyer-Moore-投票算法"><a href="#Boyer-Moore-投票算法" class="headerlink" title="Boyer-Moore 投票算法"></a>Boyer-Moore 投票算法</h3><p>也叫博耶-摩尔多数投票算法。一种用来寻找一组元素中多数元素重复出现且占到了所有元素的一半以上的算法，该算法时间复杂度 O(n)，空间复杂度 O(1)。<br>算法流程：输入一个集合，第一轮遍历集合获得众数候选者；第二轮根据第一轮结果再遍历，若第二轮遍历结果候选者与第一轮一致，说明结果正确；否则说明第一轮遍历结果是无效随机元素，该集合可能没有众数元素。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof/">数组中出现次数超过一半的数字</a><br>使用投票算法：</p>
+<ol>
+<li>异常判断 <code>if (nums == null || nums.length &lt;= 0) return 0;</code>；</li>
+<li>定义众数候选者和出现个数 <code>int candidate = nums[0], count = 0;</code>；</li>
+<li>循环开始投票 <code>for (int num : nums)</code>：<ol>
+<li>若上一任候选者个数为 0，更新新任候选者 <code>if (count == 0) candidate = num;</code>；</li>
+<li>若上一任候选者和当前元素相同，增加候选者个数 <code>if (candidate == num) count++;</code>；</li>
+<li>若 2 不相同，减少候选者个数 <code>else count--;</code>；</li>
+</ol>
+</li>
+<li>返回候选者 <code>return candidate;</code>。</li>
+</ol>
+<h3 id="栈-队列新增-getMax-方法"><a href="#栈-队列新增-getMax-方法" class="headerlink" title="栈/队列新增 getMax() 方法"></a>栈/队列新增 getMax() 方法</h3><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/">包含min函数的栈</a><br>要求定义栈的数据结构，该栈除了 push()、pop() 操作外，还可实现 O(1) 时间复杂度获取最小值（同理最大值）。<br>栈里最小值只与当前元素及之前压栈元素相关，因此每个元素在压栈前可同时更新该元素入栈后栈内元素的最小值，一并存储进数组里再压栈：</p>
+<ol>
+<li>定义 Stack <code>Stack&lt;int[]&gt; stack = new Stack&lt;&gt;();</code>，定义最小值 <code>int min = Integer.MAX_VALUE;</code>。</li>
+<li>push() 操作：<ol>
+<li>更新 min 值：<code>min = Math.min(min, x);</code>；</li>
+<li>元素入栈：<code>stack.push(new int[]&#123;x, min&#125;);</code>。</li>
+</ol>
+</li>
+<li>pop() 操作：<ol>
+<li><code>stack.pop();</code>；</li>
+<li><code>min = stack.peek()[1];</code>。</li>
+</ol>
+</li>
+<li>getMin() 操作：<code>return stack.peek()[1];</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/">队列的最大值</a><br>要求定义一个队列，该队列除了 push()、pop() 操作外，还要求实现 getMax() 方法，这三个方法要求均摊时间复杂度为 O(1)。<br>需要使用两个队列，一个队列完成 push()、pop()，另一个队列（单调递减）完成 getMax()：</p>
+<ol>
+<li>定义两个队列 <code>Queue&lt;Integer&gt; queue = new LinkedList&lt;&gt;(); Deque&lt;Integer&gt; maxQueue = new LinkedList&lt;&gt;();</code>；</li>
+<li>push() 操作：<ol>
+<li>将元素压入普通队列 <code>queue.add(value);</code>；</li>
+<li>最大值队列元素保证单调递减性 <code>while (!maxQueue.isEmpty() &amp;&amp; maxQueue.peekLast() &lt; value) maxQueue.pollLast();</code>；</li>
+<li><code>maxQueue.addLast(value);</code>。</li>
+</ol>
+</li>
+<li>pop() 操作：<ol>
+<li>获取返回值 <code>int ret = queue.poll();</code>；</li>
+<li>若返回值是最大值，则最大值队列队头元素出队 <code>if (ret == maxQueue.peekFirst()) maxQueue.pollFirst();</code>；（因此需要在 push() 时保证重复的最大值在 maxQueue 也重复出现）</li>
+<li>返回 <code>return ret;</code>。</li>
+</ol>
+</li>
+<li>getMax() 操作：<code>return maxQueue.peekFirst();</code>。</li>
+</ol>
+<h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><ul>
+<li>相同的数字异或为 0，不同的数字异或为 1。</li>
+<li>两个相等的数异或值为 0。</li>
+<li><code>n &amp; -n =</code> n 中最低位为 1，且仅该位为 1 的数。</li>
+<li><code>n &amp; (n - 1)</code> 得到将 n 的最低位 1 变为 0 后的数。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/single-number-iii/">只出现一次的数字 III</a><br>输入一个整数数组，有正有负，其中有两个数出现次数为 1，其余数的出现次数为 2，要求返回两个出现次数为 1 的整数组成的数组。<br>对所有数做异或运算得到结果 x，x 为两个出现一次的数的异或值。对 x 和 -x 做与运算得到 x 的最低位为 1，且仅该位为 1 的数 lsp。然后再遍历一次数组，分别与 lsp 做与运算：</p>
 <ol>
 <li>定义 x，与 nums 元素做异或运算 <code>int x = 0; for (int num : nums) x ^= num;</code>；</li>
 <li>找到最低位为 1 的值 <code>int lsb = x == Integer.MIN_VALUE ? x : x &amp; (-x);</code></li>
 <li>将 lsp 分别与 nums 元素再做与运算 <code>int num1 = 0, num2 = 0; for (int num : nums) &#123;if ((num &amp; lsb) == 0) num1 ^= num; else num2 ^= num;&#125;</code>。其中 lsp 为 1 的位将 nums 元素分为两组，每组分别与 nums1、nums2 做异或运算。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/">数组中数字出现的次数 II</a><br>输入一个数组，其中只有一个元素出现一次，其它元素都出现三次，要求返回出现一次的元素。<br>对于出现三次的元素，其每个二进制位的出现次数可被 3 整除；对于只出现一次的元素，其每个二进制位被 3 除余 1。利用该特点，统计所有元素每个二进制位中 1 出现的次数，取余将余数组合构成只出现一次的元素值：</p>
+<ol>
+<li>定义返回值和各二进制位的出现次数 <code>int res = 0, bit = 0;</code>；</li>
+<li>从前往后（从大往小）遍历各数的二进制位 <code>for (int i = 30; i &gt;= 0; i--)</code>：<ol>
+<li>统计各二进制位 1 的出现次数 <code>for (int num : nums) bit += (num &gt;&gt; i) &amp; 1;</code>。</li>
+<li>更新返回值 <code>res &lt;&lt;= 1; res += bit % 3;</code>；</li>
+<li>重置 bit 值计算下一进制位 1 的出现次数 <code>bit = 0;</code>；</li>
+</ol>
+</li>
+<li>返回 <code>return res;</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/missing-number/">丢失的数字</a><br>输入一个整数数组 nums，该数组元素个数为 n，且元素值范围为 0 - n；要求找到没出现在 [0, n] 范围内的那个数。</p>
+<ol>
+<li>时间复杂度 O(nlogn)，空间复杂度 O(1)，排序后查找数组下标和元素值不相等的值，该下标即为缺失的数。</li>
+<li>时间复杂度 O(n)，空间复杂度 O(n)，新建数组 newNums，遍历 nums 数组，令 <code>newNums[nums[i]] = 1;</code>。返回 newNums 中值为 0 的下标。</li>
+<li>时间复杂度 O(n)，空间复杂度 O(1)，位运算。对 nums 中所有元素做异或运算，结果与 0 - n 的所有值再做异或运算，返回。</li>
+<li>时间复杂度 O(1)，空间复杂度 O(1)，数学公式。计算 0 - n 的所有值的和 - nums 数组所有元素值的和，返回。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sum-of-two-integers/">两整数之和</a><br>输入两个数 a、b，返回这两个数的和。要求不能使用运算符 +、-。<br>分别讨论四种情况：<code>1 ^ 0 = 1</code>；<code>0 ^ 1 = 1</code>；<code>0 ^ 0 = 0</code>；<code>1 ^ 1 = 0</code>。四种异或的结果都与加法结果一致，唯独第四种情况需要额外考虑进位。进位可以表示为 <code>(1 &amp; 1)&lt;&lt;1</code>，故解决方案是：</p>
+<ol>
+<li><code>while(b != 0)</code><ol>
+<li><code>int carry = (a &amp; b) &lt;&lt; 1;</code>，存储进位信息。</li>
+<li><code>a = a ^ b;</code>。</li>
+<li><code>b = carry;</code>，若进位还有，继续加。</li>
+</ol>
+</li>
+<li><code>return a;</code>。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/">二进制中1的个数</a><br>输入一个整数 n，要求计算 n 作为二进制数时 1 的个数。<br>根据时间复杂度不同有两种解法：</p>
+<ol>
+<li>时间复杂度 O(n)：循环 <code>while(n != 0)</code>，与 1 做与运算，若为 1，则 1 的个数 ret++ <code>if((n &amp; 1) == 1) ret++;</code>，n 右移 <code>n &gt;&gt;= 1;</code>。</li>
+<li>时间复杂度 O(logn)：循环 <code>while(n != 0)</code>，令 <code>n &amp;= (n - 1); ret++;</code>。<br>ret 值即为返回值。</li>
 </ol>
 <h3 id="子串的全排列"><a href="#子串的全排列" class="headerlink" title="子串的全排列"></a>子串的全排列</h3><p>输入两个字符串 a、b，判断字符串 a 是否是 b 中某一子串的全排列中的一种（微软面试题）。<br>刚开始用了 O(NM) 时间复杂度解法，后面上网查了发现有 O(M) 时间复杂度解法，此处写的是第二种解法。N 是 a 字符串的长度，M 是 b 的长度。<br>使用双指针法：</p>
 <ol>
@@ -453,12 +829,12 @@
 <li>确定 right 所指字符对应的下标 <code>int idx = b.charAt(right) - &#39;a&#39;;</code>，判断 a 中是否存在该字符，若存在，则 valid++ <code>if (bNums[idx] &gt; 0) bNums[idx]--; valid++;</code>；</li>
 <li>若双指针所指窗口大于 a 的长度，则左指针右移 <code>while (right - left + 1 &gt;= n1)</code>：<ol>
 <li>先判断此时窗口的子串的一个全排列是否与 a 相同 <code>if (valid == n1) return true;</code>；</li>
-<li>左指针右移 <code>if (aNums[b.charAt(left) - &#39;a&#39;] &gt; 0) &#123;aNums[b.charAt(left) - &#39;a&#39;]++; valid--;&#125; left++;</code>。</li>
+<li>左指针右移 <code>if (aNums[b.charAt(left) - &#39;a&#39;] &gt; bNums[b.charAt(left)) &#123;bNums[b.charAt(left) - &#39;a&#39;]++; valid--;&#125; left++;</code>。</li>
 </ol>
 </li>
 <li>回到 3。</li>
 </ol>
-<h3 id="通过概率求-Pi"><a href="#通过概率求-Pi" class="headerlink" title="通过概率求 Pi"></a>通过概率求 Pi</h3><p>在一个半径为 1 的 1/4 圆上，通过随机数 <code>Random random = new Random(); a = random.nextDouble(); b = random.nextDouble();</code> 获得 a、b，若 <code>a^2 + b^2 &lt; 1</code>，说明该点在圆内，统计指标 <code>count++</code>。最后，根据 <code>4 * count / N</code> 计算得到 Pi 的近似值。其中 N 是循环求随机数的次数，越大越好。</p>
+<h3 id="通过概率求-Pi"><a href="#通过概率求-Pi" class="headerlink" title="通过概率求 Pi"></a>通过概率求 Pi</h3><p>在一个半径为 1 的 1/4 圆上，通过随机数 <code>Random random = new Random(); a = random.nextDouble(); b = random.nextDouble();</code> 获得 a、b，若 <code>a^2 + b^2 &lt; 1</code>，说明该点在圆内，统计指标 <code>count++</code>。最后，根据面积公式 <code>4 * count / N</code> 计算得到 Pi 的近似值。其中 N 是循环求随机数的次数，越大越好。</p>
 <h3 id="高精度法"><a href="#高精度法" class="headerlink" title="高精度法"></a>高精度法</h3><p>有高精乘和高精加两种。以高精加为例：<br>若一系列数相加得到的结果很大，大于计算机所能存储的数值类型，则在相加过程中，使用列表表示该数。列表中的每个元素是该数的其中一位（从左到右增大），对于加法，对应位相加，记录进位的值；对于乘法，乘数乘以每一位，记录进位的值。最终更新列表，把该列表的元素取出来转化成字符串，并逆转，即为所求的数。</p>
 <h3 id="x-的平方根"><a href="#x-的平方根" class="headerlink" title="x 的平方根"></a>x 的平方根</h3><p>输入一个非负整数 x，求它的平方根。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sqrtx/">x 的平方根</a><br>不能使用编程语言的 api，要求自己设计方法实现。<br>使用二分法：</p>
 <ol>
@@ -471,7 +847,7 @@
 <ol>
 <li>定义 <code>int left = 0, right = n - 1;</code>，<code>n = nums.length</code>。</li>
 <li>循环 <code>while(left &lt; right)</code>，更新 <code>int maxArea = Math.max(maxArea, Math.min(nums[left], nums[right]) * (right - left));</code>；</li>
-<li>若 <code>if (nums[left] &lt; nums[right]) left++;</code>，否则 <code>right++;</code>；</li>
+<li>若 <code>if (nums[left] &lt; nums[right]) left++;</code>，否则 <code>right--;</code>；</li>
 <li>回到 2。</li>
 </ol>
 <h3 id="柱状图中最大矩形"><a href="#柱状图中最大矩形" class="headerlink" title="柱状图中最大矩形"></a>柱状图中最大矩形</h3><p>一个一维数组，数组中每个元素表示一个高为元素值，宽为 1 的矩形，两两元素形成的矩形相贴近。求该一维数组形成的柱状图中，能形成的最大矩形的面积。<br>若使用两重循环，根据每个元素找最大宽计算矩形面积，则会超时；<br>故使用两个数组 <code>int[] left, right;</code>，分别记录下标为 i 的元素所能到达的最左边界和最右边界（能到达的意思是边界处的元素比 i 处的元素值要小），则 i 处元素所能构成的最大矩形的面积为 (右边界 - 左边界 - 1) * i 处元素值。left 和 right 数组的构造分别通过从左至右的元素遍历和从右至左的元素遍历的单调递增栈完成。</p>
@@ -498,7 +874,7 @@
 <li><code>sc.nextLine();</code>：获取终端输入的一行字符串，以回车（换行）作为结束；</li>
 <li><code>Random random = new Random(); random.nextDouble();</code>：获取 0 - 1 的随机数（double 类型）</li>
 <li>一个数取模一次和取模 n 次得到的结果相同。取模适用结合律（先加再模亦或先模再加结果相同）</li>
-<li>负数取模的余数仍未负数。</li>
+<li>负数取模的余数仍为负数。</li>
 <li>赋值运算符 <code>=</code> 的优先级没有三元运算符 <code>?:</code> 高；</li>
 <li>遇到 x / y = a / b 的等式时，有两种解决办法：<ol>
 <li>令 a / b = t，则 x / y = t；</li>
@@ -528,12 +904,22 @@
 <li>大写字母：int[26]，cnt[c - ‘65’]（65 - 90）；</li>
 </ul>
 </li>
-<li>如何判断当前计算的数是否越界？若是在循环里，每次循环该数 * 10，则在进入循环后，判断 <code>if(x &lt; Integer.MIN_VALUE / 10 || x &gt; Integer.MAX_VALUE)</code>，若 true，则后面 * 10 时数即越界。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-integer/"> 整数反转</a></li>
+<li>如何判断当前计算的数是否越界？若是在循环里，每次循环该数 * 10，则在进入循环后，判断 <code>if(x &lt; Integer.MIN_VALUE / 10 || x &gt; Integer.MAX_VALUE / 10)</code>，若 true，则后面 * 10 时数即越界。<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-integer/">整数反转</a></li>
 <li><strong>类似连续子数组的题目，要想到用 哈希表+前缀和 的思路去做，否则暴力法的时间复杂度会非常夸张。</strong><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-size-subarray-sum-equals-k/">和等于 k 的最长子数组长度</a></li>
 <li>相反数异或得到一个仅剩一位为 1 的数，该位是原数最低位为 1 的位。</li>
 <li>负 0 是第一位为 1，剩余位为 0 的二进制数，它在十进制里的值为 -2^31。负 0 取相反数会导致越界。</li>
 <li>统计个数/次数用 map 或数组；常数空间加排序。</li>
 <li>循环的本质是，一个数不断变大或不断变小的过程。循环体里要写的即是我在这个过程里要完成的逻辑。</li>
+<li>若对一个矩阵进行路径相关（如最大值、最小值）动态规划计算，方向可选为向下、右和左。则可先计算向下、向右，然后更新向左的元素值。</li>
+<li>要找数组 nums 中非重复数字的最小值，有两种方法：<ol>
+<li>时间复杂度 O(nlogn)：先对数组排序，然后根据 <code>if (nums[i] != nums[i - 1] &amp;&amp; nums[i] != nums[i + 1])</code> 判断当前数字是否是重复元素，若不是，即为最小不重复值（首尾元素特殊判断）。</li>
+<li>时间复杂度 O(n)：若数组元素有范围，如 [1,1000]，则构建新数组 <code>int[] cnt = new int[1001];</code>。遍历 nums 数组元素，令 <code>cnt[nums[i]]++;</code>。最后遍历 cnt 数组，找到第一个 <code>cnt[i] = 1;</code> 的 i 值，即为最小不重复值。</li>
+</ol>
+</li>
+<li>在要求实现一个栈时，若除了 push()、pop() 方法，还需实现获取栈中元素最大值/最小值的 getMax()、getMin() 方法，需使用额外的空间进行存储，如 <code>Stack&lt;int[]&gt; stack</code>，数组存储入栈的元素，及该元素为止栈中的最大值/最小值。</li>
+<li>int 32 位，long 64 位，Integer 32 位，BigInteger 理论上可以进行无限位的存储与计算，实际上受计算机内存和计算能力的影响。</li>
+<li>可重复选取数公式：从 n 个不同对象中可重复选取 m 个的方法数公式为 C(m, m + n - 1)，其中 m 是上标。</li>
+<li>给一个正整数 n 表示数位，则该数位能表示的最大整数为 n 个 9。</li>
 </ul>
 <hr>
 <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><blockquote>
@@ -556,7 +942,7 @@
 </ul>
 </li>
 <li>TCP 基本概念<ul>
-<li>通过超时重传保证数据可靠传输。</li>
+<li>通过确认和超时重传保证数据可靠传输。</li>
 <li>发送窗口大小 = 由接收方返回的窗口大小和发送方自己维护的拥塞窗口大小共同确定。</li>
 <li>流量控制：接收方控制发送方发送数据的频率的方法，可通过在确认报文段中的窗口大小来控制。</li>
 <li>拥塞控制：发送方在遇到网络拥塞时的应对算法。<ul>
@@ -751,7 +1137,7 @@
 <ul>
 <li>进程的六种调度算法</li>
 <li>进程同步</li>
-<li>进程间的六种通信方式和线程间的三种通信方式</li>
+<li>进程间的六种通信方式</li>
 <li>死锁的四个必要条件及解决的策略</li>
 <li>虚拟内存的六种页面置换算法</li>
 <li>磁盘的三种磁盘调度算法</li>
@@ -765,13 +1151,17 @@
 <li>一个进程由一个或多个线程组成（至少有一个线程），线程是一个进程中代码的不同执行路线</li>
 <li>进程之间相互独立，但同一进程下的各个线程之间共享程序的内存空间(包括代码段，数据集，堆等)及一些进程级的资源(如打开文件和信号等)，某进程内的线程在其他进程不可见；   </li>
 </ul>
- <strong>为什么使用多线程而不是多进程</strong><ul>
+  <strong>为什么使用多线程而不是多进程</strong><ul>
 <li>创建和销毁上：线程分配的资源少，效率更高</li>
 <li>上下文切换上：线程切换较进程切换开销少</li>
 </ul>
- <strong>为什么需要多进程</strong><ul>
+  <strong>为什么需要多进程</strong><ul>
 <li>进程是程序的一次执行过程，不同程序需要不同进程；</li>
 <li>需要独立内存空间的情况下，需要新建进程。</li>
+</ul>
+  <strong>线程通信方式</strong><ul>
+<li>共享进程的内存空间。如通过 volatile 关键字修饰的变量。</li>
+<li>wait()、notify() ：wait() 会使当前线程阻塞并释放锁资源；notify() 会唤醒获取资源失败被阻塞的线程，但不释放当前线程的锁资源。</li>
 </ul>
 </li>
 <li>fork函数<ul>
@@ -807,12 +1197,6 @@
 <li>仅支持半双工通信，要想全双工需要额外开一个管道</li>
 <li>管道存在内存中，缓冲区有限</li>
 <li>若管道已满，写进程会被阻塞；若管道已空，读进程会被阻塞</li>
-</ul>
-</li>
-<li>线程间通信方式：<ul>
-<li>消息队列</li>
-<li>全局变量</li>
-<li>使用事件 CEvent 类实现</li>
 </ul>
 </li>
 <li>线程共享进程哪些资源，独有哪些资源<ul>
@@ -889,17 +1273,6 @@
 </li>
 <li><p>进程的内存结构</p>
 <img src="/2021/05/03/%E9%9D%A2%E8%AF%95/1.png" class=""></li>
-<li><p>Nginx 的优点</p>
-<ul>
-<li>内存消耗少</li>
-<li>稳定性高： 用于反向代理，宕机的概率微乎其微</li>
-<li>支持高并发连接：原因主要是 Nginx 使用了最新的 epoll（Linux2.6 内核）和 kqueue（freeBSD）网路 I/O 模型</li>
-<li>支持热部署：启动容易，且能够在不间断服务的情况下，对软件版本进行升级</li>
-<li>支持 Rewrite 重写 </li>
-<li>成本低廉</li>
-<li>配置简单  </li>
-</ul>
-</li>
 <li><p>常用操作<br>  <strong>查看端口号被哪个进程占用</strong></p>
 <ul>
 <li>lsof -i:端口号</li>
@@ -973,6 +1346,51 @@
 <li>多了 options 参数，可选为 WNOHANG 和 WUNTRACED 两个选项，若参数为 WNOHANG，可以使 waitpid() 调用变成非阻塞的，也就是说它会立即返回，父进程可以继续执行其它任务。</li>
 </ul>
 </li>
+<li><p> Copy-On-Write：linux 在使用 fork() 函数创建进程时，传统的 fork() 是把父进程的所有资源复制给子进程，这种方式效率低下，因为所拷贝的数据可能是可以共享的。现在的 fork() 在创建子进程时，推迟了甚至避免数据拷贝。刚开始内核不复制父进程的数据，而是父子进程共享地址空间。只有在某个进程写时才复制写内存页的数据（其它内存页仍是共享）。</p>
+</li>
+</ul>
+<h3 id="Linux-命令"><a href="#Linux-命令" class="headerlink" title="Linux 命令"></a>Linux 命令</h3><p><strong>Linux 查看日志命令</strong></p>
+<ul>
+<li>查看命令：<ul>
+<li>tail：查看文件中最后的指定行/字节数的日志。<code>tail -n 10 test.log</code>，查看 test.log 的最后 10 行日志记录。</li>
+<li>head：查看文件中开头的指定行/字节数的日志。</li>
+<li>cat：显示、创建或合并文件。<ul>
+<li><code>cat test.log</code>，显示整个文件；</li>
+<li><code>cat &gt; test.log</code>，创建新文件；</li>
+<li><code>cat file1 file2 &gt; test.log</code>，合并文件到 test.log。</li>
+<li><code>cat file1 file2 &gt;&gt; test.log</code>，追加日志到 test.log。</li>
+</ul>
+</li>
+<li>tac：功能与 cat 相反，tac 查看文件是从最后一行到第一行反向显示。</li>
+<li>more：类似 cat，不过文件分页显示。<code>more test.log</code>，<code>space</code> 翻下一页，<code>back</code> 返回上一页。</li>
+<li>grep：关键字查找命令。</li>
+</ul>
+  <strong>多个命令可同时使用，通过 <code>|</code> 隔开。</strong></li>
+<li>补充命令：<ul>
+<li>适用 tail、head：<ul>
+<li>-f：滚动查看实时日志；</li>
+<li>-n 10：查看 10 行日志；</li>
+<li>-c 10：查看 10 字节的日志；</li>
+<li>-r：逆序显示日志；</li>
+<li><code>tail -f -n 100 test.log</code>：实时查看 test.log 最后 100 行日志。</li>
+<li><code>head -r -c 100 test.log</code>：逆序查看 test.log 开头 100 字节的日志。</li>
+</ul>
+</li>
+<li>适用 cat、tac：<ul>
+<li>-n：对日志文件按行编号；</li>
+<li>-b：和 -n 类似，不过对空白行不编号；</li>
+<li>-s：当遇到连续两行及以上空白行，就替换为一行空白行；</li>
+</ul>
+</li>
+<li>适用 grep：grep 身后跟字符串，需搭配其它查看文件命令使用，在输出的日志文件中查找关键字。<code>more test.log | grep ‘60007746’</code>，根据某单号查询日志。<ul>
+<li>-num：打印匹配行的前后 num 行日志。<code>grep -5 ‘60007746’</code>，打印匹配 60007746 前后 5 行的日志；</li>
+<li>-C：后面接数字，同上。<code>grep -C 5 ‘60007746’</code>，同上。</li>
+<li>-A：打印匹配行的后 num 行。</li>
+<li>-B：打印匹配行的前 num 行。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><blockquote>
@@ -983,10 +1401,6 @@
 </blockquote>
 <p><strong>基本知识</strong></p>
 <ul>
-<li>线程池好处</li>
-<li>线程池参数</li>
-<li>线程池提交任务的过程</li>
-<li>关闭线程池的方法</li>
 <li>Java 并发里的 JUC-AQS</li>
 <li>原子性：即一个操作或者多个操作 要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</li>
 <li>可见性：指当多个线程访问同一个变量时，一个线程修改了这个变量的值，其他线程能够立即看得到修改的值。</li>
@@ -1025,7 +1439,20 @@
 </ul>
 </li>
 </ul>
-  <strong>膨胀式锁分配策略：</strong>锁可以升级但不可以降级</li>
+  <strong>膨胀式锁分配策略：</strong>锁可以升级但不可以降级<ul>
+<li>使用：<ul>
+<li>synchronized 锁的是一个对象。</li>
+<li>synchronized 可以锁一个公有对象，即锁一个代码块，实现线程同步。</li>
+<li>synchronized 可以锁线程的当前对象，不同对象的线程互不影响。</li>
+<li>synchronized 可以锁静态方法，所有对象的线程每次只能有一个进去执行。</li>
+<li>synchronized 可以锁一个类 <code>synchronized(name.class) &#123;&#125;</code>，所有对象用同一把锁。</li>
+<li>synchronized 关键字不能被继承，即父类中声明了 synchronized 的方法被子类重写时，默认不是同步；</li>
+<li>定义接口方法时不能使用 synchronized；</li>
+<li>构造方法不能使用 synchronized 关键字，但可以 synchronized 来实现同步。</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>关键字 synchronized 和 volatile 的对比（五种）</li>
 <li>synchronized 和 ReentrantLock 对比<ul>
 <li>相同点：加锁方式同步、阻塞式同步，都属于可重入锁。</li>
@@ -1063,43 +1490,29 @@
 </ul>
 </li>
 <li>Java 创建线程的方式（也即如何实现多线程）<ul>
-<li>通过继承 Thread 类（该类实现了 Runnable 接口）：重写 run() 方法，调用 start() 方法创建新线程。<br>如 <code>new ThreadTest().start();</code>，其中 ThreadTest 类继承了 Trread 类。</li>
-<li>通过实现 Runnable 接口：创建该类的示例，将该实例作为 Thread 类的 target 对象新建线程。如 <code>ThreadTest tt = new ThreadTest(); new Thread(tt, &quot;新线程1&quot;).start();</code>，其中 ThreadTest 实现了 Runnable 接口。</li>
+<li>通过继承 Thread 类（该类实现了 Runnable 接口）：重写 run() 方法，调用 start() 方法创建新线程。<br>如 <code>new ThreadTest().start();</code>，其中 ThreadTest 类继承了 Trread 类。该方法属一个对象对应一个线程来执行。</li>
+<li>通过实现 Runnable 接口：创建该类的示例，将该实例作为 Thread 类的 target 对象新建线程。如 <code>ThreadTest tt = new ThreadTest(); new Thread(tt, &quot;新线程1&quot;).start();</code>，其中 ThreadTest 实现了 Runnable 接口。该方法可实现一个对象对应一个线程执行或一个对象由多个线程执行。</li>
 </ul>
   <strong>补充</strong>：run() 方法的方法体就是线程要完成的任务</li>
 <li>start() 和 run() 的区别<ul>
-<li>当程序调用 Thread 类 start() 方法，会创建一个新线程。此时该线程处于就绪（可运行）状态，并没有运行，一旦得到 cpu 时间片，才开始执行 run() 方法。</li>
+<li>调用 start() 方法后，线程才处于就绪（可运行）状态，并没有运行，一旦得到 cpu 时间片，才开始执行 run() 方法。</li>
 <li>若程序直接调用 run() 方法，则是程序当前运行线程执行 run() 方法。</li>
 </ul>
 </li>
-<li>Java 常见的几种线程池（五种）<ul>
-<li>newCachedThreadPool：创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程（数量没有限制）。</li>
-<li>newFixedThreadPool：创建一个指定工作线程数量的线程池。每当提交一个任务就创建一个工作线程，如果工作线程数量达到线程池初始的最大数，则将提交的任务存入到池队列中。</li>
-<li>newSingleThreadExecutor：只创建一个工作者线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。</li>
-<li>newScheduleThreadPool：创建一个定长的线程池，支持定时的以及周期性的任务执行。可基于该线程池设计定时任务类，每个调度任务都会分配到线程池中的一个线程去执行。也就是说，任务是并发执行，互不影响。</li>
+<li>Java 线程的状态<ul>
+<li>新建状态：<code>Thread t = new Thread();</code>，创建线程，开辟工作空间。</li>
+<li>就绪状态：<code>t.start();</code>，线程进入就绪队列，等待 CPU 的调度。</li>
+<li>运行状态：线程被 CPU 调度，进入运行状态，执行 run() 方法代码体。<strong>只能从就绪状态进入运行状态。</strong></li>
+<li>阻塞状态：线程不继续执行代码，而在等待。阻塞解除后，重新进入就绪状态。阻塞的方法：<ul>
+<li>wait() 方法：支持等待和超时等待，等待过程会释放锁资源；</li>
+<li>sleep() 方法：仅支持超时等待，等待过程不释放锁资源。</li>
 </ul>
 </li>
-<li>Java 线程的状态<ul>
-<li>初始状态（NEW）：线程已经构建，尚未启动。</li>
-<li>运行状态（RUNNABLE）：包括就绪（READY）和运行中（RUNNING）两种状态，统称为运行状态。</li>
-<li>阻塞状态（BLOCKED）：线程被锁阻塞。</li>
-<li>等待状态（WAITING）：线程需要等待其他线程做出特定动作（通知或中断）。</li>
-<li>超时等待状态（TIME_WAITING）：不同于等待状态，超时等待状态可以在指定的时间自行返回。</li>
-<li>终止状态（TERMINATED）：当前线程已经执行完毕。</li>
+<li>死亡状态：线程的代码执行完毕或者中断执行。<em>可通过 stop() 或 destroy() 方法，但已过时不推荐使用。</em>目前一般有两种方式进入死亡状态：<ul>
+<li>自然死亡：线程执行完代码体后自行结束；</li>
+<li>添加终止变量：run() 代码体后通过该变量控制是否执行后序代码。</li>
 </ul>
-  <strong>阻塞状态</strong><ul>
-<li>线程争用锁失败进入阻塞状态</li>
-</ul>
-  <strong>等待状态</strong><ul>
-<li>锁对象调用wait()方法（无指定超时时间）后线程进入等待状态</li>
-</ul>
-  <strong>超时等待状态</strong><ul>
-<li>线程调用sleep(int timeout)或锁对象wait(int timeout)方法后线程进入超时等待状态，在等待指定时间后会返回</li>
-</ul>
-  <strong>sleep()和wait()方法区别</strong><ul>
-<li>sleep()方法仅支持超时等待，wait()支持等待和超时等待状态</li>
-<li>sleep() 释放 CPU 资源，但不释放锁资源；wait() 既释放 CPU 资源，也释放同步锁。</li>
-<li>只有锁对象才能调用wait()和notify()方法，sleep()方法不由锁对象调用</li>
+</li>
 </ul>
 </li>
 <li>线程安全问题<ul>
@@ -1108,6 +1521,34 @@
 <li>活跃性问题，如死锁、活锁、饥饿</li>
 </ul>
 </li>
+<li>线程池<ul>
+<li>好处：<ul>
+<li>减少线程创建、销毁的开销；</li>
+<li>便于线程管理；</li>
+<li>快速响应。</li>
+</ul>
+</li>
+<li>参数：<ul>
+<li>maximumPoolSize：最大线程个数；</li>
+<li>corePoolSize：核心线程数；</li>
+<li>keepAliveTime：线程空闲时间，超过该时间则回收线程；</li>
+<li>unit：时间单位；</li>
+<li>workQueue：阻塞任务队列；</li>
+<li>threadFactory：创建线程的工厂；</li>
+<li>handler：任务分配线程失败的策略；</li>
+</ul>
+</li>
+<li>线程池提交任务的过程</li>
+<li>关闭线程池的方法</li>
+</ul>
+</li>
+<li>Java 常见的四种线程池<ul>
+<li>newCachedThreadPool：创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程（数量没有限制）。</li>
+<li>newFixedThreadPool：创建一个指定工作线程数量的线程池。每当提交一个任务就创建一个工作线程，如果工作线程数量达到线程池初始的最大数，则将提交的任务存入到池队列中。</li>
+<li>newSingleThreadExecutor：只创建一个工作者线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。</li>
+<li>newScheduleThreadPool：创建一个定长的线程池，支持定时的以及周期性的任务执行。可基于该线程池设计定时任务类，每个调度任务都会分配到线程池中的一个线程去执行。也就是说，任务是并发执行，互不影响。<a target="_blank" rel="noopener" href="https://juejin.cn/post/6992719702032121864">Java 定时任务实现方式</a></li>
+</ul>
+  <strong>以上四种线程池均继承了 ThreadPoolExecutor 类，通过 Executors 工厂类创建，</strong></li>
 <li>ThreadLocal() 类：可理解为线程的局部变量，即一个 ThreadLocal 的变量只有当前自身线程可以访问，别的线程都访问不了，避免了线程竞争。<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35190492/article/details/116431270">ThreadLocal使用与原理</a><ul>
 <li>ThreadLocal 的基本使用：<ul>
 <li><code>private ThreadLocal&lt;Integer&gt; localInt = new ThreadLocal&lt;&gt;();</code>：创建一个 ThreadLocal 对象，该对象仅为当前线程所有；</li>
@@ -1125,19 +1566,7 @@
 </li>
 </ul>
 </li>
-<li>Copy-On-Write：一种读写分离的并发策略。在多线程下共享的某个对象，当有人想修改内容的时候，就会创建该对象的副本，对副本进行修改，修改完后将原本的引用指向副本。<ul>
-<li>优点：<ul>
-<li>读取性能很高，因为读取的时候是无锁的，比较适合读多写少的场景；</li>
-<li>采用读写分离策略，允许读取的时候修改集合数据，没有 fail-fast 机制；</li>
-</ul>
-</li>
-<li>缺点：<ul>
-<li>内存占用问题。相比不读写分离，内存多占用了一倍；</li>
-<li>数据一致性问题，CopyOnWrite 只保证数据的最终一致性，并不能保证数据的实时一致性。所以对数据实时一致性要求比较高的场景不适合使用CopyOnWrite容器。</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>死锁示例<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Object obj1 = <span class="keyword">new</span> Object();</span><br><span class="line">        Object obj2 = <span class="keyword">new</span> Object();</span><br><span class="line">        Thread t1 = <span class="keyword">new</span> DeadLock(obj1, obj2);</span><br><span class="line">        Thread t2 = <span class="keyword">new</span> DeadLock(obj2, obj1);</span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DeadLock</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Object obj1;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Object obj2;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">DeadLock</span><span class="params">(Object obj1, Object obj2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.obj1 = obj1;</span><br><span class="line">        <span class="keyword">this</span>.obj2 = obj2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (obj1) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">                <span class="keyword">synchronized</span> (obj2) &#123;</span><br><span class="line">                    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/Java/Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA.html#%E4%B8%80%E3%80%81%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E5%9F%9F">CS Note</a></p>
@@ -1153,19 +1582,46 @@
 </ul>
 <p><strong>详细</strong></p>
 <ul>
-<li><p>运行时数据区域</p>
-<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java_2.jpg" class=""></li>
+<li><p>Java 运行时数据区域</p>
+<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java_2.jpg" class="">
+<ul>
+<li>程序计数器：当前线程所执行的字节码的行号指示器。</li>
+<li>虚拟机栈：存储局部变量表、操作数栈、动态链接、方法出口等信息。</li>
+<li>本地方法栈：为虚拟机调用 native 方法服务。</li>
+<li>堆：JVM 中内存最大的一块，所有对象实例都在这里分配内存。</li>
+<li>方法区：存储加载的类信息、常量、静态变量等仅需加载一次的数据。</li>
+</ul>
+<p>  <strong>静态对象在堆中分配内存，而不是方法区。</strong></p>
+<ul>
+<li>堆内：即 JVM 中的堆内内存；</li>
+<li>堆外：即堆内内存以外的内存区域，这些内存直接受操作系统（而不是虚拟机）管理。<ul>
+<li>出现原因：1. 为了解决堆内内存过大导致的 GC 问题；2. 操作系统对堆内内存不可知的问题。</li>
+<li>存储：存储对象实例，这些实例没有被分配在 Java 虚拟机堆内里。</li>
+<li>作用：<ol>
+<li>保持 JVM 较小的堆，以减少垃圾收集对应用的影响；</li>
+<li>堆外内存直接受操作系统管理，其它进程和设备（如 GPU）可以通过操作系统对其访问，减少了从虚拟机中复制内存数据的过程。</li>
+</ol>
+</li>
+<li>适用场景：方便的自主开辟大内存空间；适合分配次数少，读写操作频繁的场景。</li>
+<li>与堆内的联系：堆外内存由 ByteBuffer 创造，ByteBuffer 作为实例化对象被存储在堆内内存里。当该实例被 JVM 回收后，其开辟的堆外内存区域也会被释放掉。</li>
+<li>缺点：1. 容易出现内存泄漏，并且很难排查；2. 堆外内存的数据结构不直观，当存储结构复杂的对象时，会浪费大量的时间对其进行串行化。<img src="/2021/05/03/%E9%9D%A2%E8%AF%95/java_3.png" class=""></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>JVM 的栈、堆和方法区</p>
 <ul>
 <li>栈区<ul>
 <li>栈中只保存基本类型的数据和对象的引用；</li>
 <li>每个线程包含一个栈区，栈中数据都是私有的，其他栈不可访问；</li>
 <li>栈分为3个部分：基本类型变量区、执行环境上下文、操作指令区(存放操作指令)。</li>
+<li>栈使用的是数据结构中的栈，物理地址分配是连续的，性能更好。同时分配的内存大小要在编译期确定，大小是固定的。</li>
 </ul>
 </li>
 <li>堆区<ul>
 <li>堆中只存放对象，每个对象都包含一个与之对应的 class 的信息。(class 的目的是得到操作指令)</li>
 <li>堆中的数据被所有线程共享。</li>
+<li>堆分配的对象的物理地址是不连续的。分配的内存是在运行期确认，大小不固定。一般堆大小远大于栈。</li>
 </ul>
 </li>
 <li>方法区<ul>
@@ -1175,6 +1631,14 @@
 </li>
 </ul>
 </li>
+<li><p>关于字符串存储（jdk1.7 及以上）：</p>
+<ul>
+<li><code>String str1 = new String(&quot;abc&quot;);</code>：abc 字符串会在堆中创建。且每一次 new，会创建一个新对象，不论值是否相同。</li>
+<li><code>String str2 = str1.intern();</code>：会判断常量池中是否有 “abc”，若有，则直接返回该字符串引用；若无，因为 str1 在堆中创建了 “abc” 对象，故常量池新增指向堆中 “abc” 对象的引用，并返回这个引用给 str2。若 <code>str1 == str2</code>，返回 true。</li>
+<li><code>String str3 = &quot;abc&quot;;</code>：若堆中存在 “abc”，且常量池中存在指向堆 “abc” 的引用，则返回常量池中 “abc” 的引用。否则 “abc” 字符串会在常量池中创建。</li>
+</ul>
+<p>  <strong>intern() 方法会先查询字符串常量池中是否存在该字符串，若存在，则直接返回；若不存在，则在常量池中新建指向堆中该字符串对象的引用，返回引用。</strong></p>
+</li>
 <li><p>JVM的回收过程：大致如下，调用垃圾回收器——判断对象是否可回收（引用计数法和根搜索算法）——调用垃圾回收算法（标记—清除算法、复制算法、标记—整理算法、分代收集算法）</p>
 </li>
 <li><p>引用计数法和根搜索算法（或可达性分析法）</p>
@@ -1183,7 +1647,7 @@
 <li>引用计数法存在循环引用的问题，根搜索算法可能导致浮动垃圾和对象消失问题</li>
 </ul>
 </li>
-<li><p>JVM的根搜索算法——三色标记</p>
+<li><p>JVM的根搜索算法——三色标记 <a target="_blank" rel="noopener" href="https://blog.csdn.net/huangzhilin2015/article/details/115282572">可达性分析之三色标记算法详解</a></p>
 <ul>
 <li>三色标记分别是：黑色、灰色、白色<br>黑色：根对象，或者该对象与它的子对象都被扫描过<br>灰色：对象本身被扫描，但是还有没扫描该对象的子对象<br>白色：未被扫描的对象，如果扫描完成所有对象之后，最终为白色的为不可达对象，即垃圾对象</li>
 <li>浮动垃圾：GC中已经标黑的对象，在并发过程中引用链断掉，导致应为白色的垃圾对象仍是黑色的现象。解决办法：留给下次垃圾回收处理</li>
@@ -1286,7 +1750,7 @@
 <li>Hashmap 的存储结构为数组 + 链表，使用拉链法解决冲突，JDK1.7 使用头插法插入结点，JDK1.8 使用尾插法插入节点（避免循环引用）</li>
 <li>默认大小为 16，容量必须为 2 的整数次幂，每次扩容为原来容量的两倍</li>
 <li>默认装载因子为 0.75，即当 Hashmap 中键值对数量大于等于容量 * 0.75时，Hashmap 将自动扩容</li>
-<li>从 JDK 1.8 开始，一个桶存储的链表长度大于 8 时会将链表转换为红黑树。</li>
+<li>从 JDK 1.8 开始，一个桶存储的链表长度大于等于 8 时会将链表转换为红黑树。</li>
 <li>Hashmap 是线程不安全的</li>
 </ul>
 <p>  <strong>get 过程（JDK 1.8）</strong></p>
@@ -1329,6 +1793,11 @@
 <ul>
 <li>在查找过程中，根据key计算得到hash值后，需取模计算桶下标。若桶的大小为2的整数次方，则对capacity取模的过程可转化为对capacity - 1做与运算的过程，这个计算方式效率更高</li>
 <li>在扩容重新计算桶下标过程中，若容量为2的整数次方，以原容量为16为例，则新容量为32。则原来hash值在第五位为0的键值对在新map中仍在与原map相同下标的桶处；为1的键值对在新map中为在原map桶中下标+16的桶处</li>
+</ul>
+<p>  <strong>链表与红黑树</strong><br>  当链表长度大于等于 8 时转为红黑树，当红黑树结点等于 6 时转回链表。</p>
+<ul>
+<li>hashcode 碰撞次数符合泊松分布，链表长度达到 8 的概率很低，通常不会发生链表转红黑树的情况。因此红黑树的意义更多是保底，因为 hash 算法可能会被用户重写导致数据倾斜，使得 hashmap 的查询效率大大降低。</li>
+<li>为什么不只使用红黑树？红黑树结点 TreeNode 的大小是链表结点 Node 的两倍。在链表长度较短时，遍历链表和红黑树查找的时间效率接近，若直接使用红黑树，反而多占用了空间。</li>
 </ul>
 <p>  <strong>HashMap为什么是线程不安全</strong></p>
 <ul>
@@ -1392,7 +1861,9 @@
 <li><p>Java 的 “==” 和 “equals”</p>
 <ul>
 <li>“==” 仅适用于基本类型数据（如字符）比较，若用于对象（如字符串），则比较的是对象地址；</li>
-<li>“equals” 用于比较对象，但该方法不能作用于基本数据类型的变量。此外，equalsIgnoreCase() 方法还可实现不区分大小写比较两个字符串</li>
+<li>“equals” 用于比较对象，但该方法不能作用于基本数据类型的变量。此外，equalsIgnoreCase() 方法还可实现不区分大小写比较两个字符串。</li>
+<li>关于 <code>Integer a = 5;</code>，基于自动封装，编译器会将它转变为 <code>Integer a = Integer.valueOf(5);</code>。对于 [-128, 127] 之间的数，<code>Integer.valueOf(int)</code> 会返回同一个对象；不在该区间内的数，<code>Integer.valueOf(int)</code> 会返回不同的对象。</li>
+<li>关于 <code>Integer a = new Integer(5);</code>，会创建一个新对象，该 Integer 对象值为 5。</li>
 </ul>
 </li>
 <li><p>Java 的 static 关键字<br>  <strong>static 方法（静态方法）</strong></p>
@@ -1401,7 +1872,7 @@
 <li>静态方法中不能访问类的非静态成员变量和非静态成员方法，但非静态成员方法中是可以访问静态成员方法/变量的</li>
 <li>最常见的 static 方法就是 main 方法，因为程序在执行 main 方法的时候没有创建任何对象，因此只有通过类名来访问。</li>
 </ul>
-<p>  <strong>static 变量（静态变量）</strong></p>
+<p>  <strong>static 变量（静态变量）存储在方法区中</strong></p>
 <ul>
 <li>静态变量被所有的对象所共享，在内存中只有一个副本，它当且仅当在类初次加载时会被初始化。</li>
 <li>非静态变量是对象所拥有的，在创建对象的时候被初始化，存在多个副本，各个对象拥有的副本互不影响。</li>
@@ -1546,6 +2017,10 @@
 <p>  <strong>在Java中，仅从类代码本身是区分不了聚合和组合的。</strong></p>
 </li>
 </ul>
+<h2 id="其它-1"><a href="#其它-1" class="headerlink" title="其它"></a>其它</h2><ul>
+<li>Java 只有值传递，没有引用传递。<a target="_blank" rel="noopener" href="https://www.nowcoder.com/discuss/846917?toCommentIpt=1">我最近面了些人，发现这个基础题都答得不好</a></li>
+<li>jdk1.8 中移除了永久代，因此 jvm 中方法区的类型数据被移动到了元空间（使用本地内存，不存在 jvm中），运行时常量池（含字符串常量池）则放到堆中。</li>
+</ul>
 <hr>
 <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><blockquote>
 <p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/leetbook/read/tech-interview-cookbook/o9zra2/">校招基础知识详解</a><br><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E6%95%B0%E6%8D%AE%E5%BA%93/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%8E%9F%E7%90%86.html#%E4%B8%80%E3%80%81%E4%BA%8B%E5%8A%A1">CS-Notes</a></p>
@@ -1688,17 +2163,6 @@
 <li>但在并发场景下两个事务的非只读查询无法避免幻读：因为在一个事务运行过程中，只有在对表中的记录做改动时（执行 INSERT、DELETE、UPDATE 这些语句时）才会为事务分配事务id，并且重新生成一个ReadView。事务 A 先执行查询操作，随后事务 B insert 插入一行数据结束，事务 A update 更新数据。因为事务 A 运行 update 语句是在事务 B 提交之后，因此事务 A 被分配到的 trx_id 是大于事务 B 的，因此在重新生成的 ReadView 中，事务 B 的改动对于事务 A 是可见的，从而导致幻影读。</li>
 </ul>
 </li>
-<li>布隆过滤器<ul>
-<li>本质是一个很长的二进制向量和一系列随机映射函数（多次哈希）</li>
-<li>优点是空间效率和查询时间都比一般的算法要好的多，缺点是有一定的误识别率和删除困难    </li>
-</ul>
-  <strong>使用场景</strong><ul>
-<li>黑名单</li>
-<li>单词拼写检查</li>
-<li>Key-Value缓存系统的Key校验（结合缓存穿透）</li>
-<li>ID校验，比如订单系统查询某个订单ID是否存在，如果不存在就直接返回。</li>
-</ul>
-</li>
 <li>范式<br>  <strong>官方解释</strong><ul>
 <li>第一范式 (1NF)：属性不可分</li>
 <li>第二范式 (2NF)：每个非主属性完全函数依赖于键码</li>
@@ -1770,7 +2234,7 @@
 </li>
 </ul>
 <h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis.html#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0">CS-Notes</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/%E6%95%B0%E6%8D%AE%E5%BA%93/Redis.html#%E4%B8%80%E3%80%81%E6%A6%82%E8%BF%B0">CS-Notes</a><br><a target="_blank" rel="noopener" href="https://github.com/dunwu/db-tutorial/blob/master/docs/nosql/redis/redis-interview.md">Redis 面试总结</a></p>
 </blockquote>
 <p><strong>知识点</strong></p>
 <ul>
@@ -1818,6 +2282,17 @@
 <li>使用多路 IO 复用。</li>
 </ol>
 </li>
+<li>双写一致性：如何保证数据库和缓存的双写一致性。<ul>
+<li>Cache-Aside Pattern：先更新数据库，再删除缓存。该方案的主要问题出现在，若更新数据库成功，删除缓存失败，如此还是会有数据不一致问题。解决方法是重试删除操作。</li>
+<li>先更新数据库，再更新缓存：会遇到和上一个一样的问题，此外还有两个问题：<ol>
+<li>有些情况下更新缓存消耗比删缓存大（如频繁的更新数据库和缓存，但是该缓存可能不会被用到）。</li>
+<li>若有两个线程同时更新数据库和缓存，按 A、B 顺序写数据库，但因为网络原因更新缓存的顺序确实 B、A。则缓存中的数据是脏数据，且与数据库数据不一致。</li>
+</ol>
+</li>
+<li>先更新缓存，再更新数据库：问题很大。若写数据库失败，则缓存过期后的数据永远都是脏的。</li>
+<li>先删除缓存，再更新数据库：若更新数据库失败，则数据一直是脏数据。</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h1 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h1><h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><blockquote>
@@ -1864,7 +2339,10 @@
 <ul>
 <li>轮询（round-robin）：将请求按时间顺序逐一分配到不同的服务器处理，因此适用于服务器性能相近的集群情况。</li>
 <li>加权轮询：每个服务器会有各自的 weight。一般情况下，weight 的值越大意味着该服务器的性能越好，可以承载更多的请求。加权轮询可以应用于服务器性能不等的集群中，使资源分配更加合理化。</li>
+<li>随机：从服务器列表中随机选择一个服务器分配请求。</li>
+<li>加权随机：新增服务器列表，按权值将服务器添加进列表里（权值决定添加的次数）。在 [0, 权值总和] 间生成一个随机数，取出服务器列表中该随机数下标的服务器。</li>
 <li>IP 哈希（IP hash）：依据发出请求的客户端 IP 的 hash 值来分配服务器，该算法可以保证同 IP 发出的请求映射到同一服务器，或者具有相同 hash 值的不同 IP 映射到同一服务器。一定程度上解决了集群部署环境下 Session 不共享的问题。</li>
+<li>最少活跃数(LeastActive)：每个服务维护一个活跃数计数器，若服务接收到请求，则计数器加 1；若该请求处理完毕，则计数器减 1。负载均衡器先获取各服务的活跃数计数，找到最小的活跃数计数，若仅有一个服务器是该计数，则将新来的请求发到该服务器上；若有多个服务器是该计数，判断各服务器权重是否相等，若相等，则采用随机算法；若不相等，则采用加权随机算法。</li>
 </ul>
 <p><strong>CDN</strong><br>Content Distribute Network(CDN)，直译为内容分发网络。CDN 解决的是如何将数据快速可靠从源站传递到用户的问题。<br>我理解它是对请求的路由，服务端在收到请求时，数据不一定要从服务端发送，而是可以将请求路由到距离用户较近的服务器，由 CDN 服务器响应用户的请求并发送数据。<a target="_blank" rel="noopener" href="https://blog.csdn.net/lihao21/article/details/52808747">CDN 的作用与基本过程</a><br><strong>负载均衡和 CDN 的区别</strong><br>相同点：都是负责对请求进行路由到特定服务器。<br>不同点：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1835068">负载均衡和 CDN 技术有什么区别</a></p>
 <ol>
@@ -1872,6 +2350,28 @@
 <li>负载均衡解决的是集群服务器的均匀接收客户端请求的问题；CDN 解决的是客户端和服务器通信距离过长导致响应慢的问题。</li>
 <li>存储的数据上，负载均衡路由的服务器都拥有完整的与客户端通信的数据；CDN 路由的服务器的数据需从服务端中同步过来，且只同步静态数据。</li>
 </ol>
+<h2 id="布隆过滤器"><a href="#布隆过滤器" class="headerlink" title="布隆过滤器"></a>布隆过滤器</h2><ul>
+<li>本质是一个很长的二进制向量和一系列随机映射函数（多次哈希）</li>
+<li>优点：<ul>
+<li>存储空间和插入/查询时间都是常数。</li>
+<li>Hash 函数相互之间没有关系，方便由硬件实现。</li>
+<li>不存储元素本身，保密性有优势。</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>存在误算率。</li>
+<li>删除困难。</li>
+</ul>
+</li>
+<li>使用场景<ul>
+<li>黑名单</li>
+<li>单词拼写检查</li>
+<li>Key-Value 缓存系统的 Key 校验（结合缓存穿透）</li>
+<li>ID 校验，比如订单系统查询某个订单 ID 是否存在，如果不存在就直接返回。</li>
+<li>大数据场景下对数据的分类和过滤。</li>
+</ul>
+</li>
+</ul>
 <h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
 <li>一致性哈希算法：当数据太大而无法存储在一个节点或机器时，系统需要多个节点存储键值对。那问题会转变成哪个 key 存储在哪个节点上，简单情况下，可通过对哈希值取模来确定，取模节点个数来确定 key 存储的节点。但该方案在节点增加或减少时问题很突出，因为模的值发生改变，导致大量 key 可能需要重新移动到新的服务器上。而一致性哈希算法通过抽象一个环（一致性哈希环，在 0 - 2^31-1 之间），key 经过哈希后会分布在环中的某一位置（只要哈希值在 0 - 2^31-1 之间即可），同时哈希服务器（可以是 ip 或主机名）使其也分布在环上。<strong>键值对会被存放在哈希环上顺时针查找距离该对象最近的机器上。</strong>这样，在服务器节点增加/减少时，只会影响一部分键值对。<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000021199728">图解一致性哈希算法</a><br>  但是仍存在一部分问题，在新增服务器时，新服务器只会分担哈希环顺时针第一个服务器的压力，而其他服务器没有因为新服务器的加入减少负载压力。此处可以通过引入虚拟节点解决。将每台服务器抽象为一组虚拟服务器，再将虚拟服务器哈希到环上。这样，确定键值对存储节点时，先找到虚拟服务器，再确定物理服务器。<br>  哈希算法的实现（不进行虚拟服务器）：<ol>
 <li>确定服务器列表（ip），通过哈希算法获取哈希值并存入红黑树中；</li>
@@ -1883,22 +2383,70 @@
 <li>热数据/冷数据：热数据指访问频率高的数据，对存储性能要求高，一般存在 SSD 上；冷数据指访问频率低的数据，要求大容量存储介质，一般存在普通磁盘上。</li>
 <li>在 tomcat 中会维护一个线程池，每次新来 http 请求，会取出一个线程执行请求并响应。而单线程模型是指收到一个请求进程的主线程就处理，这种会导致在该请求处理完成前，新来的请求被阻塞，无法响应。</li>
 </ul>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/165520527">mybatis 解决了什么问题？</a></p>
+<ol>
+<li>解决代码冗余，解决 API 的使用难度。无需在代码中连接数据库、定义 sql 语句、执行 sql 等。</li>
+<li>解耦，避免硬编码。<ol>
+<li>数据库的环境信息（driver，url，username，password）都配置在核心配置文件（全局）中。</li>
+<li>每次执行的 sql 语句，参数，解析结果中的字段名\类，都配置在映射配置文件中。</li>
+<li>硬编码：sql 变动需改动 java 代码。如查询 sql 中 where 参数变化、结果集解析参数顺序变化，这些会导致系统不易维护。</li>
+</ol>
+</li>
+</ol>
 <hr>
 <h1 id="电商秒杀系统"><a href="#电商秒杀系统" class="headerlink" title="电商秒杀系统"></a>电商秒杀系统</h1><blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.imooc.com/learn/1079">SpringBoot 构建电商基础秒杀项目</a></p>
 </blockquote>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6990307911117307934">面试必考：秒杀系统要如何设计？</a><br><a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/63920.html">使用Redis搭建电商秒杀系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6990307911117307934">面试必考：秒杀系统要如何设计？</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/as480133937/article/details/105611577">github 使用技巧</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35616296/article/details/106749525">秒杀项目总结</a></p>
 </blockquote>
 <p>该项目是一个基于 Spring Boot + MySQL + MyBatis 完成的 JavaWeb 项目，做的是一个电商秒杀系统的基本流程及代码实现。</p>
 <img src="/2021/05/03/%E9%9D%A2%E8%AF%95/%E7%A7%92%E6%9D%80_1.png" class="">
-
-<p><strong>秒杀的特征：</strong><br>秒杀活动在较短时间内产生比平时大数十倍，上百倍的页面访问流量和下单请求流量。秒杀活动可以分为 3 个阶段：<br>秒杀前：用户不断刷新商品详情页，<strong>页面请求</strong>达到瞬时峰值。<br>秒杀开始：用户点击秒杀按钮，<strong>下单请求</strong>达到瞬时峰值。<br>秒杀后：一部分成功下单的用户不断刷新订单或者产生退单操作，大部分用户继续刷新商品详情页等待退单机会。</p>
-<p><strong>解决思路</strong><br>秒杀系统的流量虽然很高，但是实际有效流量是十分有限的。利用系统的层次结构，在每个阶段提前校验，拦截无效流量，可以减少大量无效的流量涌入数据库。</p>
 <ol>
-<li>利用浏览器缓存和 CDN 抗压静态页面流量。</li>
-<li>秒杀前，用户不断刷新商品详情页，造成大量的页面请求。所以，我们需要把秒杀商品详情页与普通的商品详情页分开。对于秒杀商品详情页尽量将能静态化的元素静态化处理，除了秒杀按钮需要服务端进行动态判断，其他的静态数据可以缓存在浏览器和 CDN 上。这样，秒杀前刷新页面导致的流量进入服务端的流量只有很小的一部分。</li>
+<li>用户服务：新用户注册，用户登录，使用 Session 存储用户登录状态；</li>
+<li>商品服务：创建新商品、商品列表、商品详情展示；</li>
+<li>交易服务：用户下单完成商品减库存、增销量和创建订单数据；</li>
+<li>活动服务：若商品参加秒杀活动，则商品详情页显示活动信息。</li>
+</ol>
+<h2 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h2><ol>
+<li>秒杀的特征：<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/63920.html">使用Redis搭建电商秒杀系统</a><br> 秒杀活动在较短时间内产生比平时大数十倍，上百倍的页面访问流量和下单请求流量。秒杀活动可以分为 3 个阶段：<br> 秒杀前：用户不断刷新商品详情页，<strong>页面请求</strong>达到瞬时峰值。<br> 秒杀开始：用户点击秒杀按钮，<strong>下单请求</strong>达到瞬时峰值。<br> 秒杀后：一部分成功下单的用户不断刷新订单或者产生退单操作，大部分用户继续刷新商品详情页等待退单机会。<br> <strong>解决思路</strong><br> 秒杀系统的流量虽然很高，但是实际有效流量是十分有限的。利用系统的层次结构，在每个阶段提前校验，拦截无效流量，可以减少大量无效的流量涌入数据库。<ol>
+<li>利用浏览器缓存和 CDN 抗压静态页面流量：秒杀前，用户不断刷新商品详情页，造成大量的页面请求。所以，我们需要把秒杀商品详情页与普通的商品详情页分开。对于秒杀商品详情页尽量将能静态化的元素静态化处理，除了秒杀按钮需要服务端进行动态判断，其他的静态数据可以缓存在浏览器和 CDN 上。这样，秒杀前刷新页面导致的流量进入服务端的流量只有很小的一部分。</li>
 <li>利用 Redis 缓存拦截流量：redis 缓存库存总量和下单商品个数，秒杀活动开始后请求先访问 redis 确定已下单商品数 + 待下单商品数 &lt;= 库存总数；若 true，则下单并增加已下单商品数，否则拒绝处理。下单成功的请求再将订单写数据库（可使用消息队列异步处理）。</li>
+</ol>
+</li>
+<li>如何保证扣减库存的原子性：扣减库存需要做的是，1. 确定库存大于等于下单数量；2. 将库存减去下单商品数量。这两步需确保原子性，通过 sql 的事务实现。<code>update item_stock set stock = stock - #&#123;amount&#125; where item_id = #&#123;itemId&#125; and stock &gt;= #&#123;amount&#125;</code>（mybatis 语句），其中 amount 是下单商品数量，itemId 是下单商品 id。</li>
+<li>下单的逻辑处理：因为项目使用的是 spring boot 内集成的 tomcat，每一个请求会创建一个线程执行，故需考虑：<ol>
+<li>扣减商品库存；</li>
+<li>新增订单写数据库；</li>
+<li>增加商品的销量。</li>
+</ol>
+ <strong>其中 1 通过 sql 语句保证原子性，1、2、3 都保证原子性需对方法加 @Transactional 注解。</strong></li>
+<li>扣减库存的逻辑：<ol>
+<li>下单减库存：用户下单即扣减库存。会存在问题：用户恶意下单不支付的情况。解决办法：<ol>
+<li>限制用户下单数量；</li>
+<li>标识恶意用户；</li>
+<li>采用预扣，用户支付后再扣减库存（其实回到了支付减库存上）。</li>
+</ol>
+</li>
+<li>支付减库存：用户支付后才扣减库存。但用户体验不好，因为下单后还会面临因库存不足导致的支付失败。</li>
+</ol>
+ <strong>项目里没有支付功能的处理逻辑，下单即支付，因此扣减库存应属于支付减库存的逻辑。那下单减库存该怎么实现呢？</strong><ol>
+<li>下单减库存成功后，起异步线程定期查询支付信息（支付信息可存到订单数据的某列里）。并返回 OK 给前端，前端跳转到支付页面；</li>
+<li>用户若支付成功，则异步线程获取到支付信息即挂掉；</li>
+<li>用户若取消支付，即到时间后获取支付信息失败，则异步线程获取订单信息。将订单删除并给商品加回库存。</li>
+</ol>
+ <em>异步线程可通过定时任务实现，如 newScheduledThreadPool()，并传入定时任务终止时间，在某时刻后主动终止。</em></li>
+<li>登录<ol>
+<li>用户获取验证码时，使用 session 保存用户手机号和验证码的 &lt;key, val&gt; 对。</li>
+<li>用户登录时，使用 UUID 生成 token，缓存用户的登录信息 &lt;token, userModel&gt;。</li>
+</ol>
+ <strong>若使用的是分布式系统，并提供了负载均衡，则需通过缓存 redis 存储 session 和 token。若本地存储则可能会遇到请求打到另一台机器，显示用户未登录影响用户体验的情况。在用户下单时需携带 token。</strong></li>
+<li>在秒杀商品详情页实时展示商品销量：不需要做准实时。<ol>
+<li>使用异步线程定时查询商品销量，并更新到 redis 中。</li>
+<li>每次页面请求先路由到 CDN（CDN 界面设置过期时间），若已过期，则 CDN 请求主服务器页面，主服务器访问 redis 更新商品销量并返回给 CDN 服务器。</li>
+<li>CDN 服务器返回页面请求的响应给客户端。</li>
+</ol>
+</li>
 </ol>
 <h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><p>使用 Html + CSS + jQuery + 图片基于 Metronic 框架模板完成（该框架拥有后台管理能力，封装了 css 样式及 js 效果（基于 boot strap）用于展示，可利用前端模板快速构建所需页面）。<br>前端文件都在 html 文件夹下，所有请求均是基于 ajax。</p>
 <ul>
@@ -1922,7 +2470,7 @@
 </ul>
 <p><strong>问题</strong></p>
 <ul>
-<li>跨域请求问题 1：<br>在 getotp.html 中，ajax 启动时，域对应的是本地文件，但是请求服务器是 localhost 域名。这种情况下，虽然请求能正确到达服务端，且服务端能正确返回，但 ajax 回调认定两个的域不同，任务回调不安全，因此会报错且结果走不到 ajax 的 success block 里。获取 otp 则失败。<br>  <strong>解决办法：</strong>spring boot 中解决 ajax 跨域问题的方法，是在请求路径对应的 controller 类中新增 @CrossOrigin 注解即可。它表达的是，让 response 的 header 含 <code>Accsee-Control-Allow-Origin: *</code> 参数。</li>
+<li>跨域请求问题 1：<br>在 getotp.html 中，ajax 启动时，域对应的是本地文件，但是请求服务器是 localhost 域名。这种情况下，虽然请求能正确到达服务端，且服务端能正确返回，但 ajax 回调认定两个的域不同，任务回调不安全，因此会报错且结果走不到 ajax 的 success block 里。获取 otp 则失败（表现为页面请求失败）。<br>  <strong>解决办法：</strong>spring boot 中解决 ajax 跨域问题的方法，是在请求路径对应的 controller 类中新增 @CrossOrigin 注解即可。它表达的是，让 response 的 header 含 <code>Accsee-Control-Allow-Origin: *</code> 参数。</li>
 <li>跨域请求问题 2：<br>getotp.html 获取 otp 验证码成功后，会跳转到 register.html，后端也会保存该手机号和新生成的 otp code 到 session 中。但是在 register.html 中注册使用 otp code 时，后端 session 却找不到该手机号对应的 otp code，导致注册失败。<br>  <strong>解决办法：</strong>新增 @CrossOrigin 注解参数 <code>@CrossOrigin(allowCredentials=&quot;true&quot;, allowedHeaders = &quot;*&quot;)</code>。<ol>
 <li><code>allowedHeaders = &quot;*&quot;</code> 允许跨域传输所有 headers 参数，适用于将 token 放入 header 做 session 共享的跨域请求；</li>
 <li><code>allowCredentials=&quot;true&quot;</code> 需配合前端设置 xhrFields 授信后使得跨域 session 共享，即同时在前端 ajax 里设置 <code>xhrFields:&#123;withCredentials:true&#125;,</code>。<br>因为默认 ajax 请求可以通过任何域发过来，因此 ajax 请求默认被授信。</li>
@@ -1943,12 +2491,16 @@
 <li>private HttpServletRequest httpServletRequest：@Autowired，获取 http session 绑定手机号和 otp，用于注册验证。</li>
 <li><strong>CommonReturnType getOtp</strong>：<code>@RequestMapping(&quot;/getotp&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;telphone&quot;)</code>，用户获取 otp 短信接口。<ol>
 <li>需要按照一定的规则生成 OTP 验证码，使用随机数生成 5 位数字。</li>
-<li>将 OTP 验证码同对应用户的手机号关联，因为此处还没讲到分布式系统，故使用 http session 方式绑定 telphone 和 otp code。但企业一般采用 redis 保存关联，原因：1. redis 天生支持 key-value 对属性；2. 当用户反复点击 getotp 时，redis 可以做反复覆盖，以确保一个 telphone 只对应一个最新的 otp code；3. redis 支持自定义 expire 时间。</li>
+<li>将 OTP 验证码同对应用户的手机号关联，可使用 Session 或 redis 存储关联关系。<ol>
+<li>使用 Session：<code>httpServletRequest.getSession().setAttribute(telphone, otpCode);</code>。</li>
+<li>使用 redis：<code>redisTemplate.opsForValue().set(&quot;otp_&quot;+telphone, otpCode); redisTemplate.expire(&quot;otp_&quot;+telphone,60,TimeUnit.SECONDS);</code>。</li>
+</ol>
+ <em>企业一般采用 redis 保存关联，原因：1. redis 天生支持 key-value 对属性；2. 当用户反复点击 getotp 时，redis 可以做反复覆盖，以确保一个 telphone 只对应一个最新的 otp code；3. redis 支持自定义 expire 时间；4. 若在分布式系统中，统一存储在 redis 更为必要。</em></li>
 <li>将 OTP 验证码通过短信渠道发送给用户，省略。需买第三方短信服务通道，以 http post 方式将短信模板内容 post 到用户手机号。此处仅是输出到后台，但在企业级中不可犯这种错误，不能把用户敏感信息打印到日志中，让企业人员看到。</li>
 </ol>
 </li>
 <li><strong>CommonReturnType register</strong>：<code>@RequestMapping(&quot;/register&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;telphone&quot;)</code>，此外还需要有 otpCode、name、gender、age、password，每个参数对应一个 @RequestParam 注解。<ol>
-<li>验证手机号和 otp code 相符合：通过 getOtp 时存下的 session，取出特定手机号的 otp code。与传入的 otp 做对比。</li>
+<li>验证手机号和 otp code 相符合：通过 getOtp 时存下的 session，取出特定手机号的 otp code <code>String inSessionOtpCode = this.httpServletRequest.getSession().getAttribute(telphone);</code>。与传入的 otp 做对比。</li>
 <li>用户注册：构建 userModel 对象，并设置它的属性。对于密码 password，需调用 EncodeByMd5() 方法加密。</li>
 <li>调用 <code>userService.register(userModel);</code> 完成写数据库。</li>
 </ol>
@@ -1961,8 +2513,12 @@
 </li>
 <li><strong>CommonReturnType login</strong>：<code>@RequestMapping(&quot;/login&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;telphone&quot;)</code> 还有一个 password 参数。用户登录接口。<ol>
 <li>入参校验：判断参数是否为空。</li>
-<li>用户登录服务，用来校验用户登录是否合法。<code>UserModel userModel = userService.validateLogin(telphone, this.EncodeByMd5(password));</code>。</li>
-<li>若成功，将登录凭证加入用户登录成功的 session 内。在分布式系统中，使用 token 来作为用户登录凭证。此处假设用户单机登录，并使用 session 保存登录状态 <code>this.httpServletRequest.getSession().setAttribute(&quot;IS_LOGIN&quot;, true); this.httpServletRequest.getSession().setAttribute(&quot;LOGIN_USER&quot;, userModel);</code></li>
+<li>用户登录服务，用来校验用户登录密码是否正确。<code>UserModel userModel = userService.validateLogin(telphone, this.EncodeByMd5(password));</code>。</li>
+<li>若成功，保存登录凭证。<ol>
+<li>若用户单机登录，可使用 session 保存登录状态 <code>this.httpServletRequest.getSession().setAttribute(&quot;IS_LOGIN&quot;, true); this.httpServletRequest.getSession().setAttribute(&quot;LOGIN_USER&quot;, userModel);</code></li>
+<li>若在分布式系统中，则使用 token 来作为用户登录凭证。<code>String uuidToken = UUID.randomUUID().toString();</code>，存储在 redis 中并设置过期时间 1h。</li>
+</ol>
+</li>
 </ol>
 </li>
 <li><strong>CommonReturnType getUser</strong>：<code>@RequestMapping(&quot;/get&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;id&quot;)</code>，调用 service 服务获取对应 id 的用户对象并返回给前端。<strong>url 访问路径 localhost:8080/user/get?id=1</strong></li>
@@ -1971,12 +2527,18 @@
 <p><strong>class ItemController</strong><br><code>@Controller(&quot;item&quot;) @RequestMapping(&quot;/item&quot;) @CrossOrigin(Origin=&#123;&quot;*&quot;&#125;, allowCredentials=&quot;true&quot;)</code>。</p>
 <ul>
 <li>ItemService itemService：@Autowired</li>
+<li>CacheService cacheService：@Autowired</li>
 <li><strong>CommonReturnType createItem</strong>：<code>@RequestMapping(&quot;/create&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;title&quot;)</code>，此处还需要有 description、price、stock、imgUrl 参数。<ol>
 <li>封装 service 用来请求创建商品。使用 set 方法设置新 new 的 ItemModel 的各属性，调用 <code>itemService.createItem(itemModel)</code> 创建商品信息（即写数据库）。</li>
 </ol>
 </li>
 <li><strong>CommonReturnType getItem</strong>：<code>@RequestMapping(&quot;/get&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;id&quot;)</code>。商品详情页浏览。<ol>
-<li>调用 <code>itemService.getItemById(id);</code> 获得 itemModel；</li>
+<li>获取商品：<ol>
+<li>从本地缓存中获取：<code>ItemModel itemModel = (ItemModel) cacheService.getCommonCache(itemKey);</code>；</li>
+<li>若 1 失败，从 redis 获取：<code>itemModel = (ItemModel) redisTemplate.opsForValue().get(itemKey);</code>；</li>
+<li>若 2 仍失败，最后从数据库获取：<code>itemModel = itemService.getItemById(id);</code>，然后更新 redis 和缓存。</li>
+</ol>
+</li>
 <li>调用 <code>convertVOFromModel(itemModel);</code> 获得 itemVO；</li>
 <li>返回 <code>return CommonReturnType.create(itemVO);</code>。</li>
 </ol>
@@ -1989,7 +2551,7 @@
 <li>OrderService orderService：@Autowired。</li>
 <li>private HttpServletRequest httpServletRequest：@Autowired。</li>
 <li><strong>CommonReturnType createOrder</strong>：<code>@RequestMapping(&quot;/createorder&quot;) @ResponseBody</code>、<code>@RequestParam(name=&quot;itemId&quot;) @RequestParam(name=&quot;promoId&quot;, required=false)</code> 和 amount 参数。其中 promoId 参数不强制要求，该参数用来标识下单商品是否参与活动。<ol>
-<li>异常判断：从 session 获取登录状态，若用户是未登录，则抛异常。</li>
+<li>异常判断：从 session 获取登录状态，若用户是未登录，则抛异常。<code>Boolean isLogin = (Boolean) httpServletRequest.getSession().getAttribute(&quot;IS_LOGIN&quot;);</code>，若未登录则 isLogin 为 null</li>
 <li>获取登录的用户对象：<code>UserModel userModel = (UserModel) httpServletRequest.getSession().getAttribute(&quot;LOGIN_USER&quot;);</code>。</li>
 <li>根据用户 id 下单：<code>OrderModel orderModel = orderService.createOrder();</code></li>
 </ol>
@@ -2161,7 +2723,7 @@
 </ul>
 </li>
 <li>表 item：id、title、price、description、sales、img_url。sales 暂时放在这张表里，理论上应该和库存 stock 一样单独一张表记录。img_url 可用百度图片的 url。</li>
-<li>表 item_stock：id、stock、item_id。</li>
+<li>表 item_stock：id、stock、item_id。库存不和 item 表放在一起是因为 item 表多是用来查询，而库存 stock 需查询并修改。同时在服务器高压力下可将 item 拆解为 item 展示服务和库存服务（做性能优化）。</li>
 <li>表 order_info：id（主键但不自增）、user_id、item_id、item_price、amount、order_price。保存交易订单数据。</li>
 <li>表 sequence_info：name、current_value、step。用于实现自增序列，在每次获取 name 字段的 current_value 时，<code>current_value += step</code>。</li>
 <li>表 promo：id、promo_name、start_date（年月日时分秒的 Str）、end_date、item_id、promo_item_price。</li>
@@ -2172,7 +2734,7 @@
 <li>null 字段对于前端展示没有任何意义；因为 null 只在程序级别有效，对于用户级别，看到的 null 应该是一个空字符串。</li>
 </ol>
 <p><strong>但也不能全是 <code>not null</code> 的原因</strong><br>如 telphone，若是第三方登录，则可能不含手机号（除非使用强绑定，必须要求有手机号才能完成注册），则手机号为默认值 ‘’，这样多个不含手机号的用户存储的 telphone 会与唯一索引产生冲突。若 telphone 不设置 <code>not null</code>，null 不受唯一索引限制，可有多个，解决了这样的冲突。</p>
-<h2 id="其它-1"><a href="#其它-1" class="headerlink" title="其它"></a>其它</h2><ul>
+<h2 id="其它-2"><a href="#其它-2" class="headerlink" title="其它"></a>其它</h2><ul>
 <li>统一 response 的格式（无论正确、错误或异常）：class CommonReturnType：因为若每个不同的请求要根据返回值处理 json 字符串的解析，对于前端来说比较难做。<ul>
 <li>String status：表明请求的返回处理结果，两种值 success/fail。因为若有业务逻辑错误，应当通过业务逻辑错误标识方式去做，而不是使用 http 错误码及 spring boot 自带的错误提示。</li>
 <li>Object data：若 <code>status=success</code>，则 data 内返回前端需要的 json 数据；若 <code>status=fail</code>，则 data 内使用通用的错误码格式。</li>
@@ -2262,4 +2824,4 @@
 </ul>
 </li>
 </ol>
-</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/"><img class="prev-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">工具类</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/05/Java/"><img class="next-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">多总结！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%9D%E6%8C%81%E5%86%B7%E9%9D%99%EF%BC%8C%E5%A4%9A%E6%80%BB%E7%BB%93"><span class="toc-text">保持冷静，多总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leetcode"><span class="toc-text">Leetcode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92%EF%BC%88dfs%EF%BC%89"><span class="toc-text">递归（dfs）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%EF%BC%88backTrack%EF%BC%89"><span class="toc-text">回溯（backTrack）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="toc-text">广度优先遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-text">动态规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-text">分治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8"><span class="toc-text">链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">反转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC-N-%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">删除链表的第 N 个结点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#K-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">K 个一组翻转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="toc-text">环形链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E7%BB%93%E7%82%B9"><span class="toc-text">删除链表中的重复结点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%96%87%E4%B8%B2"><span class="toc-text">回文串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E6%8E%89-K-%E4%BD%8D%E6%95%B0%E5%AD%97"><span class="toc-text">移掉 K 位数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91"><span class="toc-text">树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88"><span class="toc-text">二叉树的最近公共祖先</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE"><span class="toc-text">图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E5%9B%BE"><span class="toc-text">克隆图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%9C%89%E5%90%91%E5%9B%BE%E6%98%AF%E5%90%A6%E6%BB%A1%E8%B6%B3%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="toc-text">判断有向图是否满足拓扑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-text">并查集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91"><span class="toc-text">图的最小高度树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-text">查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">二分查找</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E5%BA%8F%E6%95%B0%E7%BB%84%E8%AE%A1%E7%AE%97%E6%9C%80%E9%95%BF%E9%80%92%E5%A2%9E%E5%AD%90%E5%BA%8F%E5%88%97%E9%95%BF%E5%BA%A6%EF%BC%88%E4%B8%8D%E8%A6%81%E6%B1%82%E8%BF%9E%E7%BB%AD%EF%BC%89"><span class="toc-text">无序数组计算最长递增子序列长度（不要求连续）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8%E7%AE%97%E6%B3%95"><span class="toc-text">经典算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-1-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-text">0-1 背包问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">两数之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86"><span class="toc-text">时间管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-text">滑动窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3"><span class="toc-text">整数分解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">只有一个不同字符的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="toc-text">编辑距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-text">位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E4%B8%B2%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97"><span class="toc-text">子串的全排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%A6%82%E7%8E%87%E6%B1%82-Pi"><span class="toc-text">通过概率求 Pi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%B3%95"><span class="toc-text">高精度法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x-%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9"><span class="toc-text">x 的平方根</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-text">盛最多水的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2"><span class="toc-text">柱状图中最大矩形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%BE%E5%87%BA%E5%8C%BA%E9%97%B4%E5%92%8C%E4%B8%8E-M-%E6%95%B4%E9%99%A4%E7%9A%84%E5%8C%BA%E9%97%B4%E4%B8%AA%E6%95%B0"><span class="toc-text">数组中找出区间和与 M 整除的区间个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95"><span class="toc-text">蓄水池算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83"><span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80"><span class="toc-text">网络基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP"><span class="toc-text">HTTP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E7%B3%BB%E7%BB%9F"><span class="toc-text">一般系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-text">JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">内存模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%AF%86"><span class="toc-text">通识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-text">后端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RPC"><span class="toc-text">RPC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E5%92%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-text">代理和负载均衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E5%95%86%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F"><span class="toc-text">电商秒杀系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-text">前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service"><span class="toc-text">Service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ORM"><span class="toc-text">ORM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93-1"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83-1"><span class="toc-text">其它</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1"><span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-text">思考题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%99%BA%E5%8A%9B%E9%A2%98"><span class="toc-text">智力题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/13/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/" title="职业发展">职业发展</a><time datetime="2022-03-13T08:09:13.000Z" title="Created 2022-03-13 16:09:13">2022-03-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/26/%E9%87%91%E8%9E%8D%E6%9C%AF%E8%AF%AD/" title="金融术语">金融术语</a><time datetime="2022-01-26T05:47:08.000Z" title="Created 2022-01-26 13:47:08">2022-01-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><time datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/03/%E9%9D%A2%E8%AF%95/" title="面试">面试</a><time datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/02/05/Java/" title="Java">Java</a><time datetime="2021-02-05T13:10:50.000Z" title="Created 2021-02-05 21:10:50">2021-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/"><img class="prev-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">工具类</div></div></a></div><div class="next-post pull-right"><a href="/2021/02/05/Java/"><img class="next-cover" src="/img/beijing.jpg" onerror="onerror=null;src='/img/touxiang.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Java</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zourunxin"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">多总结！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%9D%E6%8C%81%E5%86%B7%E9%9D%99%EF%BC%8C%E5%A4%9A%E6%80%BB%E7%BB%93"><span class="toc-text">保持冷静，多总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Leetcode"><span class="toc-text">Leetcode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92%EF%BC%88dfs%EF%BC%89"><span class="toc-text">递归（dfs）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%EF%BC%88backTrack%EF%BC%89"><span class="toc-text">回溯（backTrack）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E9%81%8D%E5%8E%86"><span class="toc-text">广度优先遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="toc-text">动态规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%B2%BB"><span class="toc-text">分治</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8"><span class="toc-text">链表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">反转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC-N-%E4%B8%AA%E7%BB%93%E7%82%B9"><span class="toc-text">删除链表的第 N 个结点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#K-%E4%B8%AA%E4%B8%80%E7%BB%84%E7%BF%BB%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-text">K 个一组翻转链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="toc-text">环形链表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E7%BB%93%E7%82%B9"><span class="toc-text">删除链表中的重复结点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%96%87%E4%B8%B2"><span class="toc-text">回文串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E6%8E%89-K-%E4%BD%8D%E6%95%B0%E5%AD%97"><span class="toc-text">移掉 K 位数字</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%91"><span class="toc-text">树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE"><span class="toc-text">图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E5%9B%BE"><span class="toc-text">克隆图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%9C%89%E5%90%91%E5%9B%BE%E6%98%AF%E5%90%A6%E6%BB%A1%E8%B6%B3%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="toc-text">判断有向图是否满足拓扑结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-text">并查集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E7%9A%84%E6%9C%80%E5%B0%8F%E9%AB%98%E5%BA%A6%E6%A0%91"><span class="toc-text">图的最小高度树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-text">查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="toc-text">二分查找</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-text">排序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F"><span class="toc-text">快速排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E6%95%B0%E6%8E%92%E5%BA%8F"><span class="toc-text">计数排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83%E7%AE%97%E6%B3%95"><span class="toc-text">其它算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#0-1-%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98"><span class="toc-text">0-1 背包问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">两数之和</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E4%BB%A3%E4%BB%B7"><span class="toc-text">最小代价</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%89%B2%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC%E6%9C%80%E5%B0%8F"><span class="toc-text">分割数组的最大值最小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BA%A2%E6%9D%80%E6%80%AA"><span class="toc-text">小红杀怪</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86"><span class="toc-text">时间管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-text">滑动窗口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E5%88%86%E8%A7%A3"><span class="toc-text">整数分解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AA%E6%9C%89%E4%B8%80%E4%B8%AA%E4%B8%8D%E5%90%8C%E5%AD%97%E7%AC%A6%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">只有一个不同字符的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E5%BA%8F%E5%88%97%E4%B8%AD%E6%9F%90%E4%B8%80%E4%BD%8D%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-text">数字序列中某一位的数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB"><span class="toc-text">编辑距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boyer-Moore-%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95"><span class="toc-text">Boyer-Moore 投票算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%88-%E9%98%9F%E5%88%97%E6%96%B0%E5%A2%9E-getMax-%E6%96%B9%E6%B3%95"><span class="toc-text">栈&#x2F;队列新增 getMax() 方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8D%E8%BF%90%E7%AE%97"><span class="toc-text">位运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E4%B8%B2%E7%9A%84%E5%85%A8%E6%8E%92%E5%88%97"><span class="toc-text">子串的全排列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E6%A6%82%E7%8E%87%E6%B1%82-Pi"><span class="toc-text">通过概率求 Pi</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%B2%BE%E5%BA%A6%E6%B3%95"><span class="toc-text">高精度法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#x-%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9"><span class="toc-text">x 的平方根</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8"><span class="toc-text">盛最多水的容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2"><span class="toc-text">柱状图中最大矩形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%BE%E5%87%BA%E5%8C%BA%E9%97%B4%E5%92%8C%E4%B8%8E-M-%E6%95%B4%E9%99%A4%E7%9A%84%E5%8C%BA%E9%97%B4%E4%B8%AA%E6%95%B0"><span class="toc-text">数组中找出区间和与 M 整除的区间个数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%93%84%E6%B0%B4%E6%B1%A0%E7%AE%97%E6%B3%95"><span class="toc-text">蓄水池算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83"><span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="toc-text">计算机网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80"><span class="toc-text">网络基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP"><span class="toc-text">HTTP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-text">操作系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E7%B3%BB%E7%BB%9F"><span class="toc-text">一般系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-text">Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux-%E5%91%BD%E4%BB%A4"><span class="toc-text">Linux 命令</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java"><span class="toc-text">Java</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-text">多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JVM"><span class="toc-text">JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-text">内存模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-text">数据结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-text">面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83-1"><span class="toc-text">其它</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E8%AF%86"><span class="toc-text">通识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL"><span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis"><span class="toc-text">Redis</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E7%AB%AF"><span class="toc-text">后端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RPC"><span class="toc-text">RPC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%90%86%E5%92%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-text">代理和负载均衡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">布隆过滤器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E5%95%86%E7%A7%92%E6%9D%80%E7%B3%BB%E7%BB%9F"><span class="toc-text">电商秒杀系统</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96"><span class="toc-text">优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%AB%AF"><span class="toc-text">前端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Service"><span class="toc-text">Service</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ORM"><span class="toc-text">ORM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93-1"><span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E5%AE%83-2"><span class="toc-text">其它</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-1"><span class="toc-text">数据结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="toc-text">需要注意的对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-text">思考题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%99%BA%E5%8A%9B%E9%A2%98"><span class="toc-text">智力题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/01/26/%E9%87%91%E8%9E%8D%E6%9C%AF%E8%AF%AD/" title="金融术语">金融术语</a><time datetime="2022-01-26T05:47:08.000Z" title="Created 2022-01-26 13:47:08">2022-01-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/10/25/%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="工具类">工具类</a><time datetime="2021-10-25T04:13:44.000Z" title="Created 2021-10-25 12:13:44">2021-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/05/03/%E9%9D%A2%E8%AF%95/" title="面试">面试</a><time datetime="2021-05-03T07:37:48.000Z" title="Created 2021-05-03 15:37:48">2021-05-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2021/02/05/Java/" title="Java">Java</a><time datetime="2021-02-05T13:10:50.000Z" title="Created 2021-02-05 21:10:50">2021-02-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div></div></body></html>
